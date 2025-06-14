@@ -2,13 +2,56 @@
 
 import type React from "react";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  CheckCircle,
+  AlertCircle,
+  Loader2,
+} from "lucide-react";
+import { submitContactForm } from "@/app/actions/contact";
 
 export default function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitResult, setSubmitResult] = useState<{
+    success?: boolean;
+    message?: string;
+  } | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const formData = new FormData(e.target as HTMLFormElement);
+    setIsSubmitting(true);
+    setSubmitResult(null);
+
+    try {
+      const result = await submitContactForm(formData);
+      setSubmitResult(result);
+
+      // Reset form if successful
+      if (result.success) {
+        const form = document.getElementById("contact-form") as HTMLFormElement;
+        if (form) {
+          form.reset();
+        }
+      }
+    } catch (error) {
+      setSubmitResult({
+        success: false,
+        message: "An unexpected error occurred. Please try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section
       id="contact"
@@ -73,7 +116,11 @@ export default function Contact() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <form id="contact-form" className="space-y-6">
+            <form
+              id="contact-form"
+              onSubmit={handleSubmit}
+              className="space-y-6"
+            >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label
@@ -87,6 +134,7 @@ export default function Contact() {
                     name="name"
                     placeholder="John Doe"
                     required
+                    disabled={isSubmitting}
                     className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-[#ff6b6b] focus:ring-[#ff6b6b]"
                   />
                 </div>
@@ -103,6 +151,7 @@ export default function Contact() {
                     type="email"
                     placeholder="john@example.com"
                     required
+                    disabled={isSubmitting}
                     className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-[#ff6b6b] focus:ring-[#ff6b6b]"
                   />
                 </div>
@@ -119,6 +168,7 @@ export default function Contact() {
                   name="subject"
                   placeholder="Project Inquiry"
                   required
+                  disabled={isSubmitting}
                   className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-[#ff6b6b] focus:ring-[#ff6b6b]"
                 />
               </div>
@@ -135,14 +185,47 @@ export default function Contact() {
                   placeholder="Tell me about your project..."
                   rows={5}
                   required
+                  disabled={isSubmitting}
                   className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-[#ff6b6b] focus:ring-[#ff6b6b] resize-none"
                 />
               </div>
 
+              {/* Feedback message */}
+              {submitResult && (
+                <div
+                  className={`text-sm flex items-start gap-2 p-3 rounded-lg ${
+                    submitResult.success
+                      ? "bg-green-500/20 text-green-200 border border-green-500/30"
+                      : "bg-red-500/20 text-red-200 border border-red-500/30"
+                  }`}
+                  role="alert"
+                >
+                  {submitResult.success ? (
+                    <CheckCircle size={16} className="mt-0.5 flex-shrink-0" />
+                  ) : (
+                    <AlertCircle size={16} className="mt-0.5 flex-shrink-0" />
+                  )}
+                  <span>{submitResult.message}</span>
+                </div>
+              )}
+
               <Button
                 type="submit"
+                disabled={isSubmitting}
                 className="bg-[#ff6b6b] hover:bg-[#ff5252] text-white w-full disabled:opacity-70 disabled:cursor-not-allowed"
-              ></Button>
+              >
+                {isSubmitting ? (
+                  <>
+                    <Loader2 size={16} className="animate-spin mr-2" />
+                    Sending Message...
+                  </>
+                ) : (
+                  <>
+                    <Send size={16} className="mr-2" />
+                    Send Message
+                  </>
+                )}
+              </Button>
             </form>
           </motion.div>
         </div>
