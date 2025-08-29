@@ -1,0 +1,1875 @@
+{
+	"meta": {
+		"authors": [
+			"David Haz"
+		],
+		"bugs": "https://github.com/DavidHDev/react-bits/issues",
+		"description": "An open source collection of animated, interactive & fully customizable React components for building stunning, memorable user interfaces.",
+		"homepage": "https://reactbits.dev",
+		"repository": "https://github.com/DavidHDev/react-bits",
+		"tags": [
+			"react",
+			"javascript",
+			"components",
+			"web",
+			"reactjs",
+			"css-animations",
+			"component-library",
+			"ui-components",
+			"3d",
+			"ui-library",
+			"tailwind",
+			"tailwindcss",
+			"components",
+			"components-library"
+		]
+	},
+	"categories": [
+		{
+			"name": "Animations",
+			"blocks": [
+				{
+					"name": "AnimatedContent",
+					"directory": "src/ts-tailwind/Animations/AnimatedContent",
+					"category": "Animations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"AnimatedContent.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gsap@^3.13.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "BlobCursor",
+					"directory": "src/ts-tailwind/Animations/BlobCursor",
+					"category": "Animations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"BlobCursor.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gsap@^3.13.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "ClickSpark",
+					"directory": "src/ts-tailwind/Animations/ClickSpark",
+					"category": "Animations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"ClickSpark.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Crosshair",
+					"directory": "src/ts-tailwind/Animations/Crosshair",
+					"category": "Animations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Crosshair.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gsap@^3.13.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Cubes",
+					"directory": "src/ts-tailwind/Animations/Cubes",
+					"category": "Animations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Cubes.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gsap@^3.13.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "ElectricBorder",
+					"directory": "src/ts-tailwind/Animations/ElectricBorder",
+					"category": "Animations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"ElectricBorder.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "FadeContent",
+					"directory": "src/ts-tailwind/Animations/FadeContent",
+					"category": "Animations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"FadeContent.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "GlareHover",
+					"directory": "src/ts-tailwind/Animations/GlareHover",
+					"category": "Animations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"GlareHover.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "GradualBlur",
+					"directory": "src/ts-tailwind/Animations/GradualBlur",
+					"category": "Animations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"GradualBlur.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"mathjs@^14.6.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "ImageTrail",
+					"directory": "src/ts-tailwind/Animations/ImageTrail",
+					"category": "Animations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"ImageTrail.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gsap@^3.13.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "LogoLoop",
+					"directory": "src/ts-tailwind/Animations/LogoLoop",
+					"category": "Animations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"LogoLoop.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Magnet",
+					"directory": "src/ts-tailwind/Animations/Magnet",
+					"category": "Animations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Magnet.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "MagnetLines",
+					"directory": "src/ts-tailwind/Animations/MagnetLines",
+					"category": "Animations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"MagnetLines.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "MetaBalls",
+					"directory": "src/ts-tailwind/Animations/MetaBalls",
+					"category": "Animations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"MetaBalls.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"ogl@^1.0.11"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "MetallicPaint",
+					"directory": "src/ts-tailwind/Animations/MetallicPaint",
+					"category": "Animations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"MetallicPaint.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Noise",
+					"directory": "src/ts-tailwind/Animations/Noise",
+					"category": "Animations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Noise.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "PixelTrail",
+					"directory": "src/ts-tailwind/Animations/PixelTrail",
+					"category": "Animations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"PixelTrail.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"@react-three/fiber@^9.1.2",
+						"@react-three/drei@^10.1.2",
+						"three@^0.167.1"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "PixelTransition",
+					"directory": "src/ts-tailwind/Animations/PixelTransition",
+					"category": "Animations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"PixelTransition.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gsap@^3.13.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Ribbons",
+					"directory": "src/ts-tailwind/Animations/Ribbons",
+					"category": "Animations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Ribbons.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"ogl@^1.0.11"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "ShapeBlur",
+					"directory": "src/ts-tailwind/Animations/ShapeBlur",
+					"category": "Animations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"ShapeBlur.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"three@^0.167.1"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "SplashCursor",
+					"directory": "src/ts-tailwind/Animations/SplashCursor",
+					"category": "Animations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"SplashCursor.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "StarBorder",
+					"directory": "src/ts-tailwind/Animations/StarBorder",
+					"category": "Animations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"StarBorder.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "StickerPeel",
+					"directory": "src/ts-tailwind/Animations/StickerPeel",
+					"category": "Animations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"StickerPeel.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gsap@^3.13.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "TargetCursor",
+					"directory": "src/ts-tailwind/Animations/TargetCursor",
+					"category": "Animations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"TargetCursor.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gsap@^3.13.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				}
+			]
+		},
+		{
+			"name": "Backgrounds",
+			"blocks": [
+				{
+					"name": "Aurora",
+					"directory": "src/ts-tailwind/Backgrounds/Aurora",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Aurora.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"ogl@^1.0.11"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Balatro",
+					"directory": "src/ts-tailwind/Backgrounds/Balatro",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Balatro.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"ogl@^1.0.11"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Ballpit",
+					"directory": "src/ts-tailwind/Backgrounds/Ballpit",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Ballpit.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"three@^0.167.1",
+						"gsap@^3.13.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Beams",
+					"directory": "src/ts-tailwind/Backgrounds/Beams",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Beams.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"three@^0.167.1",
+						"@react-three/fiber@^9.1.2",
+						"@react-three/drei@^10.1.2"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "DarkVeil",
+					"directory": "src/ts-tailwind/Backgrounds/DarkVeil",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"DarkVeil.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"ogl@^1.0.11"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Dither",
+					"directory": "src/ts-tailwind/Backgrounds/Dither",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Dither.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"@react-three/fiber@^9.1.2",
+						"@react-three/postprocessing@^3.0.4",
+						"postprocessing@^6.36.0",
+						"three@^0.167.1"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "DotGrid",
+					"directory": "src/ts-tailwind/Backgrounds/DotGrid",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"DotGrid.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gsap@^3.13.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "FaultyTerminal",
+					"directory": "src/ts-tailwind/Backgrounds/FaultyTerminal",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"FaultyTerminal.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"ogl@^1.0.11"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Galaxy",
+					"directory": "src/ts-tailwind/Backgrounds/Galaxy",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Galaxy.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"ogl@^1.0.11"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "GradientBlinds",
+					"directory": "src/ts-tailwind/Backgrounds/GradientBlinds",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"GradientBlinds.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"ogl@^1.0.11"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "GridDistortion",
+					"directory": "src/ts-tailwind/Backgrounds/GridDistortion",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"GridDistortion.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"three@^0.167.1"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "GridMotion",
+					"directory": "src/ts-tailwind/Backgrounds/GridMotion",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"GridMotion.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gsap@^3.13.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Hyperspeed",
+					"directory": "src/ts-tailwind/Backgrounds/Hyperspeed",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"HyperSpeedPresets.ts",
+						"Hyperspeed.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"three@^0.167.1",
+						"postprocessing@^6.36.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Iridescence",
+					"directory": "src/ts-tailwind/Backgrounds/Iridescence",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Iridescence.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"ogl@^1.0.11"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "LetterGlitch",
+					"directory": "src/ts-tailwind/Backgrounds/LetterGlitch",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"LetterGlitch.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "LightRays",
+					"directory": "src/ts-tailwind/Backgrounds/LightRays",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"LightRays.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"ogl@^1.0.11"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Lightning",
+					"directory": "src/ts-tailwind/Backgrounds/Lightning",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Lightning.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "LiquidChrome",
+					"directory": "src/ts-tailwind/Backgrounds/LiquidChrome",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"LiquidChrome.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"ogl@^1.0.11"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Orb",
+					"directory": "src/ts-tailwind/Backgrounds/Orb",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Orb.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"ogl@^1.0.11"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Particles",
+					"directory": "src/ts-tailwind/Backgrounds/Particles",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Particles.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"ogl@^1.0.11"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Plasma",
+					"directory": "src/ts-tailwind/Backgrounds/Plasma",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Plasma.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"ogl@^1.0.11"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Prism",
+					"directory": "src/ts-tailwind/Backgrounds/Prism",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Prism.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"ogl@^1.0.11"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "PrismaticBurst",
+					"directory": "src/ts-tailwind/Backgrounds/PrismaticBurst",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"PrismaticBurst.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"ogl@^1.0.11"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "RippleGrid",
+					"directory": "src/ts-tailwind/Backgrounds/RippleGrid",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"RippleGrid.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"ogl@^1.0.11"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Silk",
+					"directory": "src/ts-tailwind/Backgrounds/Silk",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Silk.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"@react-three/fiber@^9.1.2",
+						"three@^0.167.1"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Squares",
+					"directory": "src/ts-tailwind/Backgrounds/Squares",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Squares.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Threads",
+					"directory": "src/ts-tailwind/Backgrounds/Threads",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Threads.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"ogl@^1.0.11"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Waves",
+					"directory": "src/ts-tailwind/Backgrounds/Waves",
+					"category": "Backgrounds",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Waves.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				}
+			]
+		},
+		{
+			"name": "Components",
+			"blocks": [
+				{
+					"name": "AnimatedList",
+					"directory": "src/ts-tailwind/Components/AnimatedList",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"AnimatedList.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"motion@^12.23.12"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "BounceCards",
+					"directory": "src/ts-tailwind/Components/BounceCards",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"BounceCards.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gsap@^3.13.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "BubbleMenu",
+					"directory": "src/ts-tailwind/Components/BubbleMenu",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"BubbleMenu.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gsap@^3.13.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "CardNav",
+					"directory": "src/ts-tailwind/Components/CardNav",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"CardNav.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gsap@^3.13.0",
+						"react-icons@^5.5.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "CardSwap",
+					"directory": "src/ts-tailwind/Components/CardSwap",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"CardSwap.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gsap@^3.13.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Carousel",
+					"directory": "src/ts-tailwind/Components/Carousel",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Carousel.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"motion@^12.23.12",
+						"react-icons@^5.5.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "ChromaGrid",
+					"directory": "src/ts-tailwind/Components/ChromaGrid",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"ChromaGrid.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gsap@^3.13.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "CircularGallery",
+					"directory": "src/ts-tailwind/Components/CircularGallery",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"CircularGallery.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"ogl@^1.0.11"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Counter",
+					"directory": "src/ts-tailwind/Components/Counter",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Counter.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"motion@^12.23.12"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "DecayCard",
+					"directory": "src/ts-tailwind/Components/DecayCard",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"DecayCard.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gsap@^3.13.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Dock",
+					"directory": "src/ts-tailwind/Components/Dock",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Dock.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"motion@^12.23.12"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "DomeGallery",
+					"directory": "src/ts-tailwind/Components/DomeGallery",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"DomeGallery.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"@use-gesture/react@^10.2.27"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "ElasticSlider",
+					"directory": "src/ts-tailwind/Components/ElasticSlider",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"ElasticSlider.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"motion@^12.23.12"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "FlowingMenu",
+					"directory": "src/ts-tailwind/Components/FlowingMenu",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"FlowingMenu.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gsap@^3.13.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "FluidGlass",
+					"directory": "src/ts-tailwind/Components/FluidGlass",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"FluidGlass.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"three@^0.167.1",
+						"@react-three/fiber@^9.1.2",
+						"@react-three/drei@^10.1.2",
+						"maath@^0.10.8"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "FlyingPosters",
+					"directory": "src/ts-tailwind/Components/FlyingPosters",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"FlyingPosters.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"ogl@^1.0.11"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Folder",
+					"directory": "src/ts-tailwind/Components/Folder",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Folder.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "GlassIcons",
+					"directory": "src/ts-tailwind/Components/GlassIcons",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"GlassIcons.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "GlassSurface",
+					"directory": "src/ts-tailwind/Components/GlassSurface",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"GlassSurface.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "GooeyNav",
+					"directory": "src/ts-tailwind/Components/GooeyNav",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"GooeyNav.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "InfiniteMenu",
+					"directory": "src/ts-tailwind/Components/InfiniteMenu",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"InfiniteMenu.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gl-matrix@^3.4.3"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "InfiniteScroll",
+					"directory": "src/ts-tailwind/Components/InfiniteScroll",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"InfiniteScroll.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gsap@^3.13.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Lanyard",
+					"directory": "src/ts-tailwind/Components/Lanyard",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Lanyard.tsx",
+						"card.glb",
+						"lanyard.png"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"@react-three/fiber@^9.1.2",
+						"@react-three/drei@^10.1.2",
+						"@react-three/rapier@^2.1.0",
+						"meshline@^3.3.1",
+						"three@^0.167.1"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "MagicBento",
+					"directory": "src/ts-tailwind/Components/MagicBento",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"MagicBento.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gsap@^3.13.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Masonry",
+					"directory": "src/ts-tailwind/Components/Masonry",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Masonry.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gsap@^3.13.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "ModelViewer",
+					"directory": "src/ts-tailwind/Components/ModelViewer",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"ModelViewer.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"@react-three/fiber@^9.1.2",
+						"@react-three/drei@^10.1.2",
+						"three@^0.167.1"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "PillNav",
+					"directory": "src/ts-tailwind/Components/PillNav",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"PillNav.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"react-router-dom@^6.26.0",
+						"gsap@^3.13.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "PixelCard",
+					"directory": "src/ts-tailwind/Components/PixelCard",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"PixelCard.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "RollingGallery",
+					"directory": "src/ts-tailwind/Components/RollingGallery",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"RollingGallery.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"motion@^12.23.12"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "ScrollStack",
+					"directory": "src/ts-tailwind/Components/ScrollStack",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"ScrollStack.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"lenis@^1.3.5"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "SpotlightCard",
+					"directory": "src/ts-tailwind/Components/SpotlightCard",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"SpotlightCard.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Stack",
+					"directory": "src/ts-tailwind/Components/Stack",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Stack.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"motion@^12.23.12"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "Stepper",
+					"directory": "src/ts-tailwind/Components/Stepper",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Stepper.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"motion@^12.23.12"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "TiltedCard",
+					"directory": "src/ts-tailwind/Components/TiltedCard",
+					"category": "Components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"TiltedCard.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"motion@^12.23.12"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				}
+			]
+		},
+		{
+			"name": "TextAnimations",
+			"blocks": [
+				{
+					"name": "ASCIIText",
+					"directory": "src/ts-tailwind/TextAnimations/ASCIIText",
+					"category": "TextAnimations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"ASCIIText.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"three@^0.167.1"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "BlurText",
+					"directory": "src/ts-tailwind/TextAnimations/BlurText",
+					"category": "TextAnimations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"BlurText.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"motion@^12.23.12",
+						"motion-utils"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "CircularText",
+					"directory": "src/ts-tailwind/TextAnimations/CircularText",
+					"category": "TextAnimations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"CircularText.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"motion@^12.23.12"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "CountUp",
+					"directory": "src/ts-tailwind/TextAnimations/CountUp",
+					"category": "TextAnimations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"CountUp.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"motion@^12.23.12"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "CurvedLoop",
+					"directory": "src/ts-tailwind/TextAnimations/CurvedLoop",
+					"category": "TextAnimations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"CurvedLoop.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "DecryptedText",
+					"directory": "src/ts-tailwind/TextAnimations/DecryptedText",
+					"category": "TextAnimations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"DecryptedText.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"motion@^12.23.12"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "FallingText",
+					"directory": "src/ts-tailwind/TextAnimations/FallingText",
+					"category": "TextAnimations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"FallingText.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"matter-js@^0.20.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "FuzzyText",
+					"directory": "src/ts-tailwind/TextAnimations/FuzzyText",
+					"category": "TextAnimations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"FuzzyText.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "GlitchText",
+					"directory": "src/ts-tailwind/TextAnimations/GlitchText",
+					"category": "TextAnimations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"GlitchText.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "GradientText",
+					"directory": "src/ts-tailwind/TextAnimations/GradientText",
+					"category": "TextAnimations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"GradientText.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "RotatingText",
+					"directory": "src/ts-tailwind/TextAnimations/RotatingText",
+					"category": "TextAnimations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"RotatingText.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"motion@^12.23.12"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "ScrambledText",
+					"directory": "src/ts-tailwind/TextAnimations/ScrambledText",
+					"category": "TextAnimations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"ScrambledText.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gsap@^3.13.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "ScrollFloat",
+					"directory": "src/ts-tailwind/TextAnimations/ScrollFloat",
+					"category": "TextAnimations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"ScrollFloat.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gsap@^3.13.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "ScrollReveal",
+					"directory": "src/ts-tailwind/TextAnimations/ScrollReveal",
+					"category": "TextAnimations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"ScrollReveal.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gsap@^3.13.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "ScrollVelocity",
+					"directory": "src/ts-tailwind/TextAnimations/ScrollVelocity",
+					"category": "TextAnimations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"ScrollVelocity.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"motion@^12.23.12"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "ShinyText",
+					"directory": "src/ts-tailwind/TextAnimations/ShinyText",
+					"category": "TextAnimations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"ShinyText.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "SplitText",
+					"directory": "src/ts-tailwind/TextAnimations/SplitText",
+					"category": "TextAnimations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"SplitText.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gsap@^3.13.0",
+						"@gsap/react@^2.1.2"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "TextCursor",
+					"directory": "src/ts-tailwind/TextAnimations/TextCursor",
+					"category": "TextAnimations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"TextCursor.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"motion@^12.23.12"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "TextPressure",
+					"directory": "src/ts-tailwind/TextAnimations/TextPressure",
+					"category": "TextAnimations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"TextPressure.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "TextTrail",
+					"directory": "src/ts-tailwind/TextAnimations/TextTrail",
+					"category": "TextAnimations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"TextTrail.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"three@^0.167.1"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "TextType",
+					"directory": "src/ts-tailwind/TextAnimations/TextType",
+					"category": "TextAnimations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"TextType.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"gsap@^3.13.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "TrueFocus",
+					"directory": "src/ts-tailwind/TextAnimations/TrueFocus",
+					"category": "TextAnimations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"TrueFocus.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"motion@^12.23.12"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				},
+				{
+					"name": "VariableProximity",
+					"directory": "src/ts-tailwind/TextAnimations/VariableProximity",
+					"category": "TextAnimations",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"VariableProximity.tsx"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"motion@^12.23.12"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				}
+			]
+		}
+	]
+}

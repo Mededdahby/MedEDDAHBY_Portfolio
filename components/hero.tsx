@@ -20,6 +20,7 @@ import {
   RiCloseLine,
   RiSendPlaneFill,
 } from "react-icons/ri";
+import Galaxy from "@/src/blocks/Backgrounds/Galaxy/Galaxy";
 
 const socialIcons = [
   { path: "https://linkedin.com/in/mohamed-eddahby", name: <RiLinkedinFill /> },
@@ -50,7 +51,22 @@ const Hero = () => {
   };
 
   return (
-    <section className="h-screen flex items-center bg-gradient-to-br from-[#f0f0ff] to-[#e0fff0] dark:from-[#0a0a20] dark:to-[#1a1a40] bg-no-repeat bg-bottom dark:bg-none relative">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Layer */}
+      <div className="absolute inset-0 -z-10">
+        {/* Gradient for light/dark */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#f0f0ff] to-[#e0fff0] dark:from-[#0a0a20] dark:to-[#1a1a40] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#fafafa] to-[#ffffff] opacity-50 dark:from-[#0a0a20] dark:to-[#1a1a40] pointer-events-none" />
+        {/* Galaxy Animation */}
+        <Galaxy
+          mouseRepulsion={true}
+          mouseInteraction={true}
+          density={2}
+          glowIntensity={0.2}
+          saturation={0.8}
+          hueShift={340}
+        />
+      </div>
       <div className="container mx-auto px-4 md:px-8 lg:px-16">
         <div className="flex justify-between gap-x-8">
           {/* Left side content */}
@@ -59,7 +75,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-sm uppercase font-semibold mb-4 text-[#ff6b6b] dark:text-[#ff6b6b] tracking-[4px]"
+              className="text-2xl uppercase font-semibold mb-4 text-[#ff6b6b] dark:text-[#ff6b6b] tracking-[4px]"
             >
               WEB DEVELOPER
             </motion.div>
@@ -77,7 +93,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-[#4a4a80] dark:text-gray-300 mb-8 max-w-[490px] mx-auto xl:mx-0"
+              className="text-[#4a4a80] dark:text-gray-300 mb-8 max-w-[490px] mx-auto xl:mx-0 font-serif font-bold"
             >
               Brief description with insights into myself, my vocational
               journey, and what I engage in professionally.

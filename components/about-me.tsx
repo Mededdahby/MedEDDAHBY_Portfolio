@@ -100,117 +100,30 @@ export default function AboutMe() {
     },
   ];
 
-  // Function to handle printing
-  // const handlePrint = () => {
-  //   if (typeof window !== "undefined") {
-  //     const printContent =
-  //       document.getElementById("printable-skills")?.innerHTML;
-
-  //     if (printContent) {
-  //       // Create a new window for printing
-  //       const printWindow = window.open("", "_blank");
-
-  //       if (printWindow) {
-  //         printWindow.document.write(`
-  //           <html>
-  //             <head>
-  //               <title>Mohamed Eddahby - Skills Summary</title>
-  //               <style>
-  //                 body {
-  //                   font-family: Arial, sans-serif;
-  //                   line-height: 1.6;
-  //                   color: #333;
-  //                   max-width: 800px;
-  //                   margin: 0 auto;
-  //                   padding: 20px;
-  //                 }
-  //                 h1 {
-  //                   color: #ff6b6b;
-  //                   border-bottom: 2px solid #ff6b6b;
-  //                   padding-bottom: 10px;
-  //                   margin-bottom: 20px;
-  //                 }
-  //                 h2 {
-  //                   color: #ff6b6b;
-  //                   margin-top: 25px;
-  //                   margin-bottom: 10px;
-  //                 }
-  //                 .skills-container {
-  //                   margin-bottom: 30px;
-  //                 }
-  //                 .skills-list {
-  //                   display: flex;
-  //                   flex-wrap: wrap;
-  //                   gap: 10px;
-  //                   margin-top: 10px;
-  //                 }
-  //                 .skill-item {
-  //                   background-color: #f5f5f5;
-  //                   border-radius: 5px;
-  //                   padding: 5px 10px;
-  //                   font-size: 14px;
-  //                 }
-  //                 .contact-info {
-  //                   margin-top: 40px;
-  //                   border-top: 1px solid #eee;
-  //                   padding-top: 20px;
-  //                   font-size: 14px;
-  //                 }
-  //                 .footer {
-  //                   margin-top: 40px;
-  //                   text-align: center;
-  //                   font-size: 12px;
-  //                   color: #777;
-  //                 }
-  //                 @media print {
-  //                   body {
-  //                     print-color-adjust: exact;
-  //                     -webkit-print-color-adjust: exact;
-  //                   }
-  //                 }
-  //               </style>
-  //             </head>
-  //             <body>
-  //               <h1>Mohamed Eddahby - Skills Summary</h1>
-  //               <p>Full-stack web developer with expertise in modern web technologies and frameworks.</p>
-  //               ${printContent}
-  //               <div class="contact-info">
-  //                 <p><strong>Email:</strong> eddahby.contact@gmail.com</p>
-  //                 <p><strong>Phone:</strong> +212 653 7604 74</p>
-  //                 <p><strong>Location:</strong> Kelaat M'Gouna, Tinhgir, Morocco</p>
-  //               </div>
-  //               <div class="footer">
-  //                 <p>Generated from Mohamed Eddahby's portfolio website on ${new Date().toLocaleDateString()}</p>
-  //               </div>
-  //             </body>
-  //           </html>
-  //         `);
-
-  //         printWindow.document.close();
-
-  //         // Wait for resources to load then print
-  //         setTimeout(() => {
-  //           printWindow.print();
-  //         }, 500);
-  //       }
-  //     }
-  //   }
-  // };
-
-  // Function to download as PDF
-  // const handleDownloadPDF = () => {
-  //   // This is a placeholder - in a real implementation, you would use a library like jsPDF
-  //   // or a server-side solution to generate a proper PDF
-  //   alert(
-  //     "This feature would generate a PDF in a production environment. For now, please use the Print option and save as PDF."
-  //   );
-  // };
+  const educationData = [
+    {
+      school: "School of Technology of Essaouira",
+      degree:
+        "Professional Bachelor’s Degree in Computer Systems and Software Engineering",
+      year: "2023 - 2024",
+    },
+    {
+      school: "School of Technology of Essaouira",
+      degree: "University Diploma of Technology (DUT) in Computer Engineering",
+      year: "2021 - 2023",
+    },
+    {
+      school: "Molay Baamran High School, Kalaat M’gouna",
+      degree: "Baccalaureate in Physical and Chemical Sciences",
+      year: "2020 - 2021",
+    },
+  ];
 
   return (
     <section
       id="about"
       ref={sectionRef}
-      className="py-20 bg-gradient-to-br from-[#f0f0ff] to-[#e0fff0] dark:from-[#0a0a20] dark:to-[#1a1a40] px-4 md:px-8 lg:px-16 relative overflow-hidden"
+      className="py-20 bg-gradient-to-br from-[#fafafa] to-[#ffffff] dark:from-[#0a0a20] dark:to-[#1a1a40] px-4 md:px-8 lg:px-16 relative overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute top-20 left-[10%] w-16 h-16 bg-purple-300/20 dark:bg-purple-500/10 rounded-full blur-xl"></div>
@@ -321,9 +234,7 @@ export default function AboutMe() {
             />
           </motion.div>
 
-          {/* Right side - Content */}
           <div>
-            {/* Tabs with modified shape */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -405,7 +316,7 @@ export default function AboutMe() {
                     animate="visible"
                     className="text-gray-600 dark:text-gray-300 mb-6"
                   >
-                    I specialise in crafting intuitive websites with a focus on
+                    I specialize in crafting intuitive websites with a focus on
                     user experience and user interface design, delivering a
                     seamless experience for your customers.
                   </motion.p>
@@ -423,7 +334,7 @@ export default function AboutMe() {
                         <User className="text-[#ff6b6b]" size={18} />
                       </div>
                       <span className="text-gray-800 dark:text-white">
-                        Mohamed Eddahby
+                        Mohamed EDDAHBY
                       </span>
                     </motion.div>
 
@@ -471,7 +382,7 @@ export default function AboutMe() {
                         <Award className="text-[#ff6b6b]" size={18} />
                       </div>
                       <span className="text-gray-800 dark:text-white">
-                        Bachelor of computer science
+                        Bachelor in Computer Systems and Software Engineering
                       </span>
                     </motion.div>
 
@@ -555,39 +466,44 @@ export default function AboutMe() {
                       </div>
                     </motion.div>
 
-                    {[1, 2, 3].map((item, index) => (
-                      <motion.div
-                        key={index}
-                        custom={index}
-                        variants={listItemVariants}
-                        initial="hidden"
-                        animate="visible"
-                        className="mb-8 relative pl-6"
-                        whileHover={{ x: 5, transition: { duration: 0.2 } }}
-                      >
+                    <div>
+                      {educationData.map((item, index) => (
                         <motion.div
-                          className="absolute left-[-12px] top-2 w-5 h-5 bg-gradient-to-br from-[#ff6b6b] to-[#ff8a9d]"
-                          style={{
-                            borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%",
-                            rotate: `${index * 15}deg`,
-                          }}
-                          whileHover={{
-                            scale: 1.2,
-                            rotate: `${index * 15 + 180}deg`,
-                            transition: { duration: 0.3 },
-                          }}
-                        />
-                        <h4 className="text-lg font-medium text-gray-800 dark:text-white">
-                          Height school of Technology Essaouira
-                        </h4>
-                        <p className="text-gray-600 dark:text-gray-300">
-                          Bachelor of science
-                        </p>
-                        <p className="text-gray-500 dark:text-gray-400 mt-1">
-                          2020 - 2023
-                        </p>
-                      </motion.div>
-                    ))}
+                          key={index}
+                          custom={index}
+                          variants={listItemVariants}
+                          initial="hidden"
+                          animate="visible"
+                          className="mb-8 relative pl-6"
+                          whileHover={{ x: 5, transition: { duration: 0.2 } }}
+                        >
+                          {/* Blob Icon */}
+                          <motion.div
+                            className="absolute left-[-12px] top-2 w-5 h-5 bg-gradient-to-br from-[#ff6b6b] to-[#ff8a9d]"
+                            style={{
+                              borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%",
+                              rotate: `${index * 15}deg`,
+                            }}
+                            whileHover={{
+                              scale: 1.2,
+                              rotate: `${index * 15 + 180}deg`,
+                              transition: { duration: 0.3 },
+                            }}
+                          />
+
+                          {/* Content */}
+                          <h4 className="text-lg font-medium text-gray-800 dark:text-white">
+                            {item.degree}
+                          </h4>
+                          <p className="text-gray-600 dark:text-gray-300">
+                            {item.school}
+                          </p>
+                          <p className="text-gray-500 dark:text-gray-400 mt-1">
+                            {item.year}
+                          </p>
+                        </motion.div>
+                      ))}
+                    </div>
                   </div>
                 </motion.div>
               )}

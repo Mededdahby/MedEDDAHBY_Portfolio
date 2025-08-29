@@ -47,7 +47,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="py-20 bg-gradient-to-br from-[#f0f0ff] to-[#934790] dark:from-[#0a0a20] dark:to-[#1a1a40] px-4 md:px-8 lg:px-16"
+      className="py-20 bg-gradient-to-br from-[#fafafa] to-[#ffffffda] dark:from-[#0a0a20] dark:to-[#1a1a40] px-4 md:px-8 lg:px-16"
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
@@ -57,7 +57,7 @@ export default function Services() {
               Services
             </h2>
           </div>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mt-4">
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mt-4 text-lg font-semibold">
             Providing high-quality development services to help businesses grow
             and succeed in the digital world.
           </p>

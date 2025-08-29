@@ -63,7 +63,7 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   className={cn(
-                    "text-sm font-medium transition-colors hover:text-[#ff6b6b]",
+                    "text-sm font-serif font-semibold transition-colors hover:text-[#ff6b6b]",
                     pathname === link.href ||
                       (pathname === "/" && link.href === "/")
                       ? "text-[#ff6b6b]"
@@ -100,7 +100,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 shadow-lg">
+        <div className="md:hidden bg-white dark:bg-gray-900 shadow-lg ">
           <div className="px-4 py-6 space-y-4">
             {navLinks.map((link) => (
               <Link

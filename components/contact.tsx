@@ -55,7 +55,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 bg-gradient-to-br from-[#0a0a20] to-[#1a1a40] text-white px-4 md:px-8 lg:px-16"
+      className="py-20 bg-gradient-to-br from-[#0a0a20] to-[#21213f] text-white px-4 md:px-8 lg:px-16"
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
@@ -63,7 +63,7 @@ export default function Contact() {
             <div className="w-3 h-3 rounded-full bg-[#ff6b6b] shadow-sm shadow-[#ff6b6b]/30"></div>
             <h2 className="text-3xl font-bold text-white">Get In Touch</h2>
           </div>
-          <p className="text-gray-300 max-w-2xl mx-auto mt-4">
+          <p className="text-gray-300 max-w-3xl font-extrabold mx-auto mt-4">
             Have a project in mind or want to collaborate? Feel free to reach
             out to me using the form below.
           </p>
