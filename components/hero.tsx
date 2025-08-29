@@ -106,12 +106,12 @@ const Hero = () => {
                   <span>Contact me</span>
                 </button>
               </Link>
-              <Link href="/resume" target="_blank">
+              <a href="/cv/mededdahby.pdf" download>
                 <button className="flex items-center justify-center gap-2 bg-[#1E1A2F] hover:bg-[#2a2640] text-white py-3 px-6 rounded-full w-full md:w-auto transition-all">
                   <span>Download CV</span>
                   <Download size={18} />
                 </button>
-              </Link>
+              </a>
             </motion.div>
 
             <motion.div
