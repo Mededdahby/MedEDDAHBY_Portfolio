@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import Image from "next/image"
-import { Download } from "lucide-react"
-import CountUp from "react-countup"
-import { motion, AnimatePresence } from "framer-motion"
-import { useInView } from "framer-motion"
-import { useRef, useState } from "react"
+import Link from "next/link";
+import Image from "next/image";
+import { Download } from "lucide-react";
+import CountUp from "react-countup";
+import { motion, AnimatePresence } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef, useState } from "react";
 
 import {
   RiBriefcase4Fill,
@@ -19,35 +19,35 @@ import {
   RiTelegramFill,
   RiCloseLine,
   RiSendPlaneFill,
-} from "react-icons/ri"
+} from "react-icons/ri";
 
 const socialIcons = [
   { path: "https://linkedin.com/in/mohamed-eddahby", name: <RiLinkedinFill /> },
   { path: "https://github.com/mohamededdahby", name: <RiGithubFill /> },
   { path: "https://instagram.com", name: <RiInstagramFill /> },
   { path: "https://telegram.org", name: <RiTelegramFill /> },
-]
+];
 
 const Hero = () => {
-  const statsRef = useRef(null)
-  const isInView = useInView(statsRef, { once: true, amount: 0.3 })
-  const [isHovering, setIsHovering] = useState(false)
-  const [isClicked, setIsClicked] = useState(false)
-  const [isExpanded, setIsExpanded] = useState(false)
+  const statsRef = useRef(null);
+  const isInView = useInView(statsRef, { once: true, amount: 0.3 });
+  const [isHovering, setIsHovering] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const handleImageClick = () => {
-    setIsClicked(true)
+    setIsClicked(true);
 
     // Reset the click animation after it completes
     setTimeout(() => {
-      setIsClicked(false)
-      setIsExpanded(true)
-    }, 800)
-  }
+      setIsClicked(false);
+      setIsExpanded(true);
+    }, 800);
+  };
 
   const closeExpandedView = () => {
-    setIsExpanded(false)
-  }
+    setIsExpanded(false);
+  };
 
   return (
     <section className="h-screen flex items-center bg-gradient-to-br from-[#f0f0ff] to-[#e0fff0] dark:from-[#0a0a20] dark:to-[#1a1a40] bg-no-repeat bg-bottom dark:bg-none relative">
@@ -70,7 +70,7 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-[#1a1a40] dark:text-white"
             >
-              Hello, my name is Mohamed Eddahby
+              Hello, my name is Mohamed EDDAHBY
             </motion.h1>
 
             <motion.p
@@ -79,7 +79,8 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-[#4a4a80] dark:text-gray-300 mb-8 max-w-[490px] mx-auto xl:mx-0"
             >
-              Brief description with insights into myself, my vocational journey, and what I engage in professionally.
+              Brief description with insights into myself, my vocational
+              journey, and what I engage in professionally.
             </motion.p>
 
             <motion.div
@@ -89,7 +90,7 @@ const Hero = () => {
               className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12"
             >
               {/* Contact Me Button - Styled to match the image */}
-              <Link href="#contact">
+              <Link href="/contacts">
                 <button className="flex items-center justify-center gap-2 bg-[#FF7B5F] hover:bg-[#ff6a4a] text-white py-3 px-6 rounded-full w-full md:w-auto transition-all">
                   <RiSendPlaneFill className="text-lg" />
                   <span>Contact me</span>
@@ -126,13 +127,16 @@ const Hero = () => {
                       {icon.name}
                     </motion.div>
                   </Link>
-                )
+                );
               })}
             </motion.div>
           </div>
 
           {/* Right side with blob, image and stats - Styled to match About section */}
-          <div ref={statsRef} className="hidden lg:flex items-center justify-center relative w-[600px]">
+          <div
+            ref={statsRef}
+            className="hidden lg:flex items-center justify-center relative w-[600px]"
+          >
             {/* Container to center everything */}
             <div className="relative flex items-center justify-center w-[380px] h-[380px]">
               {/* Main blob with image - Matching the About section styling */}
@@ -156,7 +160,10 @@ const Hero = () => {
                 }}
               >
                 {/* Image container */}
-                <div className="absolute inset-0 w-full h-full z-[100] cursor-pointer" onClick={handleImageClick}>
+                <div
+                  className="absolute inset-0 w-full h-full z-[100] cursor-pointer"
+                  onClick={handleImageClick}
+                >
                   <Image
                     src="/images/hero-image.jpeg"
                     alt="Mohamed Eddahby"
@@ -219,7 +226,9 @@ const Hero = () => {
               {/* 1. Left State - Years of Experience */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
-                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                animate={
+                  isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
+                }
                 transition={{ duration: 0.5 }}
                 className="absolute left-[-80px] top-1/2 transform -translate-y-1/2 z-[100]"
               >
@@ -229,9 +238,15 @@ const Hero = () => {
                   </div>
                   <div>
                     <div className="font-bold text-[#1a1a40] text-xl leading-tight">
-                      {isInView ? <CountUp end={4} duration={2} start={0} /> : "0"}
+                      {isInView ? (
+                        <CountUp end={4} duration={2} start={0} />
+                      ) : (
+                        "0"
+                      )}
                     </div>
-                    <div className="text-[#6b6b9f] text-xs leading-tight">Years Exp.</div>
+                    <div className="text-[#6b6b9f] text-xs leading-tight">
+                      Years Exp.
+                    </div>
                   </div>
                 </div>
                 {/* Connecting line */}
@@ -241,7 +256,9 @@ const Hero = () => {
               {/* 2. Right State - Projects Completed */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
-                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
+                animate={
+                  isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }
+                }
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="absolute right-[-80px] top-1/2 transform -translate-y-1/2 z-[100]"
               >
@@ -251,9 +268,15 @@ const Hero = () => {
                   </div>
                   <div>
                     <div className="font-bold text-[#1a1a40] text-xl leading-tight">
-                      {isInView ? <CountUp end={38} duration={2.5} start={0} /> : "0"}
+                      {isInView ? (
+                        <CountUp end={38} duration={2.5} start={0} />
+                      ) : (
+                        "0"
+                      )}
                     </div>
-                    <div className="text-[#6b6b9f] text-xs leading-tight">Projects</div>
+                    <div className="text-[#6b6b9f] text-xs leading-tight">
+                      Projects
+                    </div>
                   </div>
                 </div>
                 {/* Connecting line */}
@@ -263,7 +286,9 @@ const Hero = () => {
               {/* 3. Top State - Happy Customers */}
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+                animate={
+                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }
+                }
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="absolute top-[-60px] left-1/2 transform -translate-x-1/2 z-[100]"
               >
@@ -273,9 +298,15 @@ const Hero = () => {
                   </div>
                   <div>
                     <div className="font-bold text-[#1a1a40] text-xl leading-tight">
-                      {isInView ? <CountUp end={9} duration={3} start={0} /> : "0"}
+                      {isInView ? (
+                        <CountUp end={9} duration={3} start={0} />
+                      ) : (
+                        "0"
+                      )}
                     </div>
-                    <div className="text-[#6b6b9f] text-xs leading-tight">Customers</div>
+                    <div className="text-[#6b6b9f] text-xs leading-tight">
+                      Customers
+                    </div>
                   </div>
                 </div>
                 {/* Connecting line */}
@@ -307,10 +338,10 @@ const Hero = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ duration: 0.3, type: "spring", stiffness: 200 }}
-              className="relative max-w-4xl w-full bg-white/10 backdrop-blur-md rounded-[20px] overflow-hidden"
+              className="relative max-w-4xl w-full bg-white/10 backdrop-blur-md rounded-[20px] overflow-hidden "
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="relative aspect-[3/4] md:aspect-[16/9] w-full">
+              <div className="relative aspect-[3/4] md:aspect-[16/9] w-full z-[1000]">
                 <Image
                   src="/images/hero-image.jpeg"
                   alt="Mohamed Eddahby"
@@ -324,7 +355,9 @@ const Hero = () => {
               </div>
 
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-white mb-2">Mohamed Eddahby</h3>
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  Mohamed Eddahby
+                </h3>
                 <p className="text-gray-200">Web Developer</p>
               </div>
 
@@ -339,7 +372,7 @@ const Hero = () => {
         )}
       </AnimatePresence>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

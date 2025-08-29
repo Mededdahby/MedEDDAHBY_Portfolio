@@ -1,21 +1,29 @@
-"use server"
+"use server";
 
-import { z } from "zod"
+import { z } from "zod";
 
 // Contact form validation schema
 const contactSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters long" }),
+  name: z
+    .string()
+    .min(2, { message: "Name must be at least 2 characters long" }),
   email: z.string().email({ message: "Please enter a valid email address" }),
-  subject: z.string().min(5, { message: "Subject must be at least 5 characters long" }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters long" }),
-})
+  subject: z
+    .string()
+    .min(5, { message: "Subject must be at least 5 characters long" }),
+  message: z
+    .string()
+    .min(10, { message: "Message must be at least 10 characters long" }),
+});
 
 type ContactResult = {
-  success: boolean
-  message: string
-}
+  success: boolean;
+  message: string;
+};
 
-export async function submitContactForm(formData: FormData): Promise<ContactResult> {
+export async function submitContactForm(
+  formData: FormData
+): Promise<ContactResult> {
   try {
     // Extract form data
     const data = {
@@ -23,21 +31,21 @@ export async function submitContactForm(formData: FormData): Promise<ContactResu
       email: formData.get("email") as string,
       subject: formData.get("subject") as string,
       message: formData.get("message") as string,
-    }
+    };
 
     // Validate the data
-    const result = contactSchema.safeParse(data)
+    const result = contactSchema.safeParse(data);
 
     if (!result.success) {
-      const firstError = result.error.errors[0]
+      const firstError = result.error.errors[0];
       return {
         success: false,
         message: firstError.message,
-      }
+      };
     }
 
     // Simulate processing delay
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    await new Promise((resolve) => setTimeout(resolve, 1500));
 
     // In a real application, you would:
     // 1. Send an email using a service like SendGrid, Resend, or Nodemailer
@@ -61,17 +69,19 @@ export async function submitContactForm(formData: FormData): Promise<ContactResu
     })
     */
 
-    console.log("Contact form submission:", data)
+    console.log("Contact form submission:", data);
 
     return {
       success: true,
-      message: "Thank you for your message! I'll get back to you within 24 hours.",
-    }
+      message:
+        "Thank you for your message! I'll get back to you within 24 hours.",
+    };
   } catch (error) {
-    console.error("Contact form submission error:", error)
+    console.error("Contact form submission error:", error);
     return {
       success: false,
-      message: "Sorry, there was an error sending your message. Please try again or contact me directly via email.",
-    }
+      message:
+        "Sorry, there was an error sending your message. Please try again or contact me directly via email.",
+    };
   }
 }

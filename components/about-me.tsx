@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { useState, useRef } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { cn } from "@/lib/utils"
+import { useState, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { cn } from "@/lib/utils";
 import {
   GraduationCap,
   User,
@@ -16,15 +16,15 @@ import {
   GitBranch,
   Printer,
   Download,
-} from "lucide-react"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
+} from "lucide-react";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 export default function AboutMe() {
-  const [activeTab, setActiveTab] = useState("personal")
-  const [isPrintView, setIsPrintView] = useState(false)
-  const printableRef = useRef<HTMLDivElement>(null)
-  const sectionRef = useRef(null)
+  const [activeTab, setActiveTab] = useState("personal");
+  const [isPrintView, setIsPrintView] = useState(false);
+  const printableRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef(null);
 
   // Animation variants
   const fadeIn = {
@@ -38,13 +38,13 @@ export default function AboutMe() {
         ease: "easeOut",
       },
     }),
-  }
+  };
 
   const tabVariants = {
     inactive: { scale: 1 },
     active: { scale: 1.02 },
     hover: { scale: 1.05 },
-  }
+  };
 
   const blobVariants = {
     hidden: { scale: 0.8, opacity: 0 },
@@ -56,7 +56,7 @@ export default function AboutMe() {
         ease: "easeOut",
       },
     },
-  }
+  };
 
   const listItemVariants = {
     hidden: { opacity: 0, x: -20 },
@@ -69,14 +69,14 @@ export default function AboutMe() {
         ease: "easeOut",
       },
     }),
-  }
+  };
 
   // Skill categories data
   const skillCategories = [
     {
       name: "Databases",
       icon: <Database className="text-[#ff6b6b]" size={20} />,
-      skills: ["MongoDB", "MySQL", "PostgreSQL", "Firebase"],
+      skills: ["MongoDB", "MySQL", "PostgreSQL", "Convex"],
     },
     {
       name: "Frameworks",
@@ -89,116 +89,122 @@ export default function AboutMe() {
       skills: ["JavaScript", "TypeScript", "Java", "C", "C++", "Python"],
     },
     {
-      name: "Others",
-      icon: <GitBranch className="text-[#ff6b6b]" size={20} />,
-      skills: ["Git", "GitHub", "GitLab", "Prisma", "Docker", "AWS"],
+      name: "Styling",
+      icon: <Terminal className="text-[#ff6b6b]" size={20} />,
+      skills: ["Css", "Tailwinds", "shadcnUI", "Bootstrap", "Material UI"],
     },
-  ]
+    {
+      name: "Tools",
+      icon: <GitBranch className="text-[#ff6b6b]" size={20} />,
+      skills: ["Git", "GitHub", "GitLab", "Prisma", "Postman", "Figma"],
+    },
+  ];
 
   // Function to handle printing
-  const handlePrint = () => {
-    if (typeof window !== "undefined") {
-      const printContent = document.getElementById("printable-skills")?.innerHTML
+  // const handlePrint = () => {
+  //   if (typeof window !== "undefined") {
+  //     const printContent =
+  //       document.getElementById("printable-skills")?.innerHTML;
 
-      if (printContent) {
-        // Create a new window for printing
-        const printWindow = window.open("", "_blank")
+  //     if (printContent) {
+  //       // Create a new window for printing
+  //       const printWindow = window.open("", "_blank");
 
-        if (printWindow) {
-          printWindow.document.write(`
-            <html>
-              <head>
-                <title>Mohamed Eddahby - Skills Summary</title>
-                <style>
-                  body {
-                    font-family: Arial, sans-serif;
-                    line-height: 1.6;
-                    color: #333;
-                    max-width: 800px;
-                    margin: 0 auto;
-                    padding: 20px;
-                  }
-                  h1 {
-                    color: #ff6b6b;
-                    border-bottom: 2px solid #ff6b6b;
-                    padding-bottom: 10px;
-                    margin-bottom: 20px;
-                  }
-                  h2 {
-                    color: #ff6b6b;
-                    margin-top: 25px;
-                    margin-bottom: 10px;
-                  }
-                  .skills-container {
-                    margin-bottom: 30px;
-                  }
-                  .skills-list {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 10px;
-                    margin-top: 10px;
-                  }
-                  .skill-item {
-                    background-color: #f5f5f5;
-                    border-radius: 5px;
-                    padding: 5px 10px;
-                    font-size: 14px;
-                  }
-                  .contact-info {
-                    margin-top: 40px;
-                    border-top: 1px solid #eee;
-                    padding-top: 20px;
-                    font-size: 14px;
-                  }
-                  .footer {
-                    margin-top: 40px;
-                    text-align: center;
-                    font-size: 12px;
-                    color: #777;
-                  }
-                  @media print {
-                    body {
-                      print-color-adjust: exact;
-                      -webkit-print-color-adjust: exact;
-                    }
-                  }
-                </style>
-              </head>
-              <body>
-                <h1>Mohamed Eddahby - Skills Summary</h1>
-                <p>Full-stack web developer with expertise in modern web technologies and frameworks.</p>
-                ${printContent}
-                <div class="contact-info">
-                  <p><strong>Email:</strong> eddahby.contact@gmail.com</p>
-                  <p><strong>Phone:</strong> +212 653 7604 74</p>
-                  <p><strong>Location:</strong> Kelaat M'Gouna, Tinhgir, Morocco</p>
-                </div>
-                <div class="footer">
-                  <p>Generated from Mohamed Eddahby's portfolio website on ${new Date().toLocaleDateString()}</p>
-                </div>
-              </body>
-            </html>
-          `)
+  //       if (printWindow) {
+  //         printWindow.document.write(`
+  //           <html>
+  //             <head>
+  //               <title>Mohamed Eddahby - Skills Summary</title>
+  //               <style>
+  //                 body {
+  //                   font-family: Arial, sans-serif;
+  //                   line-height: 1.6;
+  //                   color: #333;
+  //                   max-width: 800px;
+  //                   margin: 0 auto;
+  //                   padding: 20px;
+  //                 }
+  //                 h1 {
+  //                   color: #ff6b6b;
+  //                   border-bottom: 2px solid #ff6b6b;
+  //                   padding-bottom: 10px;
+  //                   margin-bottom: 20px;
+  //                 }
+  //                 h2 {
+  //                   color: #ff6b6b;
+  //                   margin-top: 25px;
+  //                   margin-bottom: 10px;
+  //                 }
+  //                 .skills-container {
+  //                   margin-bottom: 30px;
+  //                 }
+  //                 .skills-list {
+  //                   display: flex;
+  //                   flex-wrap: wrap;
+  //                   gap: 10px;
+  //                   margin-top: 10px;
+  //                 }
+  //                 .skill-item {
+  //                   background-color: #f5f5f5;
+  //                   border-radius: 5px;
+  //                   padding: 5px 10px;
+  //                   font-size: 14px;
+  //                 }
+  //                 .contact-info {
+  //                   margin-top: 40px;
+  //                   border-top: 1px solid #eee;
+  //                   padding-top: 20px;
+  //                   font-size: 14px;
+  //                 }
+  //                 .footer {
+  //                   margin-top: 40px;
+  //                   text-align: center;
+  //                   font-size: 12px;
+  //                   color: #777;
+  //                 }
+  //                 @media print {
+  //                   body {
+  //                     print-color-adjust: exact;
+  //                     -webkit-print-color-adjust: exact;
+  //                   }
+  //                 }
+  //               </style>
+  //             </head>
+  //             <body>
+  //               <h1>Mohamed Eddahby - Skills Summary</h1>
+  //               <p>Full-stack web developer with expertise in modern web technologies and frameworks.</p>
+  //               ${printContent}
+  //               <div class="contact-info">
+  //                 <p><strong>Email:</strong> eddahby.contact@gmail.com</p>
+  //                 <p><strong>Phone:</strong> +212 653 7604 74</p>
+  //                 <p><strong>Location:</strong> Kelaat M'Gouna, Tinhgir, Morocco</p>
+  //               </div>
+  //               <div class="footer">
+  //                 <p>Generated from Mohamed Eddahby's portfolio website on ${new Date().toLocaleDateString()}</p>
+  //               </div>
+  //             </body>
+  //           </html>
+  //         `);
 
-          printWindow.document.close()
+  //         printWindow.document.close();
 
-          // Wait for resources to load then print
-          setTimeout(() => {
-            printWindow.print()
-          }, 500)
-        }
-      }
-    }
-  }
+  //         // Wait for resources to load then print
+  //         setTimeout(() => {
+  //           printWindow.print();
+  //         }, 500);
+  //       }
+  //     }
+  //   }
+  // };
 
   // Function to download as PDF
-  const handleDownloadPDF = () => {
-    // This is a placeholder - in a real implementation, you would use a library like jsPDF
-    // or a server-side solution to generate a proper PDF
-    alert(
-      "This feature would generate a PDF in a production environment. For now, please use the Print option and save as PDF.",
-    )
-  }
+  // const handleDownloadPDF = () => {
+  //   // This is a placeholder - in a real implementation, you would use a library like jsPDF
+  //   // or a server-side solution to generate a proper PDF
+  //   alert(
+  //     "This feature would generate a PDF in a production environment. For now, please use the Print option and save as PDF."
+  //   );
+  // };
 
   return (
     <section
@@ -220,7 +226,9 @@ export default function AboutMe() {
             className="inline-flex items-center gap-3 px-6 py-2 bg-gradient-to-r from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/10 rounded-lg"
           >
             <div className="w-3 h-3 rounded-full bg-[#ff6b6b] shadow-sm shadow-[#ff6b6b]/30"></div>
-            <h2 className="text-3xl font-bold text-gray-800 dark:text-white">About me</h2>
+            <h2 className="text-3xl font-bold text-gray-800 dark:text-white">
+              About me
+            </h2>
           </motion.div>
         </div>
 
@@ -333,7 +341,7 @@ export default function AboutMe() {
                   "flex-1 px-6 py-3 rounded-[16px] text-sm font-medium transition-all",
                   activeTab === "personal"
                     ? "bg-gradient-to-r from-[#ff6b6b] to-[#ff8a9d] text-white shadow-md"
-                    : "text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white",
+                    : "text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white"
                 )}
               >
                 Personal info
@@ -348,7 +356,7 @@ export default function AboutMe() {
                   "flex-1 px-6 py-3 rounded-[16px] text-sm font-medium transition-all",
                   activeTab === "qualifications"
                     ? "bg-gradient-to-r from-[#ff6b6b] to-[#ff8a9d] text-white shadow-md"
-                    : "text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white",
+                    : "text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white"
                 )}
               >
                 Qualifications
@@ -363,7 +371,7 @@ export default function AboutMe() {
                   "flex-1 px-6 py-3 rounded-[16px] text-sm font-medium transition-all",
                   activeTab === "skills"
                     ? "bg-gradient-to-r from-[#ff6b6b] to-[#ff8a9d] text-white shadow-md"
-                    : "text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white",
+                    : "text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white"
                 )}
               >
                 Skills
@@ -397,8 +405,9 @@ export default function AboutMe() {
                     animate="visible"
                     className="text-gray-600 dark:text-gray-300 mb-6"
                   >
-                    I specialise in crafting intuitive websites with a focus on user experience and user interface
-                    design, delivering a seamless experience for your customers.
+                    I specialise in crafting intuitive websites with a focus on
+                    user experience and user interface design, delivering a
+                    seamless experience for your customers.
                   </motion.p>
 
                   <div className="space-y-4">
@@ -413,7 +422,9 @@ export default function AboutMe() {
                       <div className="w-10 h-10 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center shadow-sm">
                         <User className="text-[#ff6b6b]" size={18} />
                       </div>
-                      <span className="text-gray-800 dark:text-white">Mohamed Eddahby</span>
+                      <span className="text-gray-800 dark:text-white">
+                        Mohamed Eddahby
+                      </span>
                     </motion.div>
 
                     <motion.div
@@ -427,7 +438,9 @@ export default function AboutMe() {
                       <div className="w-10 h-10 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center shadow-sm rotate-12">
                         <Phone className="text-[#ff6b6b]" size={18} />
                       </div>
-                      <span className="text-gray-800 dark:text-white">+212 653 7604 74</span>
+                      <span className="text-gray-800 dark:text-white">
+                        +212 653 7604 74
+                      </span>
                     </motion.div>
 
                     <motion.div
@@ -441,7 +454,9 @@ export default function AboutMe() {
                       <div className="w-10 h-10 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center shadow-sm -rotate-12">
                         <Mail className="text-[#ff6b6b]" size={18} />
                       </div>
-                      <span className="text-gray-800 dark:text-white">eddahby.contact@gmail.com</span>
+                      <span className="text-gray-800 dark:text-white">
+                        eddahby.contact@gmail.com
+                      </span>
                     </motion.div>
 
                     <motion.div
@@ -455,7 +470,9 @@ export default function AboutMe() {
                       <div className="w-10 h-10 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center shadow-sm rotate-6">
                         <Award className="text-[#ff6b6b]" size={18} />
                       </div>
-                      <span className="text-gray-800 dark:text-white">Bachelor of computer science</span>
+                      <span className="text-gray-800 dark:text-white">
+                        Bachelor of computer science
+                      </span>
                     </motion.div>
 
                     <motion.div
@@ -469,24 +486,36 @@ export default function AboutMe() {
                       <div className="w-10 h-10 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center shadow-sm -rotate-6">
                         <MapPin className="text-[#ff6b6b]" size={18} />
                       </div>
-                      <span className="text-gray-800 dark:text-white">Kelaat M'Gouna, Tinghir, morocco</span>
+                      <span className="text-gray-800 dark:text-white">
+                        Kelaat M'Gouna, Tinghir, morocco
+                      </span>
                     </motion.div>
                   </div>
 
-                  <motion.div custom={7} variants={fadeIn} initial="hidden" animate="visible" className="mt-8">
-                    <h3 className="text-[#ff6b6b] font-medium mb-2">Language Skill</h3>
+                  <motion.div
+                    custom={7}
+                    variants={fadeIn}
+                    initial="hidden"
+                    animate="visible"
+                    className="mt-8"
+                  >
+                    <h3 className="text-[#ff6b6b] font-medium mb-2">
+                      Language Skill
+                    </h3>
                     <div className="flex flex-wrap gap-2">
-                      {["Arabic", "English", "French", "Tamazight"].map((lang, index) => (
-                        <motion.span
-                          key={lang}
-                          initial={{ opacity: 0, scale: 0.8 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: 0.7 + index * 0.1 }}
-                          className="px-3 py-1 bg-pink-100 dark:bg-pink-900/20 text-gray-800 dark:text-white rounded-[10px_20px_20px_10px] text-sm"
-                        >
-                          {lang}
-                        </motion.span>
-                      ))}
+                      {["Arabic", "English", "French", "Tamazight"].map(
+                        (lang, index) => (
+                          <motion.span
+                            key={lang}
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: 0.7 + index * 0.1 }}
+                            className="px-3 py-1 bg-pink-100 dark:bg-pink-900/20 text-gray-800 dark:text-white rounded-[10px_20px_20px_10px] text-sm"
+                          >
+                            {lang}
+                          </motion.span>
+                        )
+                      )}
                     </div>
                   </motion.div>
                 </motion.div>
@@ -520,7 +549,9 @@ export default function AboutMe() {
                         <GraduationCap className="text-[#ff6b6b]" size={18} />
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold text-gray-800 dark:text-white">Education</h3>
+                        <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
+                          Education
+                        </h3>
                       </div>
                     </motion.div>
 
@@ -549,8 +580,12 @@ export default function AboutMe() {
                         <h4 className="text-lg font-medium text-gray-800 dark:text-white">
                           Height school of Technology Essaouira
                         </h4>
-                        <p className="text-gray-600 dark:text-gray-300">Bachelor of science</p>
-                        <p className="text-gray-500 dark:text-gray-400 mt-1">2020 - 2023</p>
+                        <p className="text-gray-600 dark:text-gray-300">
+                          Bachelor of science
+                        </p>
+                        <p className="text-gray-500 dark:text-gray-400 mt-1">
+                          2020 - 2023
+                        </p>
                       </motion.div>
                     ))}
                   </div>
@@ -576,7 +611,7 @@ export default function AboutMe() {
                       My Skills
                     </motion.h2>
 
-                    <div className="flex gap-2">
+                    {/* <div className="flex gap-2">
                       <Button
                         size="sm"
                         variant="outline"
@@ -595,7 +630,7 @@ export default function AboutMe() {
                         <Download size={14} />
                         <span>PDF</span>
                       </Button>
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="space-y-8">
@@ -611,11 +646,15 @@ export default function AboutMe() {
                         <div className="flex items-center gap-3">
                           <div
                             className="w-8 h-8 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center shadow-sm"
-                            style={{ transform: `rotate(${categoryIndex * 10}deg)` }}
+                            style={{
+                              transform: `rotate(${categoryIndex * 10}deg)`,
+                            }}
                           >
                             {category.icon}
                           </div>
-                          <h3 className="text-xl font-semibold text-gray-800 dark:text-white">{category.name}</h3>
+                          <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
+                            {category.name}
+                          </h3>
                         </div>
 
                         <div className="flex flex-wrap gap-2 ml-4">
@@ -664,5 +703,5 @@ export default function AboutMe() {
         </div>
       </div>
     </section>
-  )
+  );
 }
