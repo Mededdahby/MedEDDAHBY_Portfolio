@@ -52,12 +52,9 @@ const Hero = () => {
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Layer */}
       <div className="absolute inset-0 -z-10">
-        {/* Gradient for light/dark */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#f0f0ff] to-[#e0fff0] dark:from-[#0a0a20] dark:to-[#1a1a40] pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-br from-[#fafafa] to-[#ffffff] opacity-50 dark:from-[#0a0a20] dark:to-[#1a1a40] pointer-events-none" />
-        {/* Galaxy Animation */}
         <Galaxy
           mouseRepulsion={true}
           mouseInteraction={true}
@@ -69,7 +66,6 @@ const Hero = () => {
       </div>
       <div className="container mx-auto px-4 md:px-8 lg:px-16">
         <div className="flex justify-between gap-x-8">
-          {/* Left side content */}
           <div className="flex max-w-[630px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -79,7 +75,6 @@ const Hero = () => {
             >
               WEB DEVELOPER
             </motion.div>
-
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -105,16 +100,13 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12"
             >
-              {/* Contact Me Button - Styled to match the image */}
               <Link href="/contacts">
                 <button className="flex items-center justify-center gap-2 bg-[#FF7B5F] hover:bg-[#ff6a4a] text-white py-3 px-6 rounded-full w-full md:w-auto transition-all">
                   <RiSendPlaneFill className="text-lg" />
                   <span>Contact me</span>
                 </button>
               </Link>
-
-              {/* Download CV Button - Updated to link to CV page */}
-              <Link href="/cv" target="_blank">
+              <Link href="/resume" target="_blank">
                 <button className="flex items-center justify-center gap-2 bg-[#1E1A2F] hover:bg-[#2a2640] text-white py-3 px-6 rounded-full w-full md:w-auto transition-all">
                   <span>Download CV</span>
                   <Download size={18} />
@@ -122,7 +114,6 @@ const Hero = () => {
               </Link>
             </motion.div>
 
-            {/* Social icons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
