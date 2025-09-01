@@ -270,7 +270,7 @@ export default function AboutMe() {
                     : "text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white"
                 )}
               >
-                Qualifications
+                Educations
               </motion.button>
               <motion.button
                 variants={tabVariants}
@@ -456,9 +456,9 @@ export default function AboutMe() {
                       transition={{ duration: 0.5 }}
                       className="flex items-start gap-2 mb-6"
                     >
-                      <div className="w-10 h-10 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center shadow-sm rotate-12">
+                      {/* <div className="w-10 h-10 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center shadow-sm rotate-12">
                         <GraduationCap className="text-[#ff6b6b]" size={18} />
-                      </div>
+                      </div> */}
                       <div>
                         <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
                           Education

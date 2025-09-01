@@ -64,7 +64,7 @@ const Hero = () => {
           hueShift={340}
         />
       </div>
-      <div className="container mx-auto px-4 md:px-8 lg:px-16">
+      <div className="container mx-auto px-4 md:px-8 lg:px-16 items-center justify-center">
         <div className="flex justify-between gap-x-8">
           <div className="flex max-w-[630px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
             <motion.div
