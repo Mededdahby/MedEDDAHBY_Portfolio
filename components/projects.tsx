@@ -32,7 +32,7 @@ export default function Projects() {
       description:
         "A vibrant world of posts and articles built with Next.js and Tailwind CSS, secured by NextAuth.",
       liveUrl: "https://postepea.vercel.app",
-      sourceUrl: "https://github.com/mohamededdahby/Postepea",
+      sourceUrl: "https://github.com/Mededdahby/Postepea",
       technologies: ["Next.js", "Tailwind CSS", "NextAuth", "JavaScript"],
     },
     {
@@ -43,7 +43,7 @@ export default function Projects() {
       description:
         "React-based application with Redux state management for tracking expenses with a user-friendly interface.",
       liveUrl: "https://expense-tracker-demo.vercel.app",
-      sourceUrl: "https://github.com/mohamededdahby/expense-tracker",
+      sourceUrl: "https://github.com/Mededdahby/expense-tracker",
       technologies: ["React", "Redux", "JavaScript"],
     },
     {
@@ -54,7 +54,7 @@ export default function Projects() {
       description:
         "A React web app helping users discover and learn exercises for every body part with detailed info and videos.",
       liveUrl: "https://fitness-explorer.vercel.app",
-      sourceUrl: "https://github.com/mohamededdahby/fitness_App",
+      sourceUrl: "https://github.com/Mededdahby/fitness_App",
       technologies: ["React", "JavaScript", "API Integration"],
     },
   ];
