@@ -1,0 +1,25 @@
+
+> my-v0-project@0.1.0 build C:\Users\HP\dev\MedEDDAHBY_Portfolio
+> next build
+
+  ▲ Next.js 14.2.16
+
+   Creating an optimized production build ...
+
+> Build error occurred
+Error: spawn EPERM
+    at ChildProcess.spawn (node:internal/child_process:421:11)
+    at spawn (node:child_process:796:9)
+    at fork (node:child_process:174:10)
+    at ChildProcessWorker.initialize (C:\Users\HP\dev\MedEDDAHBY_Portfolio\node_modules\.pnpm\next@14.2.16_react-dom@18.3.1_react@18.3.1__react@18.3.1\node_modules\next\dist\compiled\jest-worker\index.js:1:10853)
+    at new ChildProcessWorker (C:\Users\HP\dev\MedEDDAHBY_Portfolio\node_modules\.pnpm\next@14.2.16_react-dom@18.3.1_react@18.3.1__react@18.3.1\node_modules\next\dist\compiled\jest-worker\index.js:1:10741)
+    at WorkerPool.createWorker (C:\Users\HP\dev\MedEDDAHBY_Portfolio\node_modules\.pnpm\next@14.2.16_react-dom@18.3.1_react@18.3.1__react@18.3.1\node_modules\next\dist\compiled\jest-worker\index.js:1:6314)
+    at new BaseWorkerPool (C:\Users\HP\dev\MedEDDAHBY_Portfolio\node_modules\.pnpm\next@14.2.16_react-dom@18.3.1_react@18.3.1__react@18.3.1\node_modules\next\dist\compiled\jest-worker\index.js:1:8173)
+    at new WorkerPool (C:\Users\HP\dev\MedEDDAHBY_Portfolio\node_modules\.pnpm\next@14.2.16_react-dom@18.3.1_react@18.3.1__react@18.3.1\node_modules\next\dist\compiled\jest-worker\index.js:1:6110)
+    at new Worker (C:\Users\HP\dev\MedEDDAHBY_Portfolio\node_modules\.pnpm\next@14.2.16_react-dom@18.3.1_react@18.3.1__react@18.3.1\node_modules\next\dist\compiled\jest-worker\index.js:1:23092)
+    at getWorker (C:\Users\HP\dev\MedEDDAHBY_Portfolio\node_modules\.pnpm\next@14.2.16_react-dom@18.3.1_react@18.3.1__react@18.3.1\node_modules\next\dist\build\webpack-build\index.js:89:25) {
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'spawn'
+}
+ ELIFECYCLE  Command failed with exit code 1.

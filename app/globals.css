@@ -3,20 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 26, 26, 64;
-  --background-start-rgb: 240, 240, 255;
-  --background-end-rgb: 224, 255, 240;
+  --foreground-rgb: 15, 23, 42;
+  --background-start-rgb: 250, 246, 241;
+  --background-end-rgb: 240, 247, 255;
+  --page-bg: #faf7f2;
+  --page-radial-primary: rgba(180, 83, 9, 0.12);
+  --page-radial-secondary: rgba(17, 17, 17, 0.04);
+  --page-grid: rgba(17, 17, 17, 0.035);
 }
 
 .dark {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 10, 10, 32;
-  --background-end-rgb: 26, 26, 64;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom right, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb))) fixed;
+  --foreground-rgb: 248, 250, 252;
+  --background-start-rgb: 2, 6, 23;
+  --background-end-rgb: 15, 23, 42;
+  --page-bg: #0c1014;
+  --page-radial-primary: rgba(217, 119, 6, 0.14);
+  --page-radial-secondary: rgba(255, 255, 255, 0.035);
+  --page-grid: rgba(255, 255, 255, 0.05);
 }
 
 html {
@@ -24,7 +27,31 @@ html {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background:
+    radial-gradient(circle at top left, var(--page-radial-primary), transparent 28%),
+    radial-gradient(circle at top right, var(--page-radial-secondary), transparent 34%),
+    linear-gradient(180deg, var(--page-bg), var(--page-bg)) fixed;
+  font-family: var(--font-sans), sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--page-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--page-grid) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(circle at center, black, transparent 84%);
+  opacity: 0.24;
+  z-index: -1;
+}
+
+::selection {
+  background: rgba(255, 123, 95, 0.28);
+  color: rgb(var(--foreground-rgb));
 }
 
 @layer utilities {
@@ -36,66 +63,76 @@ body {
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 240 30% 20%;
+    --foreground: 222 47% 11%;
     --card: 0 0% 100%;
-    --card-foreground: 240 30% 20%;
+    --card-foreground: 222 47% 11%;
     --popover: 0 0% 100%;
-    --popover-foreground: 240 30% 20%;
-    --primary: 0 85% 70%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 12 100% 68%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 240 30% 96%;
-    --secondary-foreground: 240 30% 20%;
-    --muted: 240 30% 96%;
-    --muted-foreground: 240 30% 40%;
-    --accent: 240 30% 96%;
-    --accent-foreground: 240 30% 20%;
+    --secondary: 220 33% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 220 33% 96%;
+    --muted-foreground: 215 16% 46%;
+    --accent: 220 33% 96%;
+    --accent-foreground: 222 47% 11%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 30% 90%;
-    --input: 240 30% 90%;
-    --ring: 240 30% 20%;
+    --border: 220 26% 90%;
+    --input: 220 26% 90%;
+    --ring: 222 47% 11%;
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 240 10% 3.9%;
+    --background: 222 47% 4%;
     --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
+    --card: 222 47% 4%;
     --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
+    --popover: 222 47% 4%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 85% 70%;
+    --primary: 12 100% 68%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 240 3.7% 15.9%;
+    --secondary: 217 33% 17%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 33% 17%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 215 20% 65%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground theme-transition;
   }
 }
 
-/* Theme transition */
 .theme-transition {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-/* Dark mode styles */
 .dark .theme-toggle-icon {
   transform: rotate(180deg);
 }
 
-/* Theme toggle animation */
 @keyframes theme-fade-in {
   from {
     opacity: 0;
     transform: scale(0.9);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -106,20 +143,12 @@ body {
   animation: theme-fade-in 0.3s ease forwards;
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground theme-transition;
-  }
-}
-
 @keyframes bounce {
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(10px);
   }
@@ -130,16 +159,35 @@ body {
 }
 
 @layer components {
+  .font-display {
+    font-family: var(--font-display), serif;
+  }
+
+  .font-roman {
+    font-family: var(--font-roman), serif;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center rounded-full border border-[#111111]/10 bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#334155] shadow-sm shadow-slate-900/5 backdrop-blur dark:border-white/10 dark:bg-white/5 dark:text-slate-300;
+  }
+
+  .section-copy {
+    @apply text-base leading-8 text-[#334155] dark:text-slate-300;
+  }
+
+  .panel-surface {
+    @apply border border-[#111111]/10 bg-white/80 shadow-[0_30px_80px_-36px_rgba(17,17,17,0.16)] backdrop-blur-xl dark:border-white/10 dark:bg-[#141a1f]/80 dark:shadow-[0_30px_80px_-36px_rgba(0,0,0,0.7)];
+  }
+
   .h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#1a1a40] dark:text-white;
+    @apply font-display text-4xl font-semibold tracking-[-0.05em] text-[#111111] sm:text-5xl md:text-6xl lg:text-7xl dark:text-white;
   }
 
   .subtitle {
-    @apply text-[#4a4a80] dark:text-gray-300;
+    @apply text-[#334155] dark:text-slate-300;
   }
 }
 
-/* Print styles */
 @media print {
   body * {
     visibility: hidden;

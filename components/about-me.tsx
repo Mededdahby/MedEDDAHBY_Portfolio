@@ -1,10 +1,9 @@
 "use client";
 
-import { useState, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
 import {
-  GraduationCap,
   User,
   Phone,
   Mail,
@@ -14,51 +13,48 @@ import {
   Code,
   Terminal,
   GitBranch,
-  Printer,
-  Download,
 } from "lucide-react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 
 export default function AboutMe() {
-  const [activeTab, setActiveTab] = useState("personal");
-  const [isPrintView, setIsPrintView] = useState(false);
-  const printableRef = useRef<HTMLDivElement>(null);
-  const sectionRef = useRef(null);
+  const [activeTab, setActiveTab] = useState<
+    "personal" | "qualifications" | "skills"
+  >("personal");
+  const easeOut = [0.22, 1, 0.36, 1] as const;
 
   // Animation variants
-  const fadeIn = {
-    hidden: { opacity: 1, y: 0 },
+  const fadeIn: Variants = {
+    hidden: { opacity: 0, y: 20 },
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
       transition: {
         delay: i * 0.1,
         duration: 0.5,
-        ease: "easeOut",
+        ease: easeOut,
       },
     }),
   };
 
-  const tabVariants = {
+  const tabVariants: Variants = {
     inactive: { scale: 1 },
     active: { scale: 1.02 },
     hover: { scale: 1.05 },
   };
 
-  const blobVariants = {
+  const blobVariants: Variants = {
     hidden: { scale: 0.8, opacity: 0 },
     visible: {
       scale: 1,
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: easeOut,
       },
     },
   };
 
-  const listItemVariants = {
+  const listItemVariants: Variants = {
     hidden: { opacity: 0, x: -20 },
     visible: (i: number) => ({
       opacity: 1,
@@ -66,7 +62,7 @@ export default function AboutMe() {
       transition: {
         delay: i * 0.1,
         duration: 0.5,
-        ease: "easeOut",
+        ease: easeOut,
       },
     }),
   };
@@ -75,27 +71,27 @@ export default function AboutMe() {
   const skillCategories = [
     {
       name: "Databases",
-      icon: <Database className="text-[#ff6b6b]" size={20} />,
+      icon: <Database className="text-[#B45309]" size={20} />,
       skills: ["MongoDB", "MySQL", "PostgreSQL", "Convex"],
     },
     {
       name: "Frameworks",
-      icon: <Code className="text-[#ff6b6b]" size={20} />,
+      icon: <Code className="text-[#B45309]" size={20} />,
       skills: ["Next.js", "React", "React Native", "JEE", "Express.js"],
     },
     {
       name: "Programming Languages",
-      icon: <Terminal className="text-[#ff6b6b]" size={20} />,
+      icon: <Terminal className="text-[#B45309]" size={20} />,
       skills: ["JavaScript", "TypeScript", "Java", "C", "C++", "Python"],
     },
     {
       name: "Styling",
-      icon: <Terminal className="text-[#ff6b6b]" size={20} />,
+      icon: <Terminal className="text-[#B45309]" size={20} />,
       skills: ["Css", "Tailwinds", "shadcnUI", "Bootstrap", "Material UI"],
     },
     {
       name: "Tools",
-      icon: <GitBranch className="text-[#ff6b6b]" size={20} />,
+      icon: <GitBranch className="text-[#B45309]" size={20} />,
       skills: ["Git", "GitHub", "GitLab", "Prisma", "Postman", "Figma"],
     },
   ];
@@ -122,12 +118,11 @@ export default function AboutMe() {
   return (
     <section
       id="about"
-      ref={sectionRef}
-      className="py-20 bg-gradient-to-br from-[#fafafa] to-[#ffffff] dark:from-[#0a0a20] dark:to-[#1a1a40] px-4 md:px-8 lg:px-16 relative overflow-hidden"
+      className="relative overflow-hidden bg-[#FAF7F2] px-4 py-20 dark:bg-[#0C1014] md:px-8 lg:px-16"
     >
       {/* Background decorative elements */}
-      <div className="absolute top-20 left-[10%] w-16 h-16 bg-purple-300/20 dark:bg-purple-500/10 rounded-full blur-xl"></div>
-      <div className="absolute bottom-20 right-[10%] w-24 h-24 bg-blue-300/20 dark:bg-blue-500/10 rounded-full blur-xl"></div>
+      <div className="absolute top-20 left-[10%] h-16 w-16 rounded-full bg-[#B45309]/8 blur-xl dark:bg-[#D97706]/14"></div>
+      <div className="absolute bottom-20 right-[10%] h-24 w-24 rounded-full bg-[#111111]/4 blur-xl dark:bg-white/5"></div>
 
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-center mb-12">
@@ -136,10 +131,10 @@ export default function AboutMe() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-3 px-6 py-2 bg-gradient-to-r from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/10 rounded-lg"
+            className="inline-flex items-center gap-3 rounded-lg border border-[#111111]/10 bg-white/80 px-6 py-2 dark:border-white/10 dark:bg-white/5"
           >
-            <div className="w-3 h-3 rounded-full bg-[#ff6b6b] shadow-sm shadow-[#ff6b6b]/30"></div>
-            <h2 className="text-3xl font-bold text-gray-800 dark:text-white">
+            <div className="h-3 w-3 rounded-full bg-[#B45309] shadow-sm shadow-[#B45309]/20"></div>
+            <h2 className="text-3xl font-bold text-[#111111] dark:text-white">
               About me
             </h2>
           </motion.div>
@@ -185,7 +180,7 @@ export default function AboutMe() {
               </div>
 
               {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#ff6b6b]/10 to-transparent mix-blend-normal"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#B45309]/10 to-transparent mix-blend-normal"></div>
 
               {/* Inner decorative elements */}
               <motion.div
@@ -198,7 +193,7 @@ export default function AboutMe() {
                   ease: "linear",
                   repeat: Number.POSITIVE_INFINITY,
                 }}
-                className="absolute top-[20%] left-[30%] w-20 h-20 bg-white/10 rounded-[40%_60%_60%_40%/60%_30%_70%_40%] backdrop-blur-[2px]"
+                className="absolute top-[20%] left-[30%] w-20 h-20 rounded-[40%_60%_60%_40%/60%_30%_70%_40%] bg-white/10 backdrop-blur-[2px] dark:bg-white/5"
               />
               <motion.div
                 animate={{
@@ -210,7 +205,7 @@ export default function AboutMe() {
                   ease: "linear",
                   repeat: Number.POSITIVE_INFINITY,
                 }}
-                className="absolute bottom-[25%] right-[20%] w-16 h-16 bg-white/5 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] backdrop-blur-[2px]"
+                className="absolute bottom-[25%] right-[20%] h-16 w-16 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] bg-white/5 backdrop-blur-[2px] dark:bg-white/10"
               />
             </motion.div>
 
@@ -230,7 +225,7 @@ export default function AboutMe() {
                 repeat: Number.POSITIVE_INFINITY,
                 repeatType: "loop",
               }}
-              className="absolute w-[420px] h-[420px] border-2 border-dashed border-pink-300/40 dark:border-pink-500/20 backdrop-blur-sm"
+              className="absolute h-[420px] w-[420px] border-2 border-dashed border-[#B45309]/20 backdrop-blur-sm dark:border-[#D97706]/25"
             />
           </motion.div>
 
@@ -240,7 +235,7 @@ export default function AboutMe() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-white/80 dark:bg-white/5 backdrop-blur-sm rounded-[20px] p-1.5 inline-flex mb-8 w-full max-w-md shadow-lg shadow-pink-200/20 dark:shadow-pink-900/10"
+              className="mb-8 inline-flex w-full max-w-md rounded-[20px] border border-[#111111]/10 bg-white/80 p-1.5 backdrop-blur-sm shadow-lg shadow-black/5 dark:border-white/10 dark:bg-white/5 dark:shadow-black/40"
             >
               <motion.button
                 variants={tabVariants}
@@ -251,8 +246,8 @@ export default function AboutMe() {
                 className={cn(
                   "flex-1 px-6 py-3 rounded-[16px] text-sm font-medium transition-all",
                   activeTab === "personal"
-                    ? "bg-gradient-to-r from-[#ff6b6b] to-[#ff8a9d] text-white shadow-md"
-                    : "text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white"
+                    ? "bg-[#111111] text-white shadow-md dark:bg-white dark:text-[#111111]"
+                    : "text-[#334155] hover:text-[#B45309] dark:text-slate-300 dark:hover:text-[#D97706]"
                 )}
               >
                 Personal info
@@ -266,8 +261,8 @@ export default function AboutMe() {
                 className={cn(
                   "flex-1 px-6 py-3 rounded-[16px] text-sm font-medium transition-all",
                   activeTab === "qualifications"
-                    ? "bg-gradient-to-r from-[#ff6b6b] to-[#ff8a9d] text-white shadow-md"
-                    : "text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white"
+                    ? "bg-[#111111] text-white shadow-md dark:bg-white dark:text-[#111111]"
+                    : "text-[#334155] hover:text-[#B45309] dark:text-slate-300 dark:hover:text-[#D97706]"
                 )}
               >
                 Educations
@@ -281,8 +276,8 @@ export default function AboutMe() {
                 className={cn(
                   "flex-1 px-6 py-3 rounded-[16px] text-sm font-medium transition-all",
                   activeTab === "skills"
-                    ? "bg-gradient-to-r from-[#ff6b6b] to-[#ff8a9d] text-white shadow-md"
-                    : "text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white"
+                    ? "bg-[#111111] text-white shadow-md dark:bg-white dark:text-[#111111]"
+                    : "text-[#334155] hover:text-[#B45309] dark:text-slate-300 dark:hover:text-[#D97706]"
                 )}
               >
                 Skills
@@ -304,7 +299,7 @@ export default function AboutMe() {
                     variants={fadeIn}
                     initial="hidden"
                     animate="visible"
-                    className="text-3xl font-bold text-gray-800 dark:text-white mb-4"
+                    className="mb-4 text-3xl font-bold text-[#111111] dark:text-white"
                   >
                     Unmatched Service Quality for Over 3 Years
                   </motion.h2>
@@ -314,11 +309,12 @@ export default function AboutMe() {
                     variants={fadeIn}
                     initial="hidden"
                     animate="visible"
-                    className="text-gray-600 dark:text-gray-300 mb-6"
+                    className="mb-6 text-[#334155] dark:text-slate-300"
                   >
                     I specialize in crafting intuitive websites with a focus on
-                    user experience and user interface design, delivering a
-                    seamless experience for your customers.
+                    user experience, interface systems, and workflow
+                    automation that turns repeated tasks into cleaner product
+                    flows.
                   </motion.p>
 
                   <div className="space-y-4">
@@ -330,10 +326,10 @@ export default function AboutMe() {
                       className="flex items-center gap-4"
                       whileHover={{ x: 5, transition: { duration: 0.2 } }}
                     >
-                      <div className="w-10 h-10 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center shadow-sm">
-                        <User className="text-[#ff6b6b]" size={18} />
+                      <div className="flex h-10 w-10 items-center justify-center rounded-[30%_70%_70%_30%/30%_30%_70%_70%] bg-[#F3EEE6] shadow-sm dark:bg-white/10">
+                        <User className="text-[#B45309]" size={18} />
                       </div>
-                      <span className="text-gray-800 dark:text-white">
+                      <span className="text-[#111111] dark:text-white">
                         Mohamed EDDAHBY
                       </span>
                     </motion.div>
@@ -346,10 +342,10 @@ export default function AboutMe() {
                       className="flex items-center gap-4"
                       whileHover={{ x: 5, transition: { duration: 0.2 } }}
                     >
-                      <div className="w-10 h-10 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center shadow-sm rotate-12">
-                        <Phone className="text-[#ff6b6b]" size={18} />
+                      <div className="flex h-10 w-10 rotate-12 items-center justify-center rounded-[30%_70%_70%_30%/30%_30%_70%_70%] bg-[#F3EEE6] shadow-sm dark:bg-white/10">
+                        <Phone className="text-[#B45309]" size={18} />
                       </div>
-                      <span className="text-gray-800 dark:text-white">
+                      <span className="text-[#111111] dark:text-white">
                         +212 653 7604 74
                       </span>
                     </motion.div>
@@ -362,10 +358,10 @@ export default function AboutMe() {
                       className="flex items-center gap-4"
                       whileHover={{ x: 5, transition: { duration: 0.2 } }}
                     >
-                      <div className="w-10 h-10 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center shadow-sm -rotate-12">
-                        <Mail className="text-[#ff6b6b]" size={18} />
+                      <div className="flex h-10 w-10 -rotate-12 items-center justify-center rounded-[30%_70%_70%_30%/30%_30%_70%_70%] bg-[#F3EEE6] shadow-sm dark:bg-white/10">
+                        <Mail className="text-[#B45309]" size={18} />
                       </div>
-                      <span className="text-gray-800 dark:text-white">
+                      <span className="text-[#111111] dark:text-white">
                         eddahby.contact@gmail.com
                       </span>
                     </motion.div>
@@ -378,10 +374,10 @@ export default function AboutMe() {
                       className="flex items-center gap-4"
                       whileHover={{ x: 5, transition: { duration: 0.2 } }}
                     >
-                      <div className="w-10 h-10 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center shadow-sm rotate-6">
-                        <Award className="text-[#ff6b6b]" size={18} />
+                      <div className="flex h-10 w-10 rotate-6 items-center justify-center rounded-[30%_70%_70%_30%/30%_30%_70%_70%] bg-[#F3EEE6] shadow-sm dark:bg-white/10">
+                        <Award className="text-[#B45309]" size={18} />
                       </div>
-                      <span className="text-gray-800 dark:text-white">
+                      <span className="text-[#111111] dark:text-white">
                         Bachelor in Computer Systems and Software Engineering
                       </span>
                     </motion.div>
@@ -394,10 +390,10 @@ export default function AboutMe() {
                       className="flex items-center gap-4"
                       whileHover={{ x: 5, transition: { duration: 0.2 } }}
                     >
-                      <div className="w-10 h-10 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center shadow-sm -rotate-6">
-                        <MapPin className="text-[#ff6b6b]" size={18} />
+                      <div className="flex h-10 w-10 -rotate-6 items-center justify-center rounded-[30%_70%_70%_30%/30%_30%_70%_70%] bg-[#F3EEE6] shadow-sm dark:bg-white/10">
+                        <MapPin className="text-[#B45309]" size={18} />
                       </div>
-                      <span className="text-gray-800 dark:text-white">
+                      <span className="text-[#111111] dark:text-white">
                         Kelaat M'Gouna, Tinghir, morocco
                       </span>
                     </motion.div>
@@ -410,7 +406,7 @@ export default function AboutMe() {
                     animate="visible"
                     className="mt-8"
                   >
-                    <h3 className="text-[#ff6b6b] font-medium mb-2">
+                    <h3 className="mb-2 font-medium text-[#B45309]">
                       Language Skill
                     </h3>
                     <div className="flex flex-wrap gap-2">
@@ -421,7 +417,7 @@ export default function AboutMe() {
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: 0.7 + index * 0.1 }}
-                            className="px-3 py-1 bg-pink-100 dark:bg-pink-900/20 text-gray-800 dark:text-white rounded-[10px_20px_20px_10px] text-sm"
+                            className="rounded-[10px_20px_20px_10px] bg-[#F3EEE6] px-3 py-1 text-sm text-[#111111] dark:bg-white/10 dark:text-white"
                           >
                             {lang}
                           </motion.span>
@@ -444,12 +440,12 @@ export default function AboutMe() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="text-3xl font-bold text-gray-800 dark:text-white mb-6"
+                    className="mb-6 text-3xl font-bold text-[#111111] dark:text-white"
                   >
                     My Awesome Journey
                   </motion.h2>
 
-                  <div className="relative pl-6 border-l-2 border-gradient-to-b from-[#ff6b6b] to-[#ff8a9d]/30">
+                  <div className="relative border-l-2 border-[#B45309]/30 pl-6 dark:border-[#D97706]/40">
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -460,7 +456,7 @@ export default function AboutMe() {
                         <GraduationCap className="text-[#ff6b6b]" size={18} />
                       </div> */}
                       <div>
-                        <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
+                        <h3 className="text-xl font-semibold text-[#111111] dark:text-white">
                           Education
                         </h3>
                       </div>
@@ -479,7 +475,7 @@ export default function AboutMe() {
                         >
                           {/* Blob Icon */}
                           <motion.div
-                            className="absolute left-[-12px] top-2 w-5 h-5 bg-gradient-to-br from-[#ff6b6b] to-[#ff8a9d]"
+                            className="absolute left-[-12px] top-2 h-5 w-5 bg-gradient-to-br from-[#111111] to-[#B45309]"
                             style={{
                               borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%",
                               rotate: `${index * 15}deg`,
@@ -492,13 +488,13 @@ export default function AboutMe() {
                           />
 
                           {/* Content */}
-                          <h4 className="text-lg font-medium text-gray-800 dark:text-white">
+                          <h4 className="text-lg font-medium text-[#111111] dark:text-white">
                             {item.degree}
                           </h4>
-                          <p className="text-gray-600 dark:text-gray-300">
+                          <p className="text-[#334155] dark:text-slate-300">
                             {item.school}
                           </p>
-                          <p className="text-gray-500 dark:text-gray-400 mt-1">
+                          <p className="mt-1 text-slate-500 dark:text-slate-400">
                             {item.year}
                           </p>
                         </motion.div>
@@ -522,7 +518,7 @@ export default function AboutMe() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5 }}
-                      className="text-3xl font-bold text-gray-800 dark:text-white"
+                      className="text-3xl font-bold text-[#111111] dark:text-white"
                     >
                       My Skills
                     </motion.h2>
@@ -561,14 +557,14 @@ export default function AboutMe() {
                       >
                         <div className="flex items-center gap-3">
                           <div
-                            className="w-8 h-8 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center shadow-sm"
+                            className="flex h-8 w-8 items-center justify-center rounded-[30%_70%_70%_30%/30%_30%_70%_70%] bg-[#F3EEE6] shadow-sm dark:bg-white/10"
                             style={{
                               transform: `rotate(${categoryIndex * 10}deg)`,
                             }}
                           >
                             {category.icon}
                           </div>
-                          <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
+                          <h3 className="text-xl font-semibold text-[#111111] dark:text-white">
                             {category.name}
                           </h3>
                         </div>
@@ -582,10 +578,10 @@ export default function AboutMe() {
                               transition={{ delay: 0.2 + skillIndex * 0.05 }}
                               whileHover={{
                                 scale: 1.05,
-                                backgroundColor: "rgba(255, 107, 107, 0.2)",
+                                backgroundColor: "rgba(180, 83, 9, 0.14)",
                                 transition: { duration: 0.2 },
                               }}
-                              className="px-4 py-2 bg-white dark:bg-gray-800/50 rounded-lg shadow-sm text-gray-800 dark:text-white text-sm font-medium"
+                              className="rounded-lg bg-white px-4 py-2 text-sm font-medium text-[#111111] shadow-sm dark:bg-white/10 dark:text-white"
                             >
                               {skill}
                             </motion.div>

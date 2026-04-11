@@ -2,384 +2,160 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Download } from "lucide-react";
 import CountUp from "react-countup";
-import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef } from "react";
+import { Download, Github, Linkedin, Mail } from "lucide-react";
 
-import {
-  RiBriefcase4Fill,
-  RiTeamFill,
-  RiTodoFill,
-  RiArrowDownSLine,
-  RiLinkedinFill,
-  RiGithubFill,
-  RiInstagramFill,
-  RiTelegramFill,
-  RiCloseLine,
-  RiSendPlaneFill,
-} from "react-icons/ri";
-import Galaxy from "@/src/blocks/Backgrounds/Galaxy/Galaxy";
-
-const socialIcons = [
-  { path: "https://linkedin.com/in/mohamed-eddahby", name: <RiLinkedinFill /> },
-  { path: "https://github.com/mohamededdahby", name: <RiGithubFill /> },
-  { path: "https://instagram.com", name: <RiInstagramFill /> },
-  { path: "https://telegram.org", name: <RiTelegramFill /> },
+const stats = [
+  { label: "Years building", value: 4, suffix: "+" },
+  { label: "Projects shipped", value: 38, suffix: "+" },
+  { label: "Clients served", value: 9, suffix: "+" },
 ];
 
-const Hero = () => {
-  const statsRef = useRef(null);
-  const isInView = useInView(statsRef, { once: true, amount: 0.3 });
-  const [isHovering, setIsHovering] = useState(false);
-  const [isClicked, setIsClicked] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+const socials = [
+  {
+    label: "GitHub",
+    href: "https://github.com/Mededdahby",
+    icon: Github,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com/in/mohamed-eddahby-b10721231",
+    icon: Linkedin,
+  },
+  {
+    label: "Email",
+    href: "mailto:eddahby.contact@gmail.com",
+    icon: Mail,
+  },
+];
 
-  const handleImageClick = () => {
-    setIsClicked(true);
-
-    // Reset the click animation after it completes
-    setTimeout(() => {
-      setIsClicked(false);
-      setIsExpanded(true);
-    }, 800);
-  };
-
-  const closeExpandedView = () => {
-    setIsExpanded(false);
-  };
+export default function Hero() {
+  const statsRef = useRef<HTMLDivElement>(null);
+  const inView = useInView(statsRef, { once: true, amount: 0.35 });
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#f0f0ff] to-[#e0fff0] dark:from-[#0a0a20] dark:to-[#1a1a40] pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-br from-[#fafafa] to-[#ffffff] opacity-50 dark:from-[#0a0a20] dark:to-[#1a1a40] pointer-events-none" />
-        <Galaxy
-          mouseRepulsion={true}
-          mouseInteraction={true}
-          density={2}
-          glowIntensity={0.2}
-          saturation={0.8}
-          hueShift={340}
-        />
-      </div>
-      <div className="container mx-auto px-4 md:px-8 lg:px-16 items-center justify-center">
-        <div className="flex justify-between gap-x-8">
-          <div className="flex max-w-[630px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-2xl uppercase font-semibold mb-4 text-[#ff6b6b] dark:text-[#ff6b6b] tracking-[4px]"
-            >
-              WEB DEVELOPER
-            </motion.div>
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-[#1a1a40] dark:text-white"
-            >
-              Hello, my name is Mohamed EDDAHBY
-            </motion.h1>
+    <section className="bg-[#FAF7F2] px-4 pb-16 pt-28 text-[#111111] dark:bg-[#0C1014] dark:text-white md:px-8 md:pb-24 md:pt-32 lg:px-16">
+      <div className="mx-auto grid min-h-[85vh] max-w-7xl gap-14 xl:grid-cols-[1.05fr,0.95fr] xl:items-center">
+        <div className="max-w-3xl">
+          <p className="text-[11px] tracking-[0.28em] text-[#334155] dark:text-slate-300 sm:text-sm">
+            FULL-STACK DEVELOPER
+          </p>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-[#4a4a80] dark:text-gray-300 mb-8 max-w-[490px] mx-auto xl:mx-0 font-serif font-bold"
-            >
-              Brief description with insights into myself, my vocational
-              journey, and what I engage in professionally.
-            </motion.p>
+          <h1 className="mt-6 font-display text-[3.35rem] leading-[0.94] tracking-[-0.06em] sm:mt-8 sm:text-[5rem] lg:text-[6.4rem]">
+            Building products
+            <span className="block text-[#B45309] italic">with intent.</span>
+          </h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12"
+          <p className="mt-8 max-w-2xl text-[1.02rem] leading-8 text-[#334155] dark:text-slate-300 sm:mt-10 sm:text-[1.15rem] sm:leading-9">
+            I design and engineer software that solves real problems with clean
+            code, thoughtful interfaces, and a bias toward shipping.
+          </p>
+
+          <div className="mt-10 flex flex-col gap-4 sm:mt-12 sm:flex-row sm:items-center">
+            <a
+              href="/cv/mededdahby.pdf"
+              download
+              className="inline-flex min-h-14 items-center justify-center gap-2 bg-[#111111] px-6 py-4 text-sm tracking-[0.12em] text-white transition hover:bg-[#B45309] dark:bg-white dark:text-[#111111] dark:hover:bg-[#D97706] dark:hover:text-white"
             >
-              <Link href="/contacts">
-                <button className="flex items-center justify-center gap-2 bg-[#FF7B5F] hover:bg-[#ff6a4a] text-white py-3 px-6 rounded-full w-full md:w-auto transition-all">
-                  <RiSendPlaneFill className="text-lg" />
-                  <span>Contact me</span>
-                </button>
+              DOWNLOAD CV
+              <Download className="h-4 w-4" />
+            </a>
+
+            <Link
+              href="/projects"
+              className="inline-flex min-h-14 items-center justify-center border border-[#111111]/15 px-6 py-4 text-sm tracking-[0.12em] text-[#334155] transition hover:border-[#B45309] hover:text-[#B45309] dark:border-white/10 dark:text-slate-300 dark:hover:border-[#D97706] dark:hover:text-[#D97706]"
+            >
+              VIEW WORK
+            </Link>
+          </div>
+
+          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4 sm:mt-10">
+            {socials.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                target={item.href.startsWith("http") ? "_blank" : undefined}
+                rel={item.href.startsWith("http") ? "noreferrer" : undefined}
+                className="inline-flex items-center gap-3 text-sm tracking-[0.12em] text-[#334155] transition hover:text-[#B45309] dark:text-slate-300 dark:hover:text-[#D97706]"
+              >
+                <item.icon className="h-4 w-4" />
+                {item.label}
               </Link>
-              <a href="/cv/mededdahby.pdf" download>
-                <button className="flex items-center justify-center gap-2 bg-[#1E1A2F] hover:bg-[#2a2640] text-white py-3 px-6 rounded-full w-full md:w-auto transition-all">
-                  <span>Download CV</span>
-                  <Download size={18} />
-                </button>
-              </a>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="flex gap-x-6 mx-auto xl:mx-0 mt-2 justify-center xl:justify-start"
-            >
-              {socialIcons.map((icon, index) => {
-                return (
-                  <Link href={icon.path} key={index}>
-                    <motion.div
-                      className="text-[#1a1a40] dark:text-white text-[32px] hover:text-[#ff6b6b] dark:hover:text-[#ff6b6b] transition-all"
-                      whileHover={{
-                        scale: 1.2,
-                        rotate: [0, 10, -10, 0],
-                        transition: { duration: 0.5 },
-                      }}
-                    >
-                      {icon.name}
-                    </motion.div>
-                  </Link>
-                );
-              })}
-            </motion.div>
-          </div>
-
-          {/* Right side with blob, image and stats - Styled to match About section */}
-          <div
-            ref={statsRef}
-            className="hidden lg:flex items-center justify-center relative w-[600px]"
-          >
-            {/* Container to center everything */}
-            <div className="relative flex items-center justify-center w-[380px] h-[380px]">
-              {/* Main blob with image - Matching the About section styling */}
-              <motion.div
-                animate={{
-                  borderRadius: [
-                    "60% 40% 30% 70% / 60% 30% 70% 40%",
-                    "30% 60% 70% 40% / 50% 60% 30% 60%",
-                    "60% 40% 30% 70% / 60% 30% 70% 40%",
-                  ],
-                }}
-                transition={{
-                  duration: 8,
-                  ease: "easeInOut",
-                  repeat: Number.POSITIVE_INFINITY,
-                  repeatType: "reverse",
-                }}
-                className="w-[380px] h-[380px] relative overflow-hidden shadow-lg bg-gradient-to-br from-[#ffcdb2] to-[#ff8a9d] dark:from-[#2d2d5b] dark:to-[#3d2d4b]"
-                style={{
-                  borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
-                }}
-              >
-                {/* Image container */}
-                <div
-                  className="absolute inset-0 w-full h-full z-[100] cursor-pointer"
-                  onClick={handleImageClick}
-                >
-                  <Image
-                    src="/images/hero-image.jpeg"
-                    alt="Mohamed Eddahby"
-                    fill
-                    className="object-cover object-center scale-[1.15]"
-                  />
-
-                  {/* Click hint overlay */}
-                </div>
-
-                {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#ff6b6b]/10 to-transparent mix-blend-normal"></div>
-
-                {/* Inner decorative elements - Matching About section */}
-                <motion.div
-                  animate={{
-                    rotate: 360,
-                    scale: [1, 1.1, 1],
-                  }}
-                  transition={{
-                    duration: 20,
-                    ease: "linear",
-                    repeat: Number.POSITIVE_INFINITY,
-                  }}
-                  className="absolute top-[20%] left-[30%] w-20 h-20 bg-white/10 rounded-[40%_60%_60%_40%/60%_30%_70%_40%] backdrop-blur-[2px]"
-                />
-                <motion.div
-                  animate={{
-                    rotate: -360,
-                    scale: [1, 1.2, 1],
-                  }}
-                  transition={{
-                    duration: 15,
-                    ease: "linear",
-                    repeat: Number.POSITIVE_INFINITY,
-                  }}
-                  className="absolute bottom-[25%] right-[20%] w-16 h-16 bg-white/5 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] backdrop-blur-[2px]"
-                />
-              </motion.div>
-
-              {/* Decorative outer rings - Matching About section */}
-              <motion.div
-                animate={{
-                  rotate: [0, 360],
-                  borderRadius: [
-                    "40% 60% 70% 30% / 40% 40% 60% 60%",
-                    "60% 40% 30% 70% / 60% 30% 70% 40%",
-                    "40% 60% 70% 30% / 40% 40% 60% 60%",
-                  ],
-                }}
-                transition={{
-                  duration: 20,
-                  ease: "linear",
-                  repeat: Number.POSITIVE_INFINITY,
-                  repeatType: "loop",
-                }}
-                className="absolute w-[420px] h-[420px] border-2 border-dashed border-pink-300/40 dark:border-pink-500/20 backdrop-blur-sm"
-              />
-
-              {/* 1. Left State - Years of Experience */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={
-                  isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
-                }
-                transition={{ duration: 0.5 }}
-                className="absolute left-[-80px] top-1/2 transform -translate-y-1/2 z-[100]"
-              >
-                <div className="bg-white dark:bg-white/90 rounded-xl shadow-md p-3 flex items-center gap-2 w-[130px]">
-                  <div className="w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center">
-                    <RiBriefcase4Fill className="text-[#ff6b6b] text-lg" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-[#1a1a40] text-xl leading-tight">
-                      {isInView ? (
-                        <CountUp end={4} duration={2} start={0} />
-                      ) : (
-                        "0"
-                      )}
-                    </div>
-                    <div className="text-[#6b6b9f] text-xs leading-tight">
-                      Years Exp.
-                    </div>
-                  </div>
-                </div>
-                {/* Connecting line */}
-                <div className="absolute top-1/2 right-0 w-12 h-[2px] bg-gradient-to-r from-transparent to-pink-300 dark:to-pink-500/70 transform translate-x-[5px] -translate-y-1/2"></div>
-              </motion.div>
-
-              {/* 2. Right State - Projects Completed */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={
-                  isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }
-                }
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="absolute right-[-80px] top-1/2 transform -translate-y-1/2 z-[100]"
-              >
-                <div className="bg-white dark:bg-white/90 rounded-xl shadow-md p-3 flex items-center gap-2 w-[130px]">
-                  <div className="w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center">
-                    <RiTodoFill className="text-[#ff6b6b] text-lg" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-[#1a1a40] text-xl leading-tight">
-                      {isInView ? (
-                        <CountUp end={38} duration={2.5} start={0} />
-                      ) : (
-                        "0"
-                      )}
-                    </div>
-                    <div className="text-[#6b6b9f] text-xs leading-tight">
-                      Projects
-                    </div>
-                  </div>
-                </div>
-                {/* Connecting line */}
-                <div className="absolute top-1/2 left-0 w-12 h-[2px] bg-gradient-to-l from-transparent to-pink-300 dark:to-pink-500/70 transform translate-x-[-5px] -translate-y-1/2"></div>
-              </motion.div>
-
-              {/* 3. Top State - Happy Customers */}
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={
-                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }
-                }
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="absolute top-[-60px] left-1/2 transform -translate-x-1/2 z-[100]"
-              >
-                <div className="bg-white dark:bg-white/90 rounded-xl shadow-md p-3 flex items-center gap-2 w-[130px]">
-                  <div className="w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center">
-                    <RiTeamFill className="text-[#ff6b6b] text-lg" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-[#1a1a40] text-xl leading-tight">
-                      {isInView ? (
-                        <CountUp end={9} duration={3} start={0} />
-                      ) : (
-                        "0"
-                      )}
-                    </div>
-                    <div className="text-[#6b6b9f] text-xs leading-tight">
-                      Customers
-                    </div>
-                  </div>
-                </div>
-                {/* Connecting line */}
-                <div className="absolute bottom-0 left-1/2 w-[2px] h-12 bg-gradient-to-t from-transparent to-pink-300 dark:to-pink-500/70 transform -translate-x-1/2 translate-y-[5px]"></div>
-              </motion.div>
-            </div>
+            ))}
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="hidden md:flex absolute left-1/2 bottom-8 animate-bounce -translate-x-1/2">
-          <RiArrowDownSLine className="text-3xl text-[#ff6b6b]" />
-        </div>
-      </div>
-
-      {/* Expanded image view */}
-      <AnimatePresence>
-        {isExpanded && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4"
-            onClick={closeExpandedView}
-          >
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
-              transition={{ duration: 0.3, type: "spring", stiffness: 200 }}
-              className="relative max-w-4xl w-full bg-white/10 backdrop-blur-md rounded-[20px] overflow-hidden "
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="relative aspect-[3/4] md:aspect-[16/9] w-full z-[1000]">
+        <div ref={statsRef} className="relative">
+          <div className="relative mx-auto max-w-[500px] xl:ml-auto xl:mr-0">
+            <div className="relative overflow-hidden border border-[#111111]/10 bg-[#F3EEE6] dark:border-white/10 dark:bg-[#141a1f]">
+              <div className="relative aspect-[4/5]">
                 <Image
                   src="/images/hero-image.jpeg"
-                  alt="Mohamed Eddahby"
+                  alt="Mohamed Eddahby portrait"
                   fill
-                  sizes="(max-width: 768px) 100vw, 800px"
+                  priority
+                  sizes="(max-width: 1280px) 100vw, 500px"
                   className="object-cover"
-                  style={{
-                    objectPosition: "center",
-                  }}
                 />
               </div>
+            </div>
 
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-white mb-2">
-                  Mohamed Eddahby
-                </h3>
-                <p className="text-gray-200">Web Developer</p>
+            <div className="mt-4 grid grid-cols-2 gap-3 md:hidden">
+              <div className="border border-[#111111]/10 bg-white px-4 py-4 shadow-[0_18px_40px_-28px_rgba(17,17,17,0.35)] dark:border-white/10 dark:bg-[#141a1f] dark:text-white">
+                <p className="text-[11px] tracking-[0.24em] text-[#334155] dark:text-slate-400">
+                  BASED IN
+                </p>
+                <p className="mt-2 font-display text-xl dark:text-white">Morocco</p>
               </div>
+              <div className="border border-[#111111]/10 bg-[#111111] px-4 py-4 text-white shadow-[0_22px_44px_-30px_rgba(17,17,17,0.7)]">
+                <p className="text-[11px] tracking-[0.24em] text-white/70">
+                  FOCUS
+                </p>
+                <p className="mt-2 font-display text-xl">Full stack</p>
+              </div>
+            </div>
 
-              <button
-                onClick={closeExpandedView}
-                className="absolute top-4 right-4 bg-black/30 text-white p-2 rounded-full hover:bg-black/50 transition-colors"
+            <div className="absolute -left-6 top-8 hidden border border-[#111111]/10 bg-white px-5 py-4 shadow-[0_18px_40px_-28px_rgba(17,17,17,0.35)] dark:border-white/10 dark:bg-[#141a1f] dark:text-white md:block">
+              <p className="text-[11px] tracking-[0.24em] text-[#334155] dark:text-slate-400">
+                BASED IN
+              </p>
+              <p className="mt-2 font-display text-2xl dark:text-white">Morocco</p>
+            </div>
+
+            <div className="absolute -right-6 bottom-10 hidden border border-[#111111]/10 bg-[#111111] px-5 py-4 text-white shadow-[0_22px_44px_-30px_rgba(17,17,17,0.7)] md:block">
+              <p className="text-[11px] tracking-[0.24em] text-white/70">
+                FOCUS
+              </p>
+              <p className="mt-2 font-display text-2xl">Full stack</p>
+            </div>
+          </div>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {stats.map((stat, index) => (
+              <div
+                key={stat.label}
+                className="border border-[#111111]/10 bg-white px-5 py-5 dark:border-white/10 dark:bg-[#141a1f]"
               >
-                <RiCloseLine size={24} />
-              </button>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+                <div className="font-display text-4xl leading-none dark:text-white">
+                  {inView ? (
+                    <>
+                      <CountUp end={stat.value} duration={2} />
+                      {stat.suffix}
+                    </>
+                  ) : (
+                    `0${stat.suffix}`
+                  )}
+                </div>
+                <p className="mt-3 text-sm tracking-[0.08em] text-[#334155] dark:text-slate-400">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
   );
-};
-
-export default Hero;
+}

@@ -6,6 +6,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Loader2, Mail, User, AlertCircle, Shield, Search, Download } from "lucide-react"
 import { Input } from "@/components/ui/input"
 
+declare global {
+  interface Window {
+    gapi: any
+  }
+}
+
 interface Contact {
   name: string
   email: string

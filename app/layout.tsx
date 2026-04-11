@@ -1,27 +1,48 @@
-import type React from "react"
-import "./globals.css"
-import { Inter } from "next/font/google"
-import { ThemeProvider } from "@/components/theme-provider"
-import Navbar from "@/components/navbar"
-// Import the Footer component
-import Footer from "@/components/footer"
+import type { Metadata } from "next";
+import type React from "react";
+import {
+  Bricolage_Grotesque,
+  Cinzel_Decorative,
+  Fraunces,
+} from "next/font/google";
+import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
-const inter = Inter({ subsets: ["latin"] })
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
-export const metadata = {
-  title: "Mohamed Eddahby - Web Developer Portfolio",
-  description: "Professional portfolio showcasing web development projects and skills",
-    generator: 'v0.app'
-}
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-display",
+});
+
+const cinzelDecorative = Cinzel_Decorative({
+  subsets: ["latin"],
+  weight: ["700"],
+  variable: "--font-roman",
+});
+
+export const metadata: Metadata = {
+  title: "Mohamed Eddahby | Full-Stack Developer",
+  description:
+    "Portfolio of Mohamed Eddahby featuring full-stack products, interface work, and practical software projects.",
+  generator: "v0.app",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body
+        className={`${bricolage.variable} ${fraunces.variable} ${cinzelDecorative.variable} min-h-screen antialiased`}
+      >
         <ThemeProvider>
           <Navbar />
           {children}
@@ -29,5 +50,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }

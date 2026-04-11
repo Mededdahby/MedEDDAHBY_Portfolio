@@ -1,126 +1,74 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import SiteLogo from "@/components/site-logo";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { cn } from "@/lib/utils";
+
+const navLinks = [
+  { name: "WORK", href: "/projects" },
+  { name: "ABOUT", href: "/#about" },
+  { name: "CONTACT", href: "/#contact" },
+];
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const pathname = usePathname();
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "Projects", href: "/projects" },
-    { name: "Contact", href: "/contacts" },
-  ];
 
   return (
-    <header
-      className={cn(
-        "fixed top-0 left-0 right-0 z-[1000] transition-all duration-300",
-        isScrolled
-          ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm"
-          : "bg-transparent"
-      )}
-    >
-      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
-        <div className="flex items-center justify-between h-10 md:h-20">
-          <Link
-            href="/"
-            className="font-bold text-xl text-gray-900 dark:text-white"
-          >
-            Mohamed EDDAHBY
-          </Link>
+    <header className="fixed inset-x-0 top-0 z-[1000] bg-[#FAF7F2]/96 px-4 py-5 backdrop-blur-sm dark:bg-[#0C1014]/92 md:px-8 md:py-6 lg:px-16">
+      <div className="mx-auto flex max-w-7xl items-center justify-between">
+        <SiteLogo compact />
 
-          <div className="hidden md:flex items-center space-x-8">
-            <nav className="flex items-center space-x-6">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className={cn(
-                    "text-sm font-serif font-semibold transition-colors hover:text-[#ff6b6b]",
-                    pathname === link.href ||
-                      (pathname === "/" && link.href === "/")
-                      ? "text-[#ff6b6b]"
-                      : isScrolled
-                      ? "text-gray-900 dark:text-white"
-                      : "text-[#1a1a40] dark:text-white"
-                  )}
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </nav>
-            <ThemeToggle />
-          </div>
-
-          <div className="md:hidden flex items-center">
-            <ThemeToggle />
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={toggleMenu}
-              className={cn(
-                "rounded-full ml-2",
-                isScrolled
-                  ? "text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
-                  : "text-[#1a1a40] dark:text-white hover:bg-gray-100/20 dark:hover:bg-white/10"
-              )}
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </Button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 shadow-lg ">
-          <div className="px-4 py-6 space-y-4">
+        <div className="hidden items-center gap-4 md:flex">
+          <nav className="flex items-center gap-8 lg:gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className={cn(
-                  "block text-sm font-medium transition-colors hover:text-[#ff6b6b]",
-                  pathname === link.href ||
-                    (pathname === "/" && link.href === "/")
-                    ? "text-[#ff6b6b]"
-                    : "text-gray-900 dark:text-white"
-                )}
-                onClick={() => setIsMenuOpen(false)}
+                className="text-sm tracking-[0.12em] text-[#334155] transition-colors hover:text-[#B45309] dark:text-slate-300 dark:hover:text-[#D97706]"
               >
                 {link.name}
               </Link>
             ))}
-          </div>
+          </nav>
+          <ThemeToggle />
         </div>
-      )}
+
+        <div className="flex items-center gap-2 md:hidden">
+          <ThemeToggle />
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setIsMenuOpen((current) => !current)}
+            className="rounded-none text-[#111111] hover:bg-transparent hover:text-[#B45309] dark:text-white dark:hover:text-[#D97706]"
+          >
+            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </Button>
+        </div>
+      </div>
+
+      <div
+        className={cn(
+          "mx-auto max-w-7xl overflow-hidden transition-all duration-300 md:hidden",
+          isMenuOpen ? "max-h-48 pt-4" : "max-h-0"
+        )}
+      >
+        <div className="flex flex-col gap-4 border-t border-[#111111]/10 pt-4 dark:border-white/10">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className="py-1 text-sm tracking-[0.12em] text-[#334155] transition-colors hover:text-[#B45309] dark:text-slate-300 dark:hover:text-[#D97706]"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
+      </div>
     </header>
   );
 }

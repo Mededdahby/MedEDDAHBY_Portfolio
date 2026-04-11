@@ -55,15 +55,15 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 bg-gradient-to-br from-[#0a0a20] to-[#21213f] text-white px-4 md:px-8 lg:px-16"
+      className="bg-[#FAF7F2] px-4 py-20 text-[#111111] dark:bg-[#0C1014] dark:text-white md:px-8 lg:px-16"
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-3 mb-4 px-6 py-2 bg-gradient-to-r from-purple-900/30 to-purple-800/20 rounded-lg mx-auto">
-            <div className="w-3 h-3 rounded-full bg-[#ff6b6b] shadow-sm shadow-[#ff6b6b]/30"></div>
-            <h2 className="text-3xl font-bold text-white">Get In Touch</h2>
+          <div className="mx-auto mb-4 inline-flex items-center gap-3 rounded-lg border border-[#111111]/10 bg-white/80 px-6 py-2 dark:border-white/10 dark:bg-white/5">
+            <div className="h-3 w-3 rounded-full bg-[#B45309] shadow-sm shadow-[#B45309]/20"></div>
+            <h2 className="text-3xl font-bold text-[#111111] dark:text-white">Get In Touch</h2>
           </div>
-          <p className="text-gray-300 max-w-3xl font-extrabold mx-auto mt-4">
+          <p className="mx-auto mt-4 max-w-3xl font-semibold text-[#334155] dark:text-slate-300">
             Have a project in mind or want to collaborate? Feel free to reach
             out to me using the form below.
           </p>
@@ -75,34 +75,35 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
+            className="panel-surface rounded-[28px] p-8"
           >
             <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="bg-[#ff6b6b] p-3 rounded-lg">
+                <div className="rounded-lg bg-[#111111] p-3">
                   <Mail className="text-white" size={20} />
                 </div>
                 <div>
                   <h4 className="font-medium text-lg">Email</h4>
-                  <p className="text-gray-300">eddahby.contact@gmail.com</p>
+                  <p className="text-[#334155] dark:text-slate-300">eddahby.contact@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="bg-[#ff6b6b] p-3 rounded-lg">
+                <div className="rounded-lg bg-[#111111] p-3">
                   <Phone className="text-white" size={20} />
                 </div>
                 <div>
                   <h4 className="font-medium text-lg">Phone</h4>
-                  <p className="text-gray-300">+212 653 7604 74</p>
+                  <p className="text-[#334155] dark:text-slate-300">+212 653 7604 74</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="bg-[#ff6b6b] p-3 rounded-lg">
+                <div className="rounded-lg bg-[#111111] p-3">
                   <MapPin className="text-white" size={20} />
                 </div>
                 <div>
                   <h4 className="font-medium text-lg">Location</h4>
-                  <p className="text-gray-300">
+                  <p className="text-[#334155] dark:text-slate-300">
                     Kelaat M'Gouna, Tinghir, Morocco
                   </p>
                 </div>
@@ -115,6 +116,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
+            className="panel-surface rounded-[28px] p-8"
           >
             <form
               id="contact-form"
@@ -135,7 +137,7 @@ export default function Contact() {
                     placeholder="John Doe"
                     required
                     disabled={isSubmitting}
-                    className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-[#ff6b6b] focus:ring-[#ff6b6b]"
+                    className="border-[#111111]/12 bg-white text-[#111111] placeholder:text-[#334155]/70 focus:border-[#B45309] focus:ring-[#B45309] dark:border-white/10 dark:bg-[#10151b] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#D97706]"
                   />
                 </div>
                 <div>
@@ -152,7 +154,7 @@ export default function Contact() {
                     placeholder="john@example.com"
                     required
                     disabled={isSubmitting}
-                    className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-[#ff6b6b] focus:ring-[#ff6b6b]"
+                    className="border-[#111111]/12 bg-white text-[#111111] placeholder:text-[#334155]/70 focus:border-[#B45309] focus:ring-[#B45309] dark:border-white/10 dark:bg-[#10151b] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#D97706]"
                   />
                 </div>
               </div>
@@ -169,7 +171,7 @@ export default function Contact() {
                   placeholder="Project Inquiry"
                   required
                   disabled={isSubmitting}
-                  className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-[#ff6b6b] focus:ring-[#ff6b6b]"
+                  className="border-[#111111]/12 bg-white text-[#111111] placeholder:text-[#334155]/70 focus:border-[#B45309] focus:ring-[#B45309] dark:border-white/10 dark:bg-[#10151b] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#D97706]"
                 />
               </div>
               <div>
@@ -186,7 +188,7 @@ export default function Contact() {
                   rows={5}
                   required
                   disabled={isSubmitting}
-                  className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-[#ff6b6b] focus:ring-[#ff6b6b] resize-none"
+                  className="resize-none border-[#111111]/12 bg-white text-[#111111] placeholder:text-[#334155]/70 focus:border-[#B45309] focus:ring-[#B45309] dark:border-white/10 dark:bg-[#10151b] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#D97706]"
                 />
               </div>
 
@@ -195,8 +197,8 @@ export default function Contact() {
                 <div
                   className={`text-sm flex items-start gap-2 p-3 rounded-lg ${
                     submitResult.success
-                      ? "bg-green-500/20 text-green-200 border border-green-500/30"
-                      : "bg-red-500/20 text-red-200 border border-red-500/30"
+                      ? "border border-green-500/30 bg-green-500/10 text-green-800"
+                      : "border border-red-500/30 bg-red-500/10 text-red-700"
                   }`}
                   role="alert"
                 >
@@ -212,7 +214,7 @@ export default function Contact() {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-[#ff6b6b] hover:bg-[#ff5252] text-white w-full disabled:opacity-70 disabled:cursor-not-allowed"
+                className="w-full bg-[#111111] text-white hover:bg-[#B45309] disabled:cursor-not-allowed disabled:opacity-70 dark:bg-white dark:text-[#111111] dark:hover:bg-[#D97706] dark:hover:text-white"
               >
                 {isSubmitting ? (
                   <>
