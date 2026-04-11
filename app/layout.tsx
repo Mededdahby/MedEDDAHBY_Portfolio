@@ -31,6 +31,10 @@ export const metadata: Metadata = {
   description:
     "Portfolio of Mohamed Eddahby featuring full-stack products, interface work, and practical software projects.",
   generator: "v0.app",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({

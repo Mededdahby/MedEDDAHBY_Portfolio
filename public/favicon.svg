@@ -1,0 +1,22 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="256"
+  height="256"
+  viewBox="0 0 256 256"
+  fill="none"
+>
+  <rect width="256" height="256" rx="64" fill="#000000" />
+  <text
+    x="50%"
+    y="54%"
+    fill="#FFFFFF"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="88"
+    font-weight="700"
+    letter-spacing="4"
+    text-anchor="middle"
+    dominant-baseline="middle"
+  >
+    Med
+  </text>
+</svg>
