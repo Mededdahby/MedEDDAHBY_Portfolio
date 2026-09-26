@@ -46,7 +46,7 @@ body::before {
   background-size: 32px 32px;
   mask-image: radial-gradient(circle at center, black, transparent 84%);
   opacity: 0.24;
-  z-index: -1;
+  z-index: 0;
 }
 
 ::selection {
@@ -156,6 +156,102 @@ body::before {
 
 .animate-bounce {
   animation: bounce 2s infinite ease-in-out;
+}
+
+.project-cube-stage {
+  position: relative;
+  display: grid;
+  height: 360px;
+  place-items: center;
+  perspective: 1100px;
+  perspective-origin: 50% 42%;
+  touch-action: pan-y;
+}
+
+.project-cube-stage::before {
+  position: absolute;
+  z-index: -1;
+  bottom: 58px;
+  left: 50%;
+  width: min(72%, 340px);
+  height: 42px;
+  border-radius: 999px;
+  background: radial-gradient(ellipse, rgba(111, 72, 35, 0.3) 0%, rgba(180, 83, 9, 0.13) 40%, transparent 74%);
+  filter: blur(10px);
+  content: "";
+  pointer-events: none;
+  transform: translateX(-50%) scaleY(0.72);
+}
+
+.dark .project-cube-stage::before {
+  background: radial-gradient(ellipse, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0.34) 44%, transparent 74%);
+  filter: blur(13px);
+}
+
+.project-cube {
+  position: relative;
+  z-index: 1;
+  top: -40px;
+  height: 256px;
+  width: 256px;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.project-cube-face {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border: 1px solid rgba(17, 17, 17, 0.13);
+  border-top-width: 3px;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(180, 83, 9, 0.12), transparent 32%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(242, 237, 229, 0.94)),
+    #f2ede5;
+  box-shadow:
+    inset 0 0 45px rgba(255, 255, 255, 0.55),
+    0 28px 70px rgba(51, 65, 85, 0.12);
+  backface-visibility: hidden;
+}
+
+.project-cube-face::after {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(17, 17, 17, 0.055) 1px, transparent 1px), linear-gradient(90deg, rgba(17, 17, 17, 0.055) 1px, transparent 1px);
+  background-size: 32px 32px;
+  content: "";
+  pointer-events: none;
+}
+
+.dark .project-cube-face {
+  border-color: rgba(255, 255, 255, 0.18);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.08), transparent 42%),
+    #11151a;
+  box-shadow: inset 0 0 45px rgba(255, 255, 255, 0.025);
+}
+
+.dark .project-cube-face::after {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+}
+
+.project-cube-face-1 { transform: rotateY(0deg) translateZ(128px); }
+.project-cube-face-2 { transform: rotateY(90deg) translateZ(128px); }
+.project-cube-face-3 { transform: rotateY(180deg) translateZ(128px); }
+.project-cube-face-4 { transform: rotateY(-90deg) translateZ(128px); }
+.project-cube-face-5 { transform: rotateX(90deg) translateZ(128px); }
+.project-cube-face-6 { transform: rotateX(-90deg) translateZ(128px); }
+
+@media (min-width: 640px) {
+  .project-cube-stage { height: 420px; }
+  .project-cube-stage::before { bottom: 68px; height: 48px; }
+  .project-cube { height: 288px; width: 288px; }
+  .project-cube-face-1 { transform: rotateY(0deg) translateZ(144px); }
+  .project-cube-face-2 { transform: rotateY(90deg) translateZ(144px); }
+  .project-cube-face-3 { transform: rotateY(180deg) translateZ(144px); }
+  .project-cube-face-4 { transform: rotateY(-90deg) translateZ(144px); }
+  .project-cube-face-5 { transform: rotateX(90deg) translateZ(144px); }
+  .project-cube-face-6 { transform: rotateX(-90deg) translateZ(144px); }
 }
 
 @media (prefers-reduced-motion: reduce) {

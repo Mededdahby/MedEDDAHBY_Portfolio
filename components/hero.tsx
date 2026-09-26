@@ -1,13 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
-import heroImage from "@/public/images/hero-image.webp";
 import { Download, Github, Linkedin, Mail } from "lucide-react";
-
-const stats = [
-  { label: "Years building", value: 4, suffix: "+" },
-  { label: "Projects shipped", value: 38, suffix: "+" },
-  { label: "Clients served", value: 9, suffix: "+" },
-];
+import ProjectCube from "@/components/project-cube";
 
 const socials = [
   {
@@ -80,67 +73,8 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative">
-          <div className="relative mx-auto max-w-[500px] xl:ml-auto xl:mr-0">
-            <div className="relative overflow-hidden border border-[#111111]/10 bg-[#F3EEE6] dark:border-white/10 dark:bg-[#141a1f]">
-              <div className="relative aspect-[4/5]">
-                <Image
-                  src={heroImage}
-                  alt="Mohamed Eddahby portrait"
-                  fill
-                  priority
-                  placeholder="blur"
-                  sizes="(max-width: 1280px) 100vw, 500px"
-                  className="object-cover object-[center_30%]"
-                />
-              </div>
-            </div>
-
-            <div className="mt-4 grid grid-cols-2 gap-3 md:hidden">
-              <div className="border border-[#111111]/10 bg-white px-4 py-4 shadow-[0_18px_40px_-28px_rgba(17,17,17,0.35)] dark:border-white/10 dark:bg-[#141a1f] dark:text-white">
-                <p className="text-[11px] tracking-[0.24em] text-[#334155] dark:text-slate-400">
-                  BASED IN
-                </p>
-                <p className="mt-2 font-display text-xl dark:text-white">Morocco</p>
-              </div>
-              <div className="border border-[#111111]/10 bg-[#111111] px-4 py-4 text-white shadow-[0_22px_44px_-30px_rgba(17,17,17,0.7)]">
-                <p className="text-[11px] tracking-[0.24em] text-white/70">
-                  FOCUS
-                </p>
-                <p className="mt-2 font-display text-xl">Full stack</p>
-              </div>
-            </div>
-
-            <div className="absolute -left-6 top-8 hidden border border-[#111111]/10 bg-white px-5 py-4 shadow-[0_18px_40px_-28px_rgba(17,17,17,0.35)] dark:border-white/10 dark:bg-[#141a1f] dark:text-white md:block">
-              <p className="text-[11px] tracking-[0.24em] text-[#334155] dark:text-slate-400">
-                BASED IN
-              </p>
-              <p className="mt-2 font-display text-2xl dark:text-white">Morocco</p>
-            </div>
-
-            <div className="absolute -right-6 bottom-10 hidden border border-[#111111]/10 bg-[#111111] px-5 py-4 text-white shadow-[0_22px_44px_-30px_rgba(17,17,17,0.7)] md:block">
-              <p className="text-[11px] tracking-[0.24em] text-white/70">
-                FOCUS
-              </p>
-              <p className="mt-2 font-display text-2xl">Full stack</p>
-            </div>
-          </div>
-
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {stats.map((stat, index) => (
-              <div
-                key={stat.label}
-                className="border border-[#111111]/10 bg-white px-5 py-5 dark:border-white/10 dark:bg-[#141a1f]"
-              >
-                <div className="font-display text-4xl leading-none dark:text-white">
-                  {stat.value}{stat.suffix}
-                </div>
-                <p className="mt-3 text-sm tracking-[0.08em] text-[#334155] dark:text-slate-400">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </div>
+        <div className="relative py-4 xl:py-0">
+          <ProjectCube />
         </div>
       </div>
     </section>

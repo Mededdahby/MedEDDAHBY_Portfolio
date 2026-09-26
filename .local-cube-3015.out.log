@@ -1,0 +1,13 @@
+▲ Next.js 16.3.6 (Turbopack)
+- Local:         http://localhost:3015
+- Network:       http://192.168.1.118:3015
+✓ Ready in 2.2s
+✓ Running next.config.mjs took 157ms
+Creating turbopack project { dir: 'C:\\Users\\HP\\dev\\MedEDDAHBY_Portfolio', testMode: true }
+
+✓ Generated AGENTS.md and CLAUDE.md for AI agents. Set `agentRules: false` in next.config to disable.
+ GET / 200 in 2.6s (next.js: 1076ms, application-code: 1542ms)
+ GET / 200 in 1245ms (next.js: 91ms, application-code: 1155ms)
+ GET / 200 in 978ms (next.js: 14ms, application-code: 964ms)
+[?25h
+[ELIFECYCLE] Command failed with exit code 1.

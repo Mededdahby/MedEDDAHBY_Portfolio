@@ -1,0 +1,358 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Med" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - navigation [ref=e8]:
+          - link "WORK" [ref=e9] [cursor=pointer]:
+            - /url: /projects
+          - link "ABOUT" [ref=e10] [cursor=pointer]:
+            - /url: /#about
+          - link "CONTACT" [ref=e11] [cursor=pointer]:
+            - /url: /#contact
+        - button "Toggle color theme" [ref=e12] [cursor=pointer]
+  - main [ref=e17]:
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - paragraph [ref=e21]: FULL-STACK DEVELOPER
+        - heading "Building products with intent." [level=1] [ref=e22]:
+          - text: Building products
+          - generic [ref=e23]: with intent.
+        - paragraph [ref=e24]: I design and engineer software that solves real problems with clean code, thoughtful interfaces, and a bias toward shipping.
+        - generic [ref=e25]:
+          - link "DOWNLOAD CV" [ref=e26] [cursor=pointer]:
+            - /url: /cv/mededdahby.pdf
+          - link "VIEW WORK" [ref=e30] [cursor=pointer]:
+            - /url: /projects
+        - generic [ref=e31]:
+          - link "GitHub" [ref=e32] [cursor=pointer]:
+            - /url: https://github.com/Mededdahby
+          - link "LinkedIn" [ref=e36] [cursor=pointer]:
+            - /url: https://linkedin.com/in/mohamed-eddahby-b10721231
+          - link "Email" [ref=e41] [cursor=pointer]:
+            - /url: mailto:eddahby.contact@gmail.com
+      - generic [ref=e46]:
+        - generic [ref=e48]:
+          - generic [ref=e50]:
+            - generic [ref=e51]: Travel platform
+            - generic [ref=e54]:
+              - paragraph [ref=e55]: Morocco Immersion
+              - paragraph [ref=e56]: Public journeys + an operational publishing dashboard.
+            - generic [ref=e57]: 01 / 06
+          - generic [ref=e59]:
+            - generic [ref=e60]: Prompt operations
+            - generic [ref=e63]:
+              - paragraph [ref=e64]: Prompt Bunker
+              - paragraph [ref=e65]: Version, review, and move prompts into execution.
+            - generic [ref=e66]: 02 / 06
+          - generic [ref=e68]:
+            - generic [ref=e69]: Field-service SaaS
+            - generic [ref=e72]:
+              - paragraph [ref=e73]: SoloTradeKit
+              - paragraph [ref=e74]: From customer request to estimate, invoice, and payment.
+            - generic [ref=e75]: 03 / 06
+          - generic [ref=e77]:
+            - generic [ref=e78]: Shipped work
+            - generic [ref=e81]:
+              - paragraph [ref=e82]: 38+
+              - paragraph [ref=e83]: Projects taken from idea to working software.
+            - generic [ref=e84]: 04 / 06
+          - generic [ref=e86]:
+            - generic [ref=e87]: Experience
+            - generic [ref=e90]:
+              - paragraph [ref=e91]: 4+ years
+              - paragraph [ref=e92]: Designing and engineering full-stack products.
+            - generic [ref=e93]: 05 / 06
+          - generic [ref=e95]:
+            - generic [ref=e96]: Collaboration
+            - generic [ref=e99]:
+              - paragraph [ref=e100]: 9+ clients
+              - paragraph [ref=e101]: Product work shaped around real operational needs.
+            - generic [ref=e102]: 06 / 06
+        - generic [ref=e103]:
+          - generic [ref=e104]:
+            - generic [ref=e105]:
+              - paragraph [ref=e106]: Now showing
+              - paragraph [ref=e107]: Morocco Immersion
+            - generic [ref=e108]:
+              - button "Show previous cube face" [ref=e109] [cursor=pointer]
+              - button "Show next cube face" [ref=e112] [cursor=pointer]
+          - generic [ref=e115]:
+            - generic "Cube face 1 of 6" [ref=e116]:
+              - button "Show Morocco Immersion" [ref=e117] [cursor=pointer]
+              - button "Show Prompt Bunker" [ref=e118] [cursor=pointer]
+              - button "Show SoloTradeKit" [ref=e119] [cursor=pointer]
+              - button "Show 38+" [ref=e120] [cursor=pointer]
+              - button "Show 4+ years" [ref=e121] [cursor=pointer]
+              - button "Show 9+ clients" [ref=e122] [cursor=pointer]
+            - link "View project" [ref=e123] [cursor=pointer]:
+              - /url: /projects/morocco-immersion-platform
+    - generic [ref=e130]:
+      - heading "About me" [level=2] [ref=e134]
+      - generic [ref=e135]:
+        - img "About Mohamed Eddahby" [ref=e139]
+        - generic [ref=e144]:
+          - generic [ref=e145]:
+            - button "Personal info" [ref=e146] [cursor=pointer]
+            - button "Educations" [ref=e147] [cursor=pointer]
+            - button "Skills" [ref=e148] [cursor=pointer]
+          - generic [ref=e149]:
+            - heading "Unmatched Service Quality for Over 3 Years" [level=2] [ref=e150]
+            - paragraph [ref=e151]: I specialize in crafting intuitive websites with a focus on user experience, interface systems, and workflow automation that turns repeated tasks into cleaner product flows.
+            - generic [ref=e152]:
+              - generic [ref=e153]: Mohamed EDDAHBY
+              - generic [ref=e159]: +212 653 7604 74
+              - generic [ref=e164]: eddahby.contact@gmail.com
+              - generic [ref=e170]: Bachelor in Computer Systems and Software Engineering
+              - generic [ref=e176]: Kelaat M'Gouna, Tinghir, morocco
+            - generic [ref=e182]:
+              - heading "Language Skill" [level=3] [ref=e183]
+              - generic [ref=e184]:
+                - generic [ref=e185]: Arabic
+                - generic [ref=e186]: English
+                - generic [ref=e187]: French
+                - generic [ref=e188]: Tamazight
+    - generic [ref=e190]:
+      - generic [ref=e191]:
+        - generic [ref=e192]: How I can help
+        - heading "From a useful idea to a product people can rely on." [level=2] [ref=e193]
+        - paragraph [ref=e194]: I combine product thinking, interface craft, and full-stack delivery to turn complex needs into focused digital experiences.
+      - generic [ref=e195]:
+        - article [ref=e196]:
+          - heading "Web Development" [level=3] [ref=e201]
+          - paragraph [ref=e202]: We build websites using the latest technologies. Creating responsive and user-friendly interfaces that provide an excellent user experience.
+        - article [ref=e203]:
+          - heading "Mobile Development" [level=3] [ref=e207]
+          - paragraph [ref=e208]: We build mobile apps for iOS and Android. Creating native-like experiences with cross-platform technologies like React Native.
+        - article [ref=e209]:
+          - heading "Design" [level=3] [ref=e216]
+          - paragraph [ref=e217]: We design beautiful and responsive websites. Creating visually appealing interfaces that engage users and drive conversions.
+    - generic [ref=e220]:
+      - generic [ref=e221]:
+        - generic [ref=e222]:
+          - generic [ref=e223]: Selected Work
+          - heading "Practical builds with motion, structure, and room to scale." [level=2] [ref=e224]
+          - paragraph [ref=e225]: "I focus on shipping interfaces that feel deliberate: strong information hierarchy, sharp motion, and full-stack decisions that keep the product useful after the first demo."
+        - generic [ref=e226]:
+          - generic [ref=e227]:
+            - generic [ref=e232]: 17+
+            - generic [ref=e233]: Curated projects
+          - generic [ref=e234]:
+            - generic [ref=e239]: "10"
+            - generic [ref=e240]: Project categories
+          - generic [ref=e241]:
+            - generic [ref=e244]: 44+
+            - generic [ref=e245]: Technologies in use
+      - generic [ref=e246]:
+        - article [ref=e247]:
+          - generic [ref=e249]:
+            - generic [ref=e250]:
+              - generic [ref=e251]: Live
+              - generic [ref=e252]: AI Tooling
+              - generic [ref=e254]: "2026"
+            - img "Prompt Saver" [ref=e257]
+            - generic [ref=e259]:
+              - generic [ref=e261]:
+                - heading "Prompt Saver" [level=3] [ref=e262]
+                - paragraph [ref=e263]: A prompt management workspace for saving, organizing, and reusing high-value prompts across projects and experiments.
+              - paragraph [ref=e268]: A private product focused on structured prompt libraries, cleaner retrieval, and faster reuse when building AI features and content workflows.
+            - generic [ref=e269]:
+              - generic [ref=e270]: Next.js 16
+              - generic [ref=e271]: TypeScript
+              - generic [ref=e272]: Tailwind CSS 4
+              - generic [ref=e273]: Clerk
+              - generic [ref=e274]: Drizzle ORM
+              - generic [ref=e275]: CockroachDB
+              - generic [ref=e276]: Vercel AI SDK
+              - generic [ref=e277]: Groq
+              - generic [ref=e278]: Lemon Squeezy
+            - link "Live demo" [ref=e280] [cursor=pointer]:
+              - /url: https://www.promptbunker.com
+        - article [ref=e285]:
+          - generic [ref=e287]:
+            - generic [ref=e288]:
+              - generic [ref=e289]: Live
+              - generic [ref=e290]: Workflow Automation
+              - generic [ref=e292]: "2026"
+            - img "AutoImport ERP" [ref=e295]
+            - generic [ref=e297]:
+              - generic [ref=e299]:
+                - heading "AutoImport ERP" [level=3] [ref=e300]
+                - paragraph [ref=e301]: An internal operations dashboard that automates import-heavy workflows across delivery, sales, verification, and finance.
+              - paragraph [ref=e306]: A private Next.js application for ADV and finance teams, focused on Excel-based import flows, delivery templates, verification steps, and authenticated back-office processing.
+            - generic [ref=e307]:
+              - generic [ref=e308]: Next.js 14
+              - generic [ref=e309]: TypeScript
+              - generic [ref=e310]: Tailwind CSS
+              - generic [ref=e311]: Prisma
+              - generic [ref=e312]: PostgreSQL
+              - generic [ref=e313]: Vercel Blob
+              - generic [ref=e314]: SheetJS
+              - generic [ref=e315]: JSZip
+            - link "Live demo" [ref=e317] [cursor=pointer]:
+              - /url: https://auto-import-app.vercel.app/login
+        - article [ref=e322]:
+          - generic [ref=e324]:
+            - generic [ref=e325]:
+              - generic [ref=e326]: Live
+              - generic [ref=e327]: Full Stack Web
+              - generic [ref=e329]: "2024"
+            - img "Postepea" [ref=e332]
+            - generic [ref=e334]:
+              - generic [ref=e336]:
+                - heading "Postepea" [level=3] [ref=e337]
+                - paragraph [ref=e338]: A publishing platform with authentication, polished reading flows, and a clean editorial interface.
+              - paragraph [ref=e343]: Built with Next.js, Tailwind CSS, and NextAuth to support article publishing, account security, and a fast reading experience.
+            - generic [ref=e344]:
+              - generic [ref=e345]: Next.js
+              - generic [ref=e346]: Tailwind CSS
+              - generic [ref=e347]: NextAuth
+              - generic [ref=e348]: JavaScript
+            - generic [ref=e349]:
+              - link "Live demo" [ref=e350] [cursor=pointer]:
+                - /url: https://postepea.vercel.app
+              - link "Source" [ref=e355] [cursor=pointer]:
+                - /url: https://github.com/Mededdahby/Postepea
+        - article [ref=e359]:
+          - generic [ref=e361]:
+            - generic [ref=e362]:
+              - generic [ref=e363]: Open Source
+              - generic [ref=e364]: Full Stack Web
+              - generic [ref=e366]: "2024"
+            - img "Mosque Administration System" [ref=e369]
+            - generic [ref=e371]:
+              - generic [ref=e373]:
+                - heading "Mosque Administration System" [level=3] [ref=e374]
+                - paragraph [ref=e375]: A digital operations hub for mosques covering contributor workflows, events, finances, and announcements.
+              - paragraph [ref=e380]: An ASP.NET Core MVC application focused on contributor management, scheduling, financial reporting, notifications, and dashboard analytics.
+            - generic [ref=e381]:
+              - generic [ref=e382]: ASP.NET Core MVC
+              - generic [ref=e383]: C#
+              - generic [ref=e384]: .NET
+              - generic [ref=e385]: SQL
+            - link "Source" [ref=e387] [cursor=pointer]:
+              - /url: https://github.com/Mededdahby/Mosque_App
+        - article [ref=e391]:
+          - generic [ref=e393]:
+            - generic [ref=e394]:
+              - generic [ref=e395]: Live
+              - generic [ref=e396]: Frontend App
+              - generic [ref=e398]: "2024"
+            - img "Expense Tracker" [ref=e401]
+            - generic [ref=e403]:
+              - generic [ref=e405]:
+                - heading "Expense Tracker" [level=3] [ref=e406]
+                - paragraph [ref=e407]: A responsive personal finance interface for tracking spending with clear breakdowns and fast state updates.
+              - paragraph [ref=e412]: A React and Redux application designed around straightforward expense entry, lightweight state management, and dashboard-friendly summaries.
+            - generic [ref=e413]:
+              - generic [ref=e414]: React
+              - generic [ref=e415]: Redux
+              - generic [ref=e416]: JavaScript
+            - generic [ref=e417]:
+              - link "Live demo" [ref=e418] [cursor=pointer]:
+                - /url: https://expense-tracker-demo.vercel.app
+              - link "Source" [ref=e423] [cursor=pointer]:
+                - /url: https://github.com/Mededdahby/expense-tracker
+        - article [ref=e427]:
+          - generic [ref=e429]:
+            - generic [ref=e430]:
+              - generic [ref=e431]: Live
+              - generic [ref=e432]: Frontend App
+              - generic [ref=e434]: "2024"
+            - img "Fitness Explorer" [ref=e437]
+            - generic [ref=e439]:
+              - generic [ref=e441]:
+                - heading "Fitness Explorer" [level=3] [ref=e442]
+                - paragraph [ref=e443]: An exercise discovery app that helps users browse workouts by body part with rich API-powered content.
+              - paragraph [ref=e448]: A React app focused on motion, exploration, and structured exercise details, pairing search and visual discovery with external fitness data.
+            - generic [ref=e449]:
+              - generic [ref=e450]: React
+              - generic [ref=e451]: JavaScript
+              - generic [ref=e452]: API Integration
+            - generic [ref=e453]:
+              - link "Live demo" [ref=e454] [cursor=pointer]:
+                - /url: https://fitness-explorer.vercel.app
+              - link "Source" [ref=e459] [cursor=pointer]:
+                - /url: https://github.com/Mededdahby/fitness_App
+      - generic [ref=e463]:
+        - generic [ref=e464]:
+          - paragraph [ref=e465]: Portfolio archive
+          - paragraph [ref=e466]: The full archive includes desktop applications, systems projects, data visualizations, and smaller frontend experiments.
+        - link "Explore all projects" [ref=e467] [cursor=pointer]:
+          - /url: /projects
+    - generic [ref=e471]:
+      - generic [ref=e472]:
+        - heading "Get In Touch" [level=2] [ref=e475]
+        - paragraph [ref=e476]: Have a project in mind or want to collaborate? Feel free to reach out to me using the form below.
+      - generic [ref=e477]:
+        - generic [ref=e478]:
+          - heading "Contact Information" [level=3] [ref=e479]
+          - generic [ref=e480]:
+            - generic [ref=e486]:
+              - heading "Email" [level=4] [ref=e487]
+              - paragraph [ref=e488]: eddahby.contact@gmail.com
+            - generic [ref=e493]:
+              - heading "Phone" [level=4] [ref=e494]
+              - paragraph [ref=e495]: +212 653 7604 74
+            - generic [ref=e501]:
+              - heading "Location" [level=4] [ref=e502]
+              - paragraph [ref=e503]: Kelaat M'Gouna, Tinghir, Morocco
+        - generic [ref=e505]:
+          - generic [ref=e506]:
+            - generic [ref=e507]:
+              - generic [ref=e508]: Your Name *
+              - textbox "Your Name *" [ref=e509]:
+                - /placeholder: John Doe
+            - generic [ref=e510]:
+              - generic [ref=e511]: Your Email *
+              - textbox "Your Email *" [ref=e512]:
+                - /placeholder: john@example.com
+          - generic [ref=e513]:
+            - generic [ref=e514]: Subject *
+            - textbox "Subject *" [ref=e515]:
+              - /placeholder: Project Inquiry
+          - generic [ref=e516]:
+            - generic [ref=e517]: Message *
+            - textbox "Message *" [ref=e518]:
+              - /placeholder: Tell me about your project...
+          - button "Send Message" [ref=e519] [cursor=pointer]
+  - contentinfo [ref=e523]:
+    - generic [ref=e524]:
+      - generic [ref=e525]:
+        - generic [ref=e526]:
+          - link "Med" [ref=e527] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=e530]: Full-stack developer building practical products with a focus on strong UX, maintainable code, and clear business value.
+          - generic [ref=e531]:
+            - link "LinkedIn" [ref=e532] [cursor=pointer]:
+              - /url: https://linkedin.com/in/mohamed-eddahby
+            - link "GitHub" [ref=e537] [cursor=pointer]:
+              - /url: https://github.com/Mededdahby
+            - link "Email" [ref=e541] [cursor=pointer]:
+              - /url: mailto:eddahby.contact@gmail.com
+        - generic [ref=e545]:
+          - generic [ref=e546]:
+            - heading "Navigation" [level=2] [ref=e547]
+            - list [ref=e548]:
+              - listitem [ref=e549]:
+                - link "Home" [ref=e550] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e551]:
+                - link "Work" [ref=e552] [cursor=pointer]:
+                  - /url: /projects
+              - listitem [ref=e553]:
+                - link "About" [ref=e554] [cursor=pointer]:
+                  - /url: /#about
+              - listitem [ref=e555]:
+                - link "Contact" [ref=e556] [cursor=pointer]:
+                  - /url: /#contact
+          - generic [ref=e557]:
+            - heading "Contact" [level=2] [ref=e558]
+            - generic [ref=e559]:
+              - paragraph [ref=e560]: eddahby.contact@gmail.com
+              - paragraph [ref=e561]: +212 653 7604 74
+              - paragraph [ref=e562]: Kelaat M'Gouna, Tinghir, Morocco
+      - generic [ref=e563]:
+        - paragraph [ref=e564]: © 2026 Mohamed Eddahby. All rights reserved.
+        - paragraph [ref=e565]: Built with Next.js and Tailwind CSS.

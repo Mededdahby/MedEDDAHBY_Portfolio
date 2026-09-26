@@ -6,6 +6,7 @@ import { ArrowLeft, Search, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ProjectCard from "@/components/project-card";
 import SectionTitle from "@/components/section-title";
+import CaseStudyGrid from "@/components/case-study-grid";
 import {
   projectCategories,
   projects,
@@ -109,6 +110,8 @@ export default function ProjectsPage() {
             </div>
           </div>
         </div>
+
+        <CaseStudyGrid />
 
         <div className="panel-surface mt-12 rounded-[32px] p-6 md:p-7">
           <div className="grid gap-4 lg:grid-cols-[1.2fr,0.8fr,0.8fr,0.6fr]">

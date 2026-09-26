@@ -1,0 +1,408 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "Morocco Immersion home" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "Morocco Immersion Tours & Adventures" [ref=e6]
+      - generic [ref=e7]:
+        - link "Instagram" [ref=e8] [cursor=pointer]:
+          - /url: https://www.instagram.com/moroccoimmersion/
+        - link "Morocco Immersion on Tripadvisor" [ref=e11] [cursor=pointer]:
+          - /url: https://www.tripadvisor.com/Attraction_Review-g293734-d10002680-Reviews-Morocco_Immersion_Tours_Adventures-Marrakech_Marrakech_Safi.html
+        - link "Facebook" [ref=e14] [cursor=pointer]:
+          - /url: https://www.facebook.com/moroccoimmersion/
+      - link "Call Morocco Immersion at +1 237 878 659" [ref=e17] [cursor=pointer]:
+        - /url: tel:+1237878659
+        - generic [ref=e20]: +1 237 878 659
+    - navigation [ref=e21]:
+      - generic [ref=e23]:
+        - link "Home" [ref=e25] [cursor=pointer]:
+          - /url: /
+        - link "Destinations" [ref=e27] [cursor=pointer]:
+          - /url: /destinations
+        - link "Trips" [ref=e29] [cursor=pointer]:
+          - /url: /trips
+        - link "Plan your Trip" [ref=e33] [cursor=pointer]:
+          - /url: /trip-planner
+        - link "About Us" [ref=e35] [cursor=pointer]:
+          - /url: /story
+  - main [ref=e36]:
+    - generic [ref=e37]:
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - heading "Beyond The Ordinary." [level=1] [ref=e45]: Explore Morocco
+          - paragraph [ref=e46]: Your Key to Unlocking the Magic of Morocco
+          - generic [ref=e47]:
+            - link "Explore Trips" [ref=e48] [cursor=pointer]:
+              - /url: /trips
+            - link "Plan Private Trip" [ref=e51] [cursor=pointer]:
+              - /url: /trip-planner
+        - generic [ref=e53]:
+          - button "Show background 1" [ref=e54] [cursor=pointer]
+          - button "Show background 2" [ref=e55] [cursor=pointer]
+          - button "Show background 3" [ref=e56] [cursor=pointer]
+          - button "Show background 4" [ref=e57] [cursor=pointer]
+      - generic [ref=e59]:
+        - generic [ref=e60]:
+          - heading "Where will Morocco take you?" [level=2] [ref=e61]
+          - paragraph [ref=e62]: Live all emotions in One Place with Morocco Immersion.
+        - generic [ref=e63]:
+          - link [ref=e64] [cursor=pointer]:
+            - /url: /trips?style=cultural-immersion
+            - generic [ref=e67]:
+              - heading "Cultural immersion" [level=3] [ref=e68]
+              - paragraph [ref=e69]: Medinas, living heritage and the people behind each place.
+          - link [ref=e73] [cursor=pointer]:
+            - /url: /trips?style=food-gastronomy
+            - generic [ref=e76]:
+              - heading "Food & gastronomy" [level=3] [ref=e77]
+              - paragraph [ref=e78]: Markets, family recipes and the flavours of Morocco.
+          - link [ref=e83] [cursor=pointer]:
+            - /url: /trips?style=adventure
+            - generic [ref=e86]:
+              - heading "Adventure" [level=3] [ref=e87]
+              - paragraph [ref=e88]: Mountain trails, open roads and active days outdoors.
+          - link [ref=e92] [cursor=pointer]:
+            - /url: /trips?style=wellness-retreat
+            - generic [ref=e95]:
+              - heading "Wellness & retreat" [level=3] [ref=e96]
+              - paragraph [ref=e97]: Unhurried stays, restorative rituals and room to reset.
+          - link [ref=e101] [cursor=pointer]:
+            - /url: /trips?style=luxury
+            - generic [ref=e104]:
+              - heading "Luxury" [level=3] [ref=e105]
+              - paragraph [ref=e106]: Thoughtful details, exceptional stays and private service.
+          - link [ref=e111] [cursor=pointer]:
+            - /url: /trips?style=family-friendly
+            - generic [ref=e114]:
+              - heading "Family-friendly" [level=3] [ref=e115]
+              - paragraph [ref=e116]: Welcoming discoveries designed for travelling together.
+        - group [ref=e122]:
+          - generic "See More" [ref=e123] [cursor=pointer]
+        - generic [ref=e129]:
+          - generic [ref=e130]:
+            - paragraph [ref=e131]: Not sure where to begin?
+            - heading "Tell us the mood, and we will shape the Morocco route around it." [level=3] [ref=e135]
+            - generic [ref=e136]:
+              - generic [ref=e137]: Private routes
+              - generic [ref=e142]: Small groups
+              - generic [ref=e147]: Flexible dates
+          - generic [ref=e150]:
+            - link "Design my journey" [ref=e151] [cursor=pointer]:
+              - /url: /trip-planner
+            - link "Browse ready trips" [ref=e155] [cursor=pointer]:
+              - /url: /trips
+      - generic [ref=e160]:
+        - generic [ref=e161]:
+          - heading "Our Private Tours" [level=2] [ref=e162]
+          - paragraph [ref=e163]: From ancient medinas to desert landscapes, discover the places that make every journey different.
+        - generic [ref=e164]:
+          - article [ref=e165]:
+            - link [ref=e166] [cursor=pointer]:
+              - /url: /trips/south-of-morocco-private-immersion
+            - generic [ref=e167]:
+              - heading "South of Morocco Private Immersion" [level=3] [ref=e168]
+              - generic [ref=e169]:
+                - generic [ref=e170]: 10 Days Trip
+                - generic [ref=e175]: Private Tour
+              - paragraph [ref=e179]: Discover southern Morocco through kasbahs, valleys and the Sahara.
+              - paragraph [ref=e185]: Marrakech → Dades → Merzouga
+              - generic [ref=e186]: 3 destinations
+              - link "View details" [ref=e193] [cursor=pointer]:
+                - /url: /trips/south-of-morocco-private-immersion
+                - text: View details
+                - generic [aria-hidden] [ref=e194]: →
+          - article [ref=e195]:
+            - link [ref=e196] [cursor=pointer]:
+              - /url: /trips/famous-cities-of-morocco
+            - generic [ref=e197]:
+              - heading "Famous Cities of Morocco" [level=3] [ref=e198]
+              - generic [ref=e199]:
+                - generic [ref=e200]: 8 Days Trip
+                - generic [ref=e205]: Private Tour
+              - paragraph [ref=e209]: Explore Morocco’s historic cities, monuments and cultural heritage.
+              - paragraph [ref=e215]: Casablanca → Rabat → Fes
+              - generic [ref=e216]: 3 destinations
+              - link "View details" [ref=e223] [cursor=pointer]:
+                - /url: /trips/famous-cities-of-morocco
+                - text: View details
+                - generic [aria-hidden] [ref=e224]: →
+          - article [ref=e225]:
+            - link [ref=e226] [cursor=pointer]:
+              - /url: /trips/northern-morocco-private-immersion
+            - generic [ref=e227]:
+              - heading "Northern Morocco Private Immersion" [level=3] [ref=e228]
+              - generic [ref=e229]:
+                - generic [ref=e230]: 6 Days Trip
+                - generic [ref=e235]: Private Tour
+              - paragraph [ref=e239]: Journey through Tangier, Chefchaouen and the ancient city of Fes.
+              - paragraph [ref=e245]: Tangier → Chefchaouen → Fes
+              - generic [ref=e246]: 3 destinations
+              - link "View details" [ref=e253] [cursor=pointer]:
+                - /url: /trips/northern-morocco-private-immersion
+                - text: View details
+                - generic [aria-hidden] [ref=e254]: →
+        - generic [ref=e255]:
+          - button "View South of Morocco Private Immersion" [ref=e256] [cursor=pointer]
+          - button "View Famous Cities of Morocco" [ref=e257] [cursor=pointer]
+          - button "View Northern Morocco Private Immersion" [ref=e258] [cursor=pointer]
+      - generic [ref=e260]:
+        - generic [ref=e261]:
+          - heading "Group Tour" [level=2] [ref=e262]
+          - paragraph [ref=e263]: Share the experience with a small group of travelers through a carefully planned itinerary and guided activities.
+        - generic [ref=e264]:
+          - generic [ref=e265]:
+            - generic [ref=e266]:
+              - generic [ref=e267]:
+                - generic [ref=e268]: 28 September 2026
+                - heading "Magical Morocco Immersion" [level=3] [ref=e271]
+                - generic [ref=e272]:
+                  - generic [ref=e279]:
+                    - paragraph [ref=e280]: Duration
+                    - paragraph [ref=e281]: 14 Days
+                  - generic [ref=e287]:
+                    - paragraph [ref=e288]: Difficulty
+                    - paragraph [ref=e289]: Medium
+                  - generic [ref=e296]:
+                    - paragraph [ref=e297]: Group Size
+                    - paragraph [ref=e298]: 2 – 12 People
+                  - generic [ref=e305]:
+                    - paragraph [ref=e306]: Trip Type
+                    - paragraph [ref=e307]: Group Tours
+              - link "Explore" [ref=e310] [cursor=pointer]:
+                - /url: /trips/magical-morocco-immersion
+            - button "Previous group tour" [ref=e311] [cursor=pointer]
+            - button "Next group tour" [ref=e314] [cursor=pointer]
+          - tablist "Carousel navigation" [ref=e317]:
+            - tab "Go to slide 1" [selected] [ref=e318] [cursor=pointer]
+            - tab "Go to slide 2" [ref=e319] [cursor=pointer]
+            - tab "Go to slide 3" [ref=e320] [cursor=pointer]
+          - link "See More" [ref=e322] [cursor=pointer]:
+            - /url: /grouptrips
+      - generic [ref=e323]:
+        - generic [ref=e324]:
+          - generic [ref=e325]:
+            - heading "Plan Your Trip" [level=2] [ref=e326]
+            - paragraph [ref=e327]: Tell us what you want to experience in Morocco, and we’ll help create A journey tailored to your interests, travel style, and preferences.
+          - generic [ref=e328]:
+            - generic [ref=e329]:
+              - heading "Book Your Next Trip In 3 Easy Steps" [level=3] [ref=e330]: Book Your Next TripIn 3 Easy Steps
+              - generic [ref=e331]:
+                - generic [ref=e337]:
+                  - heading "Choose Destination and Preference" [level=4] [ref=e338]
+                  - paragraph [ref=e339]: Tell us where you want to travel, your dates, interests, and preferred travel style.
+                - generic [ref=e345]:
+                  - heading "We Suggest A Trip" [level=4] [ref=e346]
+                  - paragraph [ref=e347]: Our local travel experts create an itinerary designed around your preferences.
+                - generic [ref=e352]:
+                  - heading "You Plan as You Want" [level=4] [ref=e353]
+                  - paragraph [ref=e354]: Customize every detail until your journey feels completely right for you.
+            - generic [ref=e355]:
+              - generic [ref=e356]:
+                - img "Waterfall experience in Morocco" [ref=e358]
+                - generic [ref=e359]:
+                  - heading "Plan your Trip" [level=4] [ref=e360]
+                  - generic [ref=e361]:
+                    - generic [ref=e362]: 14–29 June
+                    - generic [ref=e364]: by Morocco Immersion
+                  - generic [ref=e377]: 3 people going
+              - generic [ref=e387]:
+                - img "Trip to Dades" [ref=e389]
+                - generic [ref=e390]:
+                  - paragraph [ref=e391]: Ongoing
+                  - paragraph [ref=e392]: Trip to Dades
+                  - paragraph [ref=e393]: 40% completed
+        - button "Discover Morocco with us." [ref=e397] [cursor=pointer]
+      - generic [ref=e400]:
+        - generic [ref=e401]:
+          - heading "Memories That Last a Lifetime" [level=2] [ref=e402]
+          - paragraph [ref=e403]: Real stories from travelers who discovered Morocco with us.
+        - generic [ref=e404]:
+          - article [ref=e405]:
+            - generic [ref=e406]:
+              - generic [ref=e407]:
+                - generic [aria-hidden] [ref=e409]: JS
+                - generic [ref=e410]:
+                  - heading "James S" [level=3] [ref=e411]
+                  - paragraph [ref=e412]: 25 May 2026
+                  - generic "5 out of 5 stars" [ref=e413]:
+                    - generic [aria-hidden] [ref=e414]: ★
+                    - generic [aria-hidden] [ref=e415]: ★
+                    - generic [aria-hidden] [ref=e416]: ★
+                    - generic [aria-hidden] [ref=e417]: ★
+                    - generic [aria-hidden] [ref=e418]: ★
+              - img "Tripadvisor" [ref=e419]
+            - blockquote [ref=e420]: “Morocco Immersion designed a flexible three-week journey around our wishes. Abdel Hadi was fantastic and became much more than our driver.”
+            - link "Read more" [ref=e421] [cursor=pointer]:
+              - /url: https://www.tripadvisor.com/Attraction_Review-g293734-d10002680-Reviews-Morocco_Immersion_Tours_Adventures-Marrakech_Marrakech_Safi.html
+          - article [ref=e426]:
+            - generic [ref=e427]:
+              - generic [ref=e428]:
+                - generic [aria-hidden] [ref=e430]: K
+                - generic [ref=e431]:
+                  - heading "keventalbert" [level=3] [ref=e432]
+                  - paragraph [ref=e433]: 24 May 2026
+                  - generic "5 out of 5 stars" [ref=e434]:
+                    - generic [aria-hidden] [ref=e435]: ★
+                    - generic [aria-hidden] [ref=e436]: ★
+                    - generic [aria-hidden] [ref=e437]: ★
+                    - generic [aria-hidden] [ref=e438]: ★
+                    - generic [aria-hidden] [ref=e439]: ★
+              - img "Tripadvisor" [ref=e440]
+            - blockquote [ref=e441]: “A wonderful seven-day journey through Marrakech, the Atlas Mountains and Essaouira. The guides were excellent and Abdel Hadi was always one step ahead.”
+            - link "Read more" [ref=e442] [cursor=pointer]:
+              - /url: https://www.tripadvisor.com/Attraction_Review-g293734-d10002680-Reviews-Morocco_Immersion_Tours_Adventures-Marrakech_Marrakech_Safi.html
+          - article [ref=e447]:
+            - generic [ref=e448]:
+              - generic [ref=e449]:
+                - generic [aria-hidden] [ref=e451]: CR
+                - generic [ref=e452]:
+                  - heading "Charles R" [level=3] [ref=e453]
+                  - paragraph [ref=e454]: 22 May 2026
+                  - generic "5 out of 5 stars" [ref=e455]:
+                    - generic [aria-hidden] [ref=e456]: ★
+                    - generic [aria-hidden] [ref=e457]: ★
+                    - generic [aria-hidden] [ref=e458]: ★
+                    - generic [aria-hidden] [ref=e459]: ★
+                    - generic [aria-hidden] [ref=e460]: ★
+              - img "Tripadvisor" [ref=e461]
+            - blockquote [ref=e462]: “A safe and enjoyable journey through Marrakech, Imlil and Essaouira with excellent hotels, memorable activities and a truly exceptional tour manager.”
+            - link "Read more" [ref=e463] [cursor=pointer]:
+              - /url: https://www.tripadvisor.com/Attraction_Review-g293734-d10002680-Reviews-Morocco_Immersion_Tours_Adventures-Marrakech_Marrakech_Safi.html
+          - article [ref=e468]:
+            - generic [ref=e469]:
+              - generic [ref=e470]:
+                - generic [aria-hidden] [ref=e472]: KB
+                - generic [ref=e473]:
+                  - heading "Katie B" [level=3] [ref=e474]
+                  - paragraph [ref=e475]: 2 May 2026
+                  - generic "5 out of 5 stars" [ref=e476]:
+                    - generic [aria-hidden] [ref=e477]: ★
+                    - generic [aria-hidden] [ref=e478]: ★
+                    - generic [aria-hidden] [ref=e479]: ★
+                    - generic [aria-hidden] [ref=e480]: ★
+                    - generic [aria-hidden] [ref=e481]: ★
+              - img "Tripadvisor" [ref=e482]
+            - blockquote [ref=e483]: “Planning the itinerary with Sharon was easy and enjoyable. The hotels, guides and activities were excellent throughout our Marrakech and Sahara adventure.”
+            - link "Read more" [ref=e484] [cursor=pointer]:
+              - /url: https://www.tripadvisor.com/Attraction_Review-g293734-d10002680-Reviews-Morocco_Immersion_Tours_Adventures-Marrakech_Marrakech_Safi.html
+          - article [ref=e489]:
+            - generic [ref=e490]:
+              - generic [ref=e491]:
+                - generic [aria-hidden] [ref=e493]: J
+                - generic [ref=e494]:
+                  - heading "JazzyBMcC" [level=3] [ref=e495]
+                  - paragraph [ref=e496]: 28 Apr 2026
+                  - generic "5 out of 5 stars" [ref=e497]:
+                    - generic [aria-hidden] [ref=e498]: ★
+                    - generic [aria-hidden] [ref=e499]: ★
+                    - generic [aria-hidden] [ref=e500]: ★
+                    - generic [aria-hidden] [ref=e501]: ★
+                    - generic [aria-hidden] [ref=e502]: ★
+              - img "Tripadvisor" [ref=e503]
+            - blockquote [ref=e504]: “From the earliest planning to the final farewell, everything was organized and stress-free. The guides, accommodation and tour manager were incredible.”
+            - link "Read more" [ref=e505] [cursor=pointer]:
+              - /url: https://www.tripadvisor.com/Attraction_Review-g293734-d10002680-Reviews-Morocco_Immersion_Tours_Adventures-Marrakech_Marrakech_Safi.html
+          - article [ref=e510]:
+            - generic [ref=e511]:
+              - generic [ref=e512]:
+                - generic [aria-hidden] [ref=e514]: L
+                - generic [ref=e515]:
+                  - heading "leokY6429SO" [level=3] [ref=e516]
+                  - paragraph [ref=e517]: 10 Apr 2026
+                  - generic "5 out of 5 stars" [ref=e518]:
+                    - generic [aria-hidden] [ref=e519]: ★
+                    - generic [aria-hidden] [ref=e520]: ★
+                    - generic [aria-hidden] [ref=e521]: ★
+                    - generic [aria-hidden] [ref=e522]: ★
+                    - generic [aria-hidden] [ref=e523]: ★
+              - img "Tripadvisor" [ref=e524]
+            - blockquote [ref=e525]: “A very enjoyable and well-organized experience. Rachid was a wonderful driver, and all of the local guides were excellent.”
+            - link "Read more" [ref=e526] [cursor=pointer]:
+              - /url: https://www.tripadvisor.com/Attraction_Review-g293734-d10002680-Reviews-Morocco_Immersion_Tours_Adventures-Marrakech_Marrakech_Safi.html
+        - tablist "Carousel navigation" [ref=e531]:
+          - tab "Go to slide 1" [selected] [ref=e532] [cursor=pointer]
+          - tab "Go to slide 2" [ref=e533] [cursor=pointer]
+          - tab "Go to slide 3" [ref=e534] [cursor=pointer]
+          - tab "Go to slide 4" [ref=e535] [cursor=pointer]
+          - tab "Go to slide 5" [ref=e536] [cursor=pointer]
+          - tab "Go to slide 6" [ref=e537] [cursor=pointer]
+        - link "Read all reviews on Tripadvisor" [ref=e539] [cursor=pointer]:
+          - /url: https://www.tripadvisor.com/Attraction_Review-g293734-d10002680-Reviews-Morocco_Immersion_Tours_Adventures-Marrakech_Marrakech_Safi.html
+      - generic [ref=e544]:
+        - heading "Trusted Us" [level=2] [ref=e546]
+        - generic [ref=e548]:
+          - generic [ref=e549]:
+            - img "Tripadvisor Travelers’ Choice 2025"
+          - generic [ref=e550]:
+            - img "Family Travel Association"
+          - generic [ref=e551]:
+            - img "American Society of Travel Advisors"
+          - generic [ref=e552]:
+            - img "TourRadar Trusted Partner"
+          - generic [ref=e553]:
+            - img "Tripadvisor Travelers’ Choice 2022"
+          - generic [ref=e554]:
+            - img "Tripadvisor Travelers’ Choice 2023"
+          - generic [ref=e555]:
+            - img "Tripadvisor Travelers’ Choice 2024"
+          - generic [ref=e556]:
+            - img "Tripadvisor Certificate of Excellence"
+          - generic [ref=e557]:
+            - img "Recommended on Kimkim"
+          - generic [ref=e558]:
+            - img "Tripadvisor Travelers’ Choice 2025"
+          - generic [ref=e559]:
+            - img "Family Travel Association"
+          - generic [ref=e560]:
+            - img "American Society of Travel Advisors"
+          - generic [ref=e561]:
+            - img "TourRadar Trusted Partner"
+          - generic [ref=e562]:
+            - img "Tripadvisor Travelers’ Choice 2022"
+          - generic [ref=e563]:
+            - img "Tripadvisor Travelers’ Choice 2023"
+          - generic [ref=e564]:
+            - img "Tripadvisor Travelers’ Choice 2024"
+          - generic [ref=e565]:
+            - img "Tripadvisor Certificate of Excellence"
+          - generic [ref=e566]:
+            - img "Recommended on Kimkim"
+  - contentinfo [ref=e567]:
+    - generic [ref=e568]:
+      - link "Morocco Immersion home":
+        - /url: /
+        - img "Morocco Immersion Tours and Adventures"
+      - navigation "Footer navigation" [ref=e569]:
+        - generic [ref=e570]:
+          - heading "About" [level=2] [ref=e571]
+          - list [ref=e572]:
+            - listitem [ref=e573]:
+              - link "About us" [ref=e574] [cursor=pointer]:
+                - /url: /story
+            - listitem [ref=e575]:
+              - link "Destinations" [ref=e576] [cursor=pointer]:
+                - /url: /destinations
+        - generic [ref=e577]:
+          - heading "Contact" [level=2] [ref=e578]
+          - list [ref=e579]:
+            - listitem [ref=e580]:
+              - link "Instagram" [ref=e581] [cursor=pointer]:
+                - /url: https://www.instagram.com/moroccoimmersion/
+            - listitem [ref=e582]:
+              - link "Twitter" [ref=e583] [cursor=pointer]:
+                - /url: https://twitter.com/moroccoimmersion
+            - listitem [ref=e584]:
+              - link "Facebook" [ref=e585] [cursor=pointer]:
+                - /url: https://www.facebook.com/moroccoimmersion/
+        - generic [ref=e586]:
+          - heading "Support" [level=2] [ref=e587]
+          - list [ref=e588]:
+            - listitem [ref=e589]:
+              - link "Support Centre" [ref=e590] [cursor=pointer]:
+                - /url: /contact
+            - listitem [ref=e591]:
+              - link "Feedback" [ref=e592] [cursor=pointer]:
+                - /url: /contact?type=feedback
+    - paragraph [ref=e594]: © Copyright 2016 – 2026. Morocco Immersion LLC
+  - button "Open Next.js Dev Tools" [ref=e600] [cursor=pointer]

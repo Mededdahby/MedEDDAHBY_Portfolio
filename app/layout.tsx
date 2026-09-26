@@ -10,6 +10,9 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
+
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -58,6 +61,8 @@ export default function RootLayout({
         <ThemeProvider>
           <Navbar />
           {children}
+           <Analytics />
+           <SpeedInsights />
           <Footer />
         </ThemeProvider>
       </body>
