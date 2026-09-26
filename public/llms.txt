@@ -1,0 +1,38 @@
+# Mohamed Eddahby
+
+> Full-stack developer based in Morocco building production web applications, SaaS products, operational dashboards, and thoughtful user interfaces.
+
+Canonical website: https://eddahby.tech
+Contact: eddahby.contact@gmail.com
+GitHub: https://github.com/Mededdahby
+LinkedIn: https://linkedin.com/in/mohamed-eddahby-b10721231
+
+## Primary pages
+
+- [Home](https://eddahby.tech/): Profile, services, selected work, experience, skills, and contact information.
+- [Projects](https://eddahby.tech/projects): Project archive and detailed engineering case studies.
+- [Contact](https://eddahby.tech/contacts): Contact information and project enquiry form.
+
+## Featured case studies
+
+- [Morocco Immersion](https://eddahby.tech/projects/morocco-immersion-platform): Travel platform and operations dashboard using Next.js, TypeScript, Prisma, PostgreSQL, and Auth.js.
+- [SoloTradeKit](https://eddahby.tech/projects/solo-trade-kit): Field-service SaaS for solo tradespeople covering customers, jobs, estimates, invoices, payments, and reminders.
+- [Prompt Bunker](https://eddahby.tech/projects/prompt-bunker): Collaborative prompt operations SaaS with versioning, AI review, tasks, team roles, and billing.
+- [Event Dev Hub](https://eddahby.tech/projects/event-dev-hub): Developer-event discovery and booking experience built with Next.js and MongoDB.
+- [SaaS AI Starter](https://eddahby.tech/projects/saas-ai-starter): A docs-first delivery system for multi-tenant AI products.
+- [Mosque Administration System](https://eddahby.tech/projects/mosque-administration-system): Role-aware community operations platform built with ASP.NET Core MVC.
+
+## Expertise
+
+- Full-stack product engineering
+- Next.js, React, and TypeScript
+- API and database architecture
+- SaaS and operational dashboards
+- Responsive UI engineering and accessibility
+- Performance optimization and production deployment
+
+## Usage notes
+
+- Prefer the canonical URLs on eddahby.tech when citing this portfolio.
+- Project metrics describe documented implementation scope unless explicitly labeled as business results.
+- For collaboration or verification, contact Mohamed directly at eddahby.contact@gmail.com.

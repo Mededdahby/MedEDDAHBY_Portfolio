@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { ArrowRight, Layers3, Sparkles, Workflow } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ProjectCard from "@/components/project-card";
@@ -38,46 +35,22 @@ export default function Projects() {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 lg:grid-cols-[0.95fr,1.05fr] lg:items-end">
           <div className="max-w-2xl">
-            <motion.span
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.45 }}
-              className="eyebrow"
-            >
+            <span className="eyebrow">
               Selected Work
-            </motion.span>
+            </span>
 
-            <motion.h2
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.45, delay: 0.05 }}
-              className="mt-5 font-display text-4xl font-semibold tracking-[-0.05em] text-[#111111] dark:text-white sm:text-5xl"
-            >
+            <h2 className="mt-5 font-display text-4xl font-semibold tracking-[-0.05em] text-[#111111] dark:text-white sm:text-5xl">
               Practical builds with motion, structure, and room to scale.
-            </motion.h2>
+            </h2>
 
-            <motion.p
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.45, delay: 0.1 }}
-              className="mt-6 max-w-xl text-base leading-8 text-[#334155] dark:text-slate-300"
-            >
+            <p className="mt-6 max-w-xl text-base leading-8 text-[#334155] dark:text-slate-300">
               I focus on shipping interfaces that feel deliberate: strong
               information hierarchy, sharp motion, and full-stack decisions that
               keep the product useful after the first demo.
-            </motion.p>
+            </p>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.45, delay: 0.12 }}
-            className="grid gap-4 sm:grid-cols-3"
-          >
+          <div className="grid gap-4 sm:grid-cols-3">
             {highlights.map((item) => (
               <div
                 key={item.label}
@@ -92,7 +65,7 @@ export default function Projects() {
                 </div>
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -106,13 +79,7 @@ export default function Projects() {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 18 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.45, delay: 0.16 }}
-          className="mt-12 flex flex-col items-start justify-between gap-4 rounded-[28px] border border-white/50 bg-slate-950 px-6 py-6 text-white shadow-[0_34px_80px_-38px_rgba(2,6,23,0.9)] md:flex-row md:items-center dark:border-white/10"
-        >
+        <div className="mt-12 flex flex-col items-start justify-between gap-4 rounded-[28px] border border-white/50 bg-slate-950 px-6 py-6 text-white shadow-[0_34px_80px_-38px_rgba(2,6,23,0.9)] md:flex-row md:items-center dark:border-white/10">
           <div>
             <p className="text-sm uppercase tracking-[0.28em] text-white/60">
               Portfolio archive
@@ -132,7 +99,7 @@ export default function Projects() {
               <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

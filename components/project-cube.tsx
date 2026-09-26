@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, MoveHorizontal } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
@@ -67,9 +66,17 @@ export default function ProjectCube() {
   const [paused, setPaused] = useState(false);
   const [dragging, setDragging] = useState(false);
   const [dragOffset, setDragOffset] = useState(0);
+  const [reduceMotion, setReduceMotion] = useState(false);
   const pointerStart = useRef<number | null>(null);
-  const reduceMotion = useReducedMotion();
   const face = faces[active];
+
+  useEffect(() => {
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const updatePreference = () => setReduceMotion(media.matches);
+    updatePreference();
+    media.addEventListener("change", updatePreference);
+    return () => media.removeEventListener("change", updatePreference);
+  }, []);
 
   useEffect(() => {
     if (paused || dragging || reduceMotion) return;
@@ -125,13 +132,12 @@ export default function ProjectCube() {
           setDragOffset(0);
         }}
       >
-        <motion.div
+        <div
           className="project-cube"
-          animate={{
-            rotateX: rotations[active].rotateX,
-            rotateY: rotations[active].rotateY + dragOffset * 0.42,
+          style={{
+            transform: `rotateX(${rotations[active].rotateX}deg) rotateY(${rotations[active].rotateY + dragOffset * 0.42}deg)`,
+            transition: dragging || reduceMotion ? "none" : "transform 650ms cubic-bezier(0.22, 1, 0.36, 1)",
           }}
-          transition={dragging || reduceMotion ? { duration: 0 } : { type: "spring", stiffness: 90, damping: 20, mass: 0.9 }}
         >
           {faces.map((item, index) => (
             <div
@@ -158,24 +164,16 @@ export default function ProjectCube() {
               </div>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
 
       <div className="relative z-20 -mt-3 border border-[#111111]/10 bg-white p-4 shadow-[0_24px_70px_-42px_rgba(17,17,17,0.55)] dark:border-white/10 dark:bg-[#141A1F] sm:mx-6 sm:p-5">
         <div className="flex items-center justify-between gap-4">
           <div className="min-w-0" aria-live="polite">
             <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#64748B] dark:text-slate-400">Now showing</p>
-            <AnimatePresence mode="wait" initial={false}>
-              <motion.p
-                key={face.title}
-                initial={reduceMotion ? false : { y: 6, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={reduceMotion ? undefined : { y: -6, opacity: 0 }}
-                className="mt-1 truncate font-display text-xl font-semibold text-[#111111] dark:text-white"
-              >
-                {face.title}
-              </motion.p>
-            </AnimatePresence>
+            <p key={face.title} className="mt-1 truncate font-display text-xl font-semibold text-[#111111] dark:text-white">
+              {face.title}
+            </p>
           </div>
 
           <div className="flex shrink-0 items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#64748B] dark:text-slate-400">

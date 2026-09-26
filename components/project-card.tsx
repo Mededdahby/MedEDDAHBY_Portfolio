@@ -1,8 +1,5 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { ArrowUpRight, ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -17,21 +14,15 @@ interface ProjectCardProps {
 
 export default function ProjectCard({
   project,
-  index = 0,
   priority = false,
   className,
 }: ProjectCardProps) {
   const hasActions = Boolean(project.liveUrl || project.sourceUrl);
 
   return (
-    <motion.article
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.45, delay: index * 0.06 }}
-      whileHover={{ y: -6 }}
+    <article
       className={cn(
-        "group relative overflow-hidden rounded-[32px] border border-white/50 bg-white/70 p-5 shadow-[0_30px_80px_-36px_rgba(15,23,42,0.4)] backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/70 dark:shadow-[0_30px_90px_-40px_rgba(2,6,23,0.92)]",
+        "group relative overflow-hidden rounded-[32px] border border-white/50 bg-white/70 p-5 shadow-[0_30px_80px_-36px_rgba(15,23,42,0.4)] backdrop-blur-xl transition-transform duration-300 hover:-translate-y-1.5 dark:border-white/10 dark:bg-slate-950/70 dark:shadow-[0_30px_90px_-40px_rgba(2,6,23,0.92)]",
         className
       )}
     >
@@ -177,6 +168,6 @@ export default function ProjectCard({
           </div>
         )}
       </div>
-    </motion.article>
+    </article>
   );
 }

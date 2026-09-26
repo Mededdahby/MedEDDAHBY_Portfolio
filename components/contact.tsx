@@ -3,7 +3,6 @@
 import type React from "react";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -42,7 +41,7 @@ export default function Contact() {
           form.reset();
         }
       }
-    } catch (error) {
+    } catch {
       setSubmitResult({
         success: false,
         message: "An unexpected error occurred. Please try again.",
@@ -70,13 +69,7 @@ export default function Contact() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="panel-surface rounded-[28px] p-8"
-          >
+          <div className="panel-surface rounded-[28px] p-8">
             <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
             <div className="space-y-6">
               <div className="flex items-start gap-4">
@@ -85,7 +78,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-medium text-lg">Email</h4>
-                  <p className="text-[#334155] dark:text-slate-300">eddahby.contact@gmail.com</p>
+                  <a href="mailto:eddahby.contact@gmail.com" className="text-[#334155] transition hover:text-[#B45309] dark:text-slate-300 dark:hover:text-[#D97706]">eddahby.contact@gmail.com</a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -104,25 +97,23 @@ export default function Contact() {
                 <div>
                   <h4 className="font-medium text-lg">Location</h4>
                   <p className="text-[#334155] dark:text-slate-300">
-                    Kelaat M'Gouna, Tinghir, Morocco
+                    Kelaat M&apos;Gouna, Tinghir, Morocco
                   </p>
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="panel-surface rounded-[28px] p-8"
-          >
+          <div className="panel-surface rounded-[28px] p-8">
             <form
               id="contact-form"
               onSubmit={handleSubmit}
               className="space-y-6"
             >
+              <div className="absolute -left-[9999px]" aria-hidden="true">
+                <label htmlFor="website">Website</label>
+                <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+              </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label
@@ -135,6 +126,8 @@ export default function Contact() {
                     id="name"
                     name="name"
                     placeholder="John Doe"
+                    autoComplete="name"
+                    maxLength={80}
                     required
                     disabled={isSubmitting}
                     className="border-[#111111]/12 bg-white text-[#111111] placeholder:text-[#334155]/70 focus:border-[#B45309] focus:ring-[#B45309] dark:border-white/10 dark:bg-[#10151b] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#D97706]"
@@ -152,6 +145,8 @@ export default function Contact() {
                     name="email"
                     type="email"
                     placeholder="john@example.com"
+                    autoComplete="email"
+                    maxLength={160}
                     required
                     disabled={isSubmitting}
                     className="border-[#111111]/12 bg-white text-[#111111] placeholder:text-[#334155]/70 focus:border-[#B45309] focus:ring-[#B45309] dark:border-white/10 dark:bg-[#10151b] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#D97706]"
@@ -169,6 +164,7 @@ export default function Contact() {
                   id="subject"
                   name="subject"
                   placeholder="Project Inquiry"
+                  maxLength={120}
                   required
                   disabled={isSubmitting}
                   className="border-[#111111]/12 bg-white text-[#111111] placeholder:text-[#334155]/70 focus:border-[#B45309] focus:ring-[#B45309] dark:border-white/10 dark:bg-[#10151b] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#D97706]"
@@ -186,6 +182,7 @@ export default function Contact() {
                   name="message"
                   placeholder="Tell me about your project..."
                   rows={5}
+                  maxLength={4000}
                   required
                   disabled={isSubmitting}
                   className="resize-none border-[#111111]/12 bg-white text-[#111111] placeholder:text-[#334155]/70 focus:border-[#B45309] focus:ring-[#B45309] dark:border-white/10 dark:bg-[#10151b] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#D97706]"
@@ -229,7 +226,7 @@ export default function Contact() {
                 )}
               </Button>
             </form>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

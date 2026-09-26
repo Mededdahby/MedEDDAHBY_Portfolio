@@ -14,7 +14,23 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: CaseStudyPageProps): Promise<Metadata> {
   const study = getCaseStudy((await params).slug);
   if (!study) return {};
-  return { title: `${study.title} Case Study | Mohamed Eddahby`, description: study.summary };
+  const url = `/projects/${study.slug}`;
+  return {
+    title: `${study.title} Case Study`,
+    description: study.summary,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${study.title} Case Study | Mohamed Eddahby`,
+      description: study.summary,
+      type: "article",
+      url,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${study.title} Case Study | Mohamed Eddahby`,
+      description: study.summary,
+    },
+  };
 }
 
 export default async function CaseStudyPage({ params }: CaseStudyPageProps) {

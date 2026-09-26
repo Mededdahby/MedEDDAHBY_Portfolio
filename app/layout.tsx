@@ -30,16 +30,41 @@ const cinzelDecorative = Cinzel_Decorative({
 });
 
 export const metadata: Metadata = {
-  title: "Mohamed Eddahby | Full-Stack Developer",
+  title: {
+    default: "Mohamed Eddahby | Full-Stack Developer",
+    template: "%s | Mohamed Eddahby",
+  },
   description:
     "Portfolio of Mohamed Eddahby featuring full-stack products, interface work, and practical software projects.",
-  metadataBase: new URL("https://med-eddahby-portfolio.vercel.app"),
+  metadataBase: new URL("https://eddahby.tech"),
+  applicationName: "Mohamed Eddahby Portfolio",
+  authors: [{ name: "Mohamed Eddahby", url: "https://eddahby.tech" }],
+  creator: "Mohamed Eddahby",
+  publisher: "Mohamed Eddahby",
+  category: "technology",
+  keywords: [
+    "Mohamed Eddahby",
+    "full-stack developer Morocco",
+    "Next.js developer",
+    "React developer",
+    "TypeScript developer",
+    "web application development",
+    "software portfolio",
+  ],
+  alternates: { canonical: "/" },
   openGraph: {
     title: "Mohamed Eddahby | Full-Stack Developer",
     description:
       "Full-stack products, interface work, and practical software projects.",
+    siteName: "Mohamed Eddahby Portfolio",
+    locale: "en_US",
     type: "website",
     url: "/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mohamed Eddahby | Full-Stack Developer",
+    description: "Full-stack products, interface work, and practical software projects.",
   },
   robots: { index: true, follow: true },
   icons: {
