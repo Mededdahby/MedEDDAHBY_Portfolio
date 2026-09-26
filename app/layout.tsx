@@ -30,7 +30,15 @@ export const metadata: Metadata = {
   title: "Mohamed Eddahby | Full-Stack Developer",
   description:
     "Portfolio of Mohamed Eddahby featuring full-stack products, interface work, and practical software projects.",
-  generator: "v0.app",
+  metadataBase: new URL("https://med-eddahby-portfolio.vercel.app"),
+  openGraph: {
+    title: "Mohamed Eddahby | Full-Stack Developer",
+    description:
+      "Full-stack products, interface work, and practical software projects.",
+    type: "website",
+    url: "/",
+  },
+  robots: { index: true, follow: true },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
@@ -43,7 +51,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
       <body
         className={`${bricolage.variable} ${fraunces.variable} ${cinzelDecorative.variable} min-h-screen antialiased`}
       >

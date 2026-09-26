@@ -66,7 +66,10 @@ export default function ProjectCard({
                 alt={project.title}
                 fill
                 priority={priority}
+                placeholder="blur"
+                sizes="(min-width: 1280px) 30vw, (min-width: 768px) 46vw, 100vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                style={{ objectPosition: project.imagePosition ?? "center" }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/15 to-transparent" />
             </div>

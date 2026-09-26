@@ -1,10 +1,6 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
-import CountUp from "react-countup";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
+import heroImage from "@/public/images/hero-image.webp";
 import { Download, Github, Linkedin, Mail } from "lucide-react";
 
 const stats = [
@@ -32,9 +28,6 @@ const socials = [
 ];
 
 export default function Hero() {
-  const statsRef = useRef<HTMLDivElement>(null);
-  const inView = useInView(statsRef, { once: true, amount: 0.35 });
-
   return (
     <section className="bg-[#FAF7F2] px-4 pb-16 pt-28 text-[#111111] dark:bg-[#0C1014] dark:text-white md:px-8 md:pb-24 md:pt-32 lg:px-16">
       <div className="mx-auto grid min-h-[85vh] max-w-7xl gap-14 xl:grid-cols-[1.05fr,0.95fr] xl:items-center">
@@ -87,17 +80,18 @@ export default function Hero() {
           </div>
         </div>
 
-        <div ref={statsRef} className="relative">
+        <div className="relative">
           <div className="relative mx-auto max-w-[500px] xl:ml-auto xl:mr-0">
             <div className="relative overflow-hidden border border-[#111111]/10 bg-[#F3EEE6] dark:border-white/10 dark:bg-[#141a1f]">
               <div className="relative aspect-[4/5]">
                 <Image
-                  src="/images/hero-image.jpeg"
+                  src={heroImage}
                   alt="Mohamed Eddahby portrait"
                   fill
                   priority
+                  placeholder="blur"
                   sizes="(max-width: 1280px) 100vw, 500px"
-                  className="object-cover"
+                  className="object-cover object-[center_30%]"
                 />
               </div>
             </div>
@@ -139,14 +133,7 @@ export default function Hero() {
                 className="border border-[#111111]/10 bg-white px-5 py-5 dark:border-white/10 dark:bg-[#141a1f]"
               >
                 <div className="font-display text-4xl leading-none dark:text-white">
-                  {inView ? (
-                    <>
-                      <CountUp end={stat.value} duration={2} />
-                      {stat.suffix}
-                    </>
-                  ) : (
-                    `0${stat.suffix}`
-                  )}
+                  {stat.value}{stat.suffix}
                 </div>
                 <p className="mt-3 text-sm tracking-[0.08em] text-[#334155] dark:text-slate-400">
                   {stat.label}

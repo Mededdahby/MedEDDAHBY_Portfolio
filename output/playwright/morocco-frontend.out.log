@@ -1,0 +1,7 @@
+▲ Next.js 16.3.4 (Turbopack)
+- Local:         http://localhost:3016
+- Network:       http://192.168.1.118:3016
+- Environments: .env
+✓ Ready in 4.0s
+✓ Running next.config.ts took 30.3s
+Creating turbopack project { dir: 'C:\\Users\\HP\\dev\\WEB\\moroccoimmersion', testMode: true }

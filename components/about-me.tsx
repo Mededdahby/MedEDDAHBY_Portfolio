@@ -15,6 +15,7 @@ import {
   GitBranch,
 } from "lucide-react";
 import Image from "next/image";
+import aboutImage from "@/public/images/about-image.webp";
 
 export default function AboutMe() {
   const [activeTab, setActiveTab] = useState<
@@ -172,10 +173,12 @@ export default function AboutMe() {
               {/* Image container */}
               <div className="absolute inset-0 w-full h-full z-[100]">
                 <Image
-                  src="/images/about-image.jpeg"
+                  src={aboutImage}
                   alt="About Mohamed Eddahby"
                   fill
-                  className="object-cover object-center scale-[1.15]"
+                  placeholder="blur"
+                  sizes="(max-width: 768px) 90vw, 380px"
+                  className="object-cover object-[center_28%] scale-[1.15]"
                 />
               </div>
 

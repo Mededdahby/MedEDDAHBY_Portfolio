@@ -15,7 +15,8 @@ export interface Project {
   summary: string;
   description: string;
   technologies: string[];
-  image?: string;
+  image?: StaticImageData;
+  imagePosition?: string;
   liveUrl?: string;
   sourceUrl?: string;
   featured?: boolean;
@@ -75,7 +76,8 @@ export const projects: Project[] = [
       "Groq",
       "Lemon Squeezy",
     ],
-    image: "/vibrant-web-interface.png",
+    image: vibrantWebInterface,
+    imagePosition: "center top",
     liveUrl: "https://www.promptbunker.com",
     featured: true,
     status: "Live",
@@ -101,7 +103,8 @@ export const projects: Project[] = [
       "SheetJS",
       "JSZip",
     ],
-    image: "/modern-finance-app.png",
+    image: modernFinanceApp,
+    imagePosition: "center top",
     liveUrl: "https://auto-import-app.vercel.app/login",
     featured: true,
     status: "Live",
@@ -118,7 +121,8 @@ export const projects: Project[] = [
     description:
       "Built with Next.js, Tailwind CSS, and NextAuth to support article publishing, account security, and a fast reading experience.",
     technologies: ["Next.js", "Tailwind CSS", "NextAuth", "JavaScript"],
-    image: "/modern-blog-interface.png",
+    image: modernBlogInterface,
+    imagePosition: "center top",
     liveUrl: "https://postepea.vercel.app",
     sourceUrl: "https://github.com/Mededdahby/Postepea",
     featured: true,
@@ -136,7 +140,8 @@ export const projects: Project[] = [
     description:
       "An ASP.NET Core MVC application focused on contributor management, scheduling, financial reporting, notifications, and dashboard analytics.",
     technologies: ["ASP.NET Core MVC", "C#", ".NET", "SQL"],
-    image: "/mosque-management-dashboard.png",
+    image: mosqueManagementDashboard,
+    imagePosition: "center top",
     sourceUrl: "https://github.com/Mededdahby/Mosque_App",
     featured: true,
     status: "Open Source",
@@ -153,7 +158,8 @@ export const projects: Project[] = [
     description:
       "A React and Redux application designed around straightforward expense entry, lightweight state management, and dashboard-friendly summaries.",
     technologies: ["React", "Redux", "JavaScript"],
-    image: "/mobile-expense-dashboard.png",
+    image: mobileExpenseDashboard,
+    imagePosition: "center center",
     liveUrl: "https://expense-tracker-demo.vercel.app",
     sourceUrl: "https://github.com/Mededdahby/expense-tracker",
     featured: true,
@@ -171,7 +177,8 @@ export const projects: Project[] = [
     description:
       "A React app focused on motion, exploration, and structured exercise details, pairing search and visual discovery with external fitness data.",
     technologies: ["React", "JavaScript", "API Integration"],
-    image: "/fitness-app-demo.jpg",
+    image: fitnessAppDemo,
+    imagePosition: "center center",
     liveUrl: "https://fitness-explorer.vercel.app",
     sourceUrl: "https://github.com/Mededdahby/fitness_App",
     featured: true,
@@ -189,7 +196,8 @@ export const projects: Project[] = [
     description:
       "Built with React and Express.js to cover quiz authoring, answer flows, and lightweight data handling across the frontend and backend.",
     technologies: ["React", "Express.js", "JavaScript"],
-    image: "/digital-quiz-interface.png",
+    image: digitalQuizInterface,
+    imagePosition: "center top",
     liveUrl: "https://quiz-platform-demo.vercel.app",
     sourceUrl: "https://github.com/Mededdahby/quizPlatforme",
     featured: true,
@@ -207,7 +215,8 @@ export const projects: Project[] = [
     description:
       "A Swing and MySQL application built to organize patient-related tasks, store records, and streamline administrative work.",
     technologies: ["Java", "Swing", "MySQL"],
-    image: "/digital-medical-records.png",
+    image: digitalMedicalRecords,
+    imagePosition: "center top",
     sourceUrl: "https://github.com/Mededdahby/Medicale-Center-App",
     featured: true,
     status: "Open Source",
@@ -224,7 +233,8 @@ export const projects: Project[] = [
     description:
       "A Java Swing application with socket communication and MySQL persistence, designed around user-friendly interactions and structured mail handling.",
     technologies: ["Java", "Swing", "MySQL", "Socket Programming"],
-    image: "/modern-mail-interface.png",
+    image: modernMailInterface,
+    imagePosition: "center top",
     sourceUrl: "https://github.com/Mededdahby/Mail-box",
     status: "Open Source",
     accent: coralAccent,
@@ -240,7 +250,8 @@ export const projects: Project[] = [
     description:
       "A small data-visualization project combining chart components with API data to surface trends through clear visual summaries.",
     technologies: ["JavaScript", "Chart.js", "REST API"],
-    image: "/covid-dashboard-charts.png",
+    image: covidDashboardCharts,
+    imagePosition: "center center",
     sourceUrl: "https://github.com/Mededdahby/Covid-statics-chart",
     status: "Open Source",
     accent: mintAccent,
@@ -256,7 +267,8 @@ export const projects: Project[] = [
     description:
       "Implemented in C to model how processor instructions and internal architecture can be represented programmatically.",
     technologies: ["C", "System Programming"],
-    image: "/digital-heart.png",
+    image: digitalHeart,
+    imagePosition: "center center",
     sourceUrl: "https://github.com/Mededdahby/processor-simulation",
     status: "Open Source",
     accent: amberAccent,
@@ -272,7 +284,8 @@ export const projects: Project[] = [
     description:
       "A lightweight desktop project that combines a familiar calculator interface with client-server messaging to execute calculations.",
     technologies: ["Java", "Swing", "Socket Programming"],
-    image: "/simple-calculator-app.png",
+    image: simpleCalculatorApp,
+    imagePosition: "center center",
     sourceUrl: "https://github.com/Mededdahby/java_Calcutor",
     status: "Open Source",
     accent: plumAccent,
@@ -288,7 +301,8 @@ export const projects: Project[] = [
     description:
       "A simple HTML, CSS, and JavaScript build that turns dice rolling into a fast, responsive mini-game.",
     technologies: ["JavaScript", "HTML", "CSS"],
-    image: "/virtual-dice-score.png",
+    image: virtualDiceScore,
+    imagePosition: "center center",
     sourceUrl: "https://github.com/Mededdahby/diceGame",
     status: "Open Source",
     accent: coralAccent,
@@ -304,7 +318,8 @@ export const projects: Project[] = [
     description:
       "A PHP and MySQL project covering article creation, editing, deletion, and reader interactions in a compact CMS-style setup.",
     technologies: ["PHP", "MySQL", "HTML", "CSS"],
-    image: "/collaborative-blogging-space.png",
+    image: collaborativeBloggingSpace,
+    imagePosition: "center top",
     sourceUrl: "https://github.com/Mededdahby/Article_wirter",
     status: "Open Source",
     accent: amberAccent,
@@ -320,7 +335,8 @@ export const projects: Project[] = [
     description:
       "A portfolio concept for presenting educational content, local discovery, and knowledge-centered navigation in a single product experience.",
     technologies: ["ASP.NET Core", "C#", "CSS", "Content Design"],
-    image: "/islamic-learning-hub.png",
+    image: islamicLearningHub,
+    imagePosition: "center top",
     status: "Case Study",
     accent: mintAccent,
   },
@@ -335,7 +351,8 @@ export const projects: Project[] = [
     description:
       "A Python and OpenCV tool exploring how hand tracking can translate into practical laptop interactions such as pointing, clicking, and screenshots.",
     technologies: ["Python", "OpenCV", "NumPy"],
-    image: "/gesture-controlled-interface.png",
+    image: gestureControlledInterface,
+    imagePosition: "center center",
     status: "Case Study",
     accent: blueAccent,
   },
@@ -376,3 +393,20 @@ export const projectStats = {
   categories: projectCategories.length,
   technologies: projectTechnologies.length,
 };
+import type { StaticImageData } from "next/image";
+import vibrantWebInterface from "@/public/vibrant-web-interface.webp";
+import modernFinanceApp from "@/public/modern-finance-app.webp";
+import modernBlogInterface from "@/public/modern-blog-interface.webp";
+import mosqueManagementDashboard from "@/public/mosque-management-dashboard.webp";
+import mobileExpenseDashboard from "@/public/mobile-expense-dashboard.webp";
+import fitnessAppDemo from "@/public/fitness-app-demo.webp";
+import digitalQuizInterface from "@/public/digital-quiz-interface.webp";
+import digitalMedicalRecords from "@/public/digital-medical-records.webp";
+import modernMailInterface from "@/public/modern-mail-interface.webp";
+import covidDashboardCharts from "@/public/covid-dashboard-charts.webp";
+import digitalHeart from "@/public/digital-heart.webp";
+import simpleCalculatorApp from "@/public/simple-calculator-app.webp";
+import virtualDiceScore from "@/public/virtual-dice-score.webp";
+import collaborativeBloggingSpace from "@/public/collaborative-blogging-space.webp";
+import islamicLearningHub from "@/public/islamic-learning-hub.webp";
+import gestureControlledInterface from "@/public/gesture-controlled-interface.webp";

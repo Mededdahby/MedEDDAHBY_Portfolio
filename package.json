@@ -5,7 +5,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "lint": "next lint",
+    "lint": "eslint .",
     "start": "next start"
   },
   "dependencies": {
@@ -49,13 +49,13 @@
     "input-otp": "1.4.1",
     "jspdf": "latest",
     "lucide-react": "^0.454.0",
-    "next": "14.2.16",
+    "next": "16.3.6",
     "next-themes": "latest",
     "ogl": "^1.0.11",
-    "react": "^18",
+    "react": "^19.2.0",
     "react-countup": "latest",
     "react-day-picker": "9.8.0",
-    "react-dom": "^18",
+    "react-dom": "^19.2.0",
     "react-hook-form": "^7.54.1",
     "react-icons": "latest",
     "react-resizable-panels": "^2.1.7",
@@ -63,13 +63,15 @@
     "sonner": "^1.7.1",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
-    "vaul": "^0.9.6",
+    "vaul": "^1.1.2",
     "zod": "^3.24.1"
   },
   "devDependencies": {
     "@types/node": "^22",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "16.3.6",
     "postcss": "^8.5",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"

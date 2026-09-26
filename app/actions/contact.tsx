@@ -44,37 +44,10 @@ export async function submitContactForm(
       };
     }
 
-    // Simulate processing delay
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    // In a real application, you would:
-    // 1. Send an email using a service like SendGrid, Resend, or Nodemailer
-    // 2. Save the message to a database
-    // 3. Send notifications to yourself
-
-    // Example of what you might do:
-    /*
-    await sendEmail({
-      to: "eddahby.contact@gmail.com",
-      from: data.email,
-      subject: `Contact Form: ${data.subject}`,
-      html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${data.name}</p>
-        <p><strong>Email:</strong> ${data.email}</p>
-        <p><strong>Subject:</strong> ${data.subject}</p>
-        <p><strong>Message:</strong></p>
-        <p>${data.message}</p>
-      `,
-    })
-    */
-
-    console.log("Contact form submission:", data);
-
     return {
-      success: true,
+      success: false,
       message:
-        "Thank you for your message! I'll get back to you within 24 hours.",
+        "Online sending is not configured yet. Please email eddahby.contact@gmail.com directly.",
     };
   } catch (error) {
     console.error("Contact form submission error:", error);

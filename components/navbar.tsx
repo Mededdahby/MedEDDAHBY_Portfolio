@@ -43,6 +43,9 @@ export default function Navbar() {
             variant="ghost"
             size="icon"
             onClick={() => setIsMenuOpen((current) => !current)}
+            aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
             className="rounded-none text-[#111111] hover:bg-transparent hover:text-[#B45309] dark:text-white dark:hover:text-[#D97706]"
           >
             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -51,6 +54,7 @@ export default function Navbar() {
       </div>
 
       <div
+        id="mobile-navigation"
         className={cn(
           "mx-auto max-w-7xl overflow-hidden transition-all duration-300 md:hidden",
           isMenuOpen ? "max-h-48 pt-4" : "max-h-0"
