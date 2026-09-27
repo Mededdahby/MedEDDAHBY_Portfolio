@@ -1,29 +1,27 @@
-"use client"
-
-import { useTheme } from "next-themes"
-import { Button } from "@/components/ui/button"
-import { Moon, Sun } from "lucide-react"
+"use client";
 
 export function ThemeToggle() {
-  const { resolvedTheme, setTheme } = useTheme()
+  const toggleTheme = () => {
+    const root = document.documentElement;
+    const dark = root.classList.toggle("dark");
+    root.style.colorScheme = dark ? "dark" : "light";
+    localStorage.setItem("portfolio-theme-preference", dark ? "dark" : "light");
+  };
 
   return (
-    <Button
-      variant="ghost"
-      size="icon"
-      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-      className="relative h-11 w-11 overflow-hidden rounded-full border border-[#111111]/10 bg-white/80 text-[#111111] hover:bg-white hover:text-[#B45309] dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:bg-white/10 dark:hover:text-[#D97706]"
+    <button
+      type="button"
+      onClick={toggleTheme}
+      className="relative grid h-11 w-11 place-items-center rounded-full border border-[#111111]/10 bg-white text-[#111111] transition-colors hover:text-[#B45309] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B45309] dark:border-white/10 dark:bg-[#171D22] dark:text-white dark:hover:text-[#D97706]"
       aria-label="Toggle color theme"
     >
-      <div className="relative z-10" aria-hidden="true">
-        <Moon size={18} className="block dark:hidden" />
-        <Sun size={18} className="hidden dark:block" />
-      </div>
-
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 rounded-full bg-gradient-to-br from-[#B45309]/8 to-[#111111]/5 transition-colors duration-300 dark:from-amber-200/10 dark:to-amber-500/10"
-      />
-    </Button>
-  )
+      <svg viewBox="0 0 24 24" aria-hidden="true" className="block h-[18px] w-[18px] dark:hidden" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z" />
+      </svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true" className="hidden h-[18px] w-[18px] dark:block" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42" />
+      </svg>
+    </button>
+  );
 }

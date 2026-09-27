@@ -225,7 +225,6 @@ export default function ProjectsPage() {
               <ProjectCard
                 key={project.slug}
                 project={project}
-                index={index}
                 priority={index < 2}
               />
             ))}

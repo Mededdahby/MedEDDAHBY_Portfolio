@@ -7,7 +7,6 @@ import type { Project } from "@/lib/projects";
 
 interface ProjectCardProps {
   project: Project;
-  index?: number;
   priority?: boolean;
   className?: string;
 }

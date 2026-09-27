@@ -1,33 +1,11 @@
 import type { Metadata } from "next";
 import type React from "react";
-import {
-  Bricolage_Grotesque,
-  Cinzel_Decorative,
-  Fraunces,
-} from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import DelayedObservability from "@/components/delayed-observability";
 
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Analytics } from "@vercel/analytics/next"
-
-const bricolage = Bricolage_Grotesque({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-display",
-});
-
-const cinzelDecorative = Cinzel_Decorative({
-  subsets: ["latin"],
-  weight: ["700"],
-  variable: "--font-roman",
-});
+const themeScript = `(()=>{try{const saved=localStorage.getItem('portfolio-theme-preference');const dark=saved?saved==='dark':matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.classList.toggle('dark',dark);document.documentElement.style.colorScheme=dark?'dark':'light'}catch{}})();`;
 
 export const metadata: Metadata = {
   title: {
@@ -80,16 +58,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
-      <body
-        className={`${bricolage.variable} ${fraunces.variable} ${cinzelDecorative.variable} min-h-screen antialiased`}
-      >
-        <ThemeProvider>
-          <Navbar />
-          {children}
-           <Analytics />
-           <SpeedInsights />
-          <Footer />
-        </ThemeProvider>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
+      <body className="min-h-screen antialiased">
+        <Navbar />
+        {children}
+        <DelayedObservability />
+        <Footer />
       </body>
     </html>
   );

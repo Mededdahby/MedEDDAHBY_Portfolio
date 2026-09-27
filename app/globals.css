@@ -28,25 +28,12 @@ html {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background:
-    radial-gradient(circle at top left, var(--page-radial-primary), transparent 28%),
-    radial-gradient(circle at top right, var(--page-radial-secondary), transparent 34%),
-    linear-gradient(180deg, var(--page-bg), var(--page-bg)) fixed;
-  font-family: var(--font-sans), sans-serif;
+  background: var(--page-bg);
+  font-family: Arial, Helvetica, system-ui, sans-serif;
 }
 
 body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(var(--page-grid) 1px, transparent 1px),
-    linear-gradient(90deg, var(--page-grid) 1px, transparent 1px);
-  background-size: 32px 32px;
-  mask-image: radial-gradient(circle at center, black, transparent 84%);
-  opacity: 0.24;
-  z-index: 0;
+  content: none;
 }
 
 ::selection {
@@ -176,16 +163,16 @@ body::before {
   width: min(72%, 340px);
   height: 42px;
   border-radius: 999px;
-  background: radial-gradient(ellipse, rgba(111, 72, 35, 0.3) 0%, rgba(180, 83, 9, 0.13) 40%, transparent 74%);
-  filter: blur(10px);
+  background: rgba(111, 72, 35, 0.12);
+  box-shadow: 0 12px 24px rgba(111, 72, 35, 0.14);
   content: "";
   pointer-events: none;
   transform: translateX(-50%) scaleY(0.72);
 }
 
 .dark .project-cube-stage::before {
-  background: radial-gradient(ellipse, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0.34) 44%, transparent 74%);
-  filter: blur(13px);
+  background: rgba(0, 0, 0, 0.34);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.32);
 }
 
 .project-cube {
@@ -195,6 +182,7 @@ body::before {
   height: 256px;
   width: 256px;
   transform-style: preserve-3d;
+  transform: rotateX(-10deg) rotateY(20deg);
   will-change: transform;
 }
 
@@ -204,13 +192,8 @@ body::before {
   overflow: hidden;
   border: 1px solid rgba(17, 17, 17, 0.13);
   border-top-width: 3px;
-  background:
-    radial-gradient(circle at 88% 12%, rgba(180, 83, 9, 0.12), transparent 32%),
-    linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(242, 237, 229, 0.94)),
-    #f2ede5;
-  box-shadow:
-    inset 0 0 45px rgba(255, 255, 255, 0.55),
-    0 28px 70px rgba(51, 65, 85, 0.12);
+  background: #f2ede5;
+  box-shadow: 0 18px 40px rgba(51, 65, 85, 0.11);
   backface-visibility: hidden;
 }
 
@@ -225,10 +208,8 @@ body::before {
 
 .dark .project-cube-face {
   border-color: rgba(255, 255, 255, 0.18);
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.08), transparent 42%),
-    #11151a;
-  box-shadow: inset 0 0 45px rgba(255, 255, 255, 0.025);
+  background: #11151a;
+  box-shadow: none;
 }
 
 .dark .project-cube-face::after {
@@ -271,11 +252,11 @@ body::before {
 
 @layer components {
   .font-display {
-    font-family: var(--font-display), serif;
+    font-family: Georgia, "Times New Roman", serif;
   }
 
   .font-roman {
-    font-family: var(--font-roman), serif;
+    font-family: Georgia, "Times New Roman", serif;
   }
 
   .eyebrow {

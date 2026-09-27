@@ -1,6 +1,6 @@
-export type ProjectStatus = "Live" | "Open Source" | "Private" | "Case Study";
+type ProjectStatus = "Live" | "Open Source" | "Private" | "Case Study";
 
-export interface ProjectAccent {
+interface ProjectAccent {
   from: string;
   to: string;
   glow: string;

@@ -69,12 +69,10 @@ export default function Projects() {
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {previewProjects.map((project, index) => (
+          {previewProjects.map((project) => (
             <ProjectCard
               key={project.slug}
               project={project}
-              index={index}
-              priority={index < 2}
             />
           ))}
         </div>
