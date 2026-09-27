@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Mohamed Eddahby — Full-Stack Developer";
+export const alt = "Mohamed Eddahby, full-stack developer. Explore projects at eddahby.tech.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -37,8 +37,9 @@ export default function OpenGraphImage() {
             <span style={{ fontSize: 78, lineHeight: 0.98, letterSpacing: -4 }}>Mohamed<br />Eddahby</span>
             <span style={{ marginTop: 26, fontFamily: "Arial, sans-serif", fontSize: 24, lineHeight: 1.45, color: "#475569" }}>Full-stack products, thoughtful interfaces,<br />and practical software engineering.</span>
           </div>
-          <div style={{ display: "flex", gap: 34, fontFamily: "Arial, sans-serif", fontSize: 16, letterSpacing: 2, color: "#B45309" }}>
-            <span>NEXT.JS</span><span>REACT</span><span>TYPESCRIPT</span><span>PRODUCT ENGINEERING</span>
+          <div style={{ display: "flex", alignItems: "center", gap: 34, fontFamily: "Arial, sans-serif", fontSize: 16, letterSpacing: 2, color: "#B45309" }}>
+            <span>NEXT.JS</span><span>REACT</span><span>TYPESCRIPT</span>
+            <span style={{ padding: "11px 14px", borderRadius: 6, background: "#D59B05", color: "#111111", fontSize: 13, fontWeight: 700, letterSpacing: 1 }}>EXPLORE PROJECTS</span>
           </div>
         </div>
       </div>

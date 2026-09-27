@@ -7,6 +7,8 @@ import Footer from "@/components/footer";
 import DelayedObservability from "@/components/delayed-observability";
 
 const themeScript = `(()=>{try{const saved=localStorage.getItem('portfolio-theme-preference');const dark=saved?saved==='dark':matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.classList.toggle('dark',dark);document.documentElement.style.colorScheme=dark?'dark':'light'}catch{}})();`;
+const socialDescription =
+  "Mohamed Eddahby builds full-stack web apps and digital products with React, Next.js, and TypeScript. Explore projects.";
 
 export const metadata: Metadata = {
   title: {
@@ -33,8 +35,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   openGraph: {
     title: "Mohamed Eddahby | Full-Stack Developer",
-    description:
-      "Mohamed Eddahby builds thoughtful web applications and practical digital products as a full-stack developer specializing in React, Next.js, and TypeScript.",
+    description: socialDescription,
     siteName: "Mohamed Eddahby Portfolio",
     locale: "en_US",
     type: "website",
@@ -43,8 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Mohamed Eddahby | Full-Stack Developer",
-    description:
-      "Mohamed Eddahby builds thoughtful web applications and practical digital products as a full-stack developer specializing in React, Next.js, and TypeScript.",
+    description: socialDescription,
   },
   manifest: "/site.webmanifest",
   robots: { index: true, follow: true },
