@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect } from "react";
 import Link from "next/link";
 import { ArrowUpRight, MoveHorizontal } from "lucide-react";
 
@@ -10,10 +13,19 @@ const faces = [
   { kind: "stat", kicker: "Collaboration", title: "9+ clients", detail: "Product work shaped around real operational needs.", href: "/projects", accent: "#73D8F2" },
 ] as const;
 
-const cubeLoader = `(()=>{let loading=false;const load=()=>{if(loading||window.__projectCubeLoaded)return;loading=true;const s=document.createElement('script');s.src='/project-cube-interaction.js';s.defer=true;s.onload=()=>{window.__projectCubeLoaded=true};document.head.appendChild(s)};const target=e=>e.target instanceof Element&&e.target.closest('[data-project-cube]');document.addEventListener('pointerover',e=>{if(target(e))load()},{once:true,passive:true});document.addEventListener('pointerdown',e=>{if(target(e))load()},{once:true,passive:true});document.addEventListener('focusin',e=>{if(target(e))load()},{once:true,passive:true});if('requestIdleCallback'in window){requestIdleCallback(load,{timeout:5000})}else{setTimeout(load,5000)}})();`;
-
 export default function ProjectCube() {
   const firstFace = faces[0];
+
+  useEffect(() => {
+    const timeoutId = window.setTimeout(() => {
+      const script = document.createElement("script");
+      script.src = "/project-cube-interaction.js";
+      script.async = true;
+      document.head.appendChild(script);
+    }, 0);
+
+    return () => window.clearTimeout(timeoutId);
+  }, []);
 
   return (
     <div className="relative mx-auto w-full max-w-[540px]" data-project-cube>
@@ -69,8 +81,7 @@ export default function ProjectCube() {
         </div>
       </div>
 
-      <script dangerouslySetInnerHTML={{ __html: cubeLoader }} />
-      <script type="application/json" data-cube-data dangerouslySetInnerHTML={{ __html: JSON.stringify(faces).replace(/</g, "\\u003c") }} />
+      <div hidden data-cube-data>{JSON.stringify(faces)}</div>
     </div>
   );
 }

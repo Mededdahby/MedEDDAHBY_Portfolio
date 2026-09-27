@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import ProjectCard from "@/components/project-card";
 import { featuredProjects, projectStats } from "@/lib/projects";
 
-const previewProjects = featuredProjects.slice(0, 6);
+const previewProjects = featuredProjects.slice(0, 3);
 
 const highlights = [
   {

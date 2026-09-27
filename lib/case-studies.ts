@@ -3,7 +3,7 @@ import moroccoImmersionHome from "@/public/case-studies/morocco-immersion-home.w
 import eventDevHub from "@/public/case-studies/event-dev-hub.webp";
 import promptBunker from "@/public/case-studies/prompt-bunker.webp";
 import soloTradeKit from "@/public/case-studies/solo-trade-kit.webp";
-import mosqueDashboard from "@/public/mosque-management-dashboard.webp";
+import mosqueDashboard from "@/public/images/projects/mosque-management-dashboard.webp";
 
 export interface CaseStudy {
   slug: string;
