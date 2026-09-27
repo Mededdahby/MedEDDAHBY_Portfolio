@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import type React from "react";
 import "./globals.css";
 import Navbar from "@/components/navbar";
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | Mohamed Eddahby",
   },
   description:
-    "Portfolio of Mohamed Eddahby featuring full-stack products, interface work, and practical software projects.",
+    "Mohamed Eddahby builds thoughtful web applications and practical digital products as a full-stack developer specializing in React, Next.js, and TypeScript.",
   metadataBase: new URL("https://eddahby.tech"),
   applicationName: "Mohamed Eddahby Portfolio",
   authors: [{ name: "Mohamed Eddahby", url: "https://eddahby.tech" }],
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mohamed Eddahby | Full-Stack Developer",
     description:
-      "Full-stack products, interface work, and practical software projects.",
+      "Mohamed Eddahby builds thoughtful web applications and practical digital products as a full-stack developer specializing in React, Next.js, and TypeScript.",
     siteName: "Mohamed Eddahby Portfolio",
     locale: "en_US",
     type: "website",
@@ -42,13 +42,46 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Mohamed Eddahby | Full-Stack Developer",
-    description: "Full-stack products, interface work, and practical software projects.",
+    description:
+      "Mohamed Eddahby builds thoughtful web applications and practical digital products as a full-stack developer specializing in React, Next.js, and TypeScript.",
   },
+  manifest: "/site.webmanifest",
   robots: { index: true, follow: true },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    shortcut: "/favicon-32x32.png",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#FAF7F2",
+  colorScheme: "light dark",
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://eddahby.tech/#website",
+      name: "Mohamed Eddahby Portfolio",
+      url: "https://eddahby.tech",
+      description:
+        "Mohamed Eddahby builds thoughtful web applications and practical digital products as a full-stack developer specializing in React, Next.js, and TypeScript.",
+      publisher: { "@id": "https://eddahby.tech/#person" },
+    },
+    {
+      "@type": "Person",
+      "@id": "https://eddahby.tech/#person",
+      name: "Mohamed Eddahby",
+      url: "https://eddahby.tech",
+      jobTitle: "Full-Stack Developer",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -60,6 +93,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </head>
       <body className="min-h-screen antialiased">
         <Navbar />
