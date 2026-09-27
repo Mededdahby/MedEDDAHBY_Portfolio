@@ -45,6 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mohamed Eddahby | Full-Stack Developer",
     description: socialDescription,
+    site: "@MohamedEddahby",
   },
   manifest: "/site.webmanifest",
   robots: { index: true, follow: true },
